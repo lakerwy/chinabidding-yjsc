@@ -1,0 +1,3548 @@
+.bid_container {
+    background-color: #f6f6f6;
+    height: 100%;
+    min-width: 1080px;
+}
+
+/* 自主续费/改版通知会员到期弹窗 sxp2021.01.26 */
+#renew_pop,
+#revision_pop,
+#april_box {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .5);
+    z-index: 110;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#88000000', endColorstr='#88000000');
+}
+
+#april_box .april {
+    position: fixed;
+    width: 940px;
+    height: 440px;
+    left: 50%;
+    top: 15%;
+    margin-left: -470px;
+    background-color: #fff;
+    z-index: 111;
+}
+
+#april_box .april_content {
+    padding: 0 40px 0 27px;
+    position: relative;
+    height: 354px;
+}
+
+#april_box .april_close {
+    width: 17px;
+    height: 16.3px;
+    background: url("https://cdn.chinabidding.cn/public/2020/img/yuanbo/ybtc_right_icon.png") no-repeat;
+    background-size: 100% 100%;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    cursor: pointer;
+    z-index: 1;
+} 
+
+#april_box .april_content .april_title {
+    text-align: center;
+    font-size: 20px;
+    line-height: 87px;
+}
+#april_box .april_content .april_first {
+    text-indent: 0;
+}
+
+#april_box .april_content p {
+    letter-spacing:1px;
+    color: #333;
+    font-size: 14px;
+    line-height: 28px;
+    text-indent: 2em;
+}
+
+#april_box .april_content p img{
+    width: 14px;
+    height: 14px;
+    margin-top: -4px;
+}
+
+#april_box .april_content p.bottom {
+    position: absolute;
+    right: 40px;
+    bottom: 0;
+    text-indent: 0;
+}
+
+#april_box .april_content .red {
+    color: #DB2831;
+}
+
+#revision_pop .inside {
+    position: fixed;
+    width: 940px;
+    height: 440px;
+    left: 50%;
+    top: 15%;
+    margin-left: -470px;
+    background-color: #fff;
+    z-index: 111;
+}
+
+#revision_pop .close {
+    width: 17px;
+    height: 16.3px;
+    background: url("https://cdn.chinabidding.cn/public/2020/img/yuanbo/ybtc_right_icon.png") no-repeat;
+    background-size: 100% 100%;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    cursor: pointer;
+}
+
+#revision_pop .seal {
+    width: 116px;
+    height: 56px;
+    position: absolute;
+    right: 81px;
+    bottom: 18px;
+    padding-top: 60px;
+}
+
+#revision_pop .seal img {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 116px;
+    height: 116px;
+}
+
+
+
+#revision_pop .seal p {
+    text-align: center;
+    font-size: 14px;
+}
+
+#revision_pop .content {
+    padding: 0 30px 0 27px;
+}
+
+#revision_pop .content h1 {
+    color: #DB2831;
+    font-size: 20px;
+    line-height: 80px;
+    text-align: center;
+}
+
+#revision_pop .content h2 {
+    line-height: 28px;
+    font-size: 14px;
+}
+
+#revision_pop .content p {
+    line-height: 28px;
+    font-size: 14px;
+    text-indent: 2em;
+}
+
+#revision_pop .content span {
+    color: #DB2831;
+}
+
+#renew_pop .inside {
+    position: fixed;
+    left: 50%;
+    top: 30%;
+    margin-left: -201px;
+    width: 402px;
+    height: 332px;
+    background-image: url(https://cdn.chinabidding.cn/public/2020/img/renew_bg.png);
+    background-size: 100% 100%;
+    padding: 130px 40px 0;
+    box-sizing: border-box;
+    color: #333;
+
+}
+
+#renew_pop .inside h2 {
+    line-height: 40px;
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+#renew_pop .inside p {
+    line-height: 26px;
+    font-size: 16px;
+}
+
+#renew_pop .inside p span {
+    color: #fab52b;
+}
+
+#renew_pop .inside a {
+    font-size: 18px;
+    text-decoration: none;
+    color: #fff;
+    text-align: center;
+    display: block;
+    background-color: #fab52b;
+    height: 44px;
+    border-radius: 22px;
+    line-height: 40px;
+    width: 280px;
+    margin: 25px auto;
+}
+
+#renew_pop .inside a:hover {
+    background-color: #f8c257;
+}
+
+#renew_pop .close {
+    width: 30px;
+    height: 32px;
+    background-image: url(https://cdn.chinabidding.cn/public/2020/img/renew_close.png);
+    background-size: 100% 100%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin-top: -40px;
+    cursor: pointer;
+}
+
+/* 顶部注册导航 */
+#topnav {
+    background-color: #efefef;
+    line-height: 30px;
+    font-size: 12px;
+}
+
+#topnav .fl {
+    float: left;
+    position: relative;
+    z-index: 109;
+}
+
+#mycity {
+    padding-left: 24px;
+    padding-right: 6px;
+    border-left: 1px solid #efefef;
+    border-right: 1px solid #efefef;
+    float: left;
+}
+
+#city {
+    color: #333;
+}
+
+#mycity i {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 20px;
+    height: 30px;
+    background: url("https://cdn.chinabidding.cn/public/2020/img/sy_top_icon.png") no-repeat 10px 8px;
+}
+
+#mycity:hover {
+    background-color: #fff;
+    border-left: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+}
+
+.unlog,
+.islog,
+.unlog span,
+.islog span {
+    float: left;
+}
+
+.islog {
+    display: none;
+}
+
+.unlog span:nth-child(1),
+.islog span:nth-child(1) {
+    margin-left: 10px;
+}
+
+/* .unlog span:nth-child(2),.islog span:nth-child(2){
+    margin-left: 10px;
+    margin-right: 10px;
+} */
+.unlog>span:first-child+span,
+.islog>span:first-child+span {
+    /* margin-left: 6px; */
+    margin-right: 10px;
+}
+
+.islog>span:first-child {
+    max-width: 120px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* .unlog span:nth-child(2){
+    padding-left: 26px;
+    background: url("https://cdn.chinabidding.cn/public/2020/img/sy_top_icon2.png") no-repeat 0 8px;
+} */
+/* .unlog>span:first-child+span{
+    padding-left: 26px;
+    background: url("https://cdn.chinabidding.cn/public/2020/img/sy_top_icon2.png") no-repeat 0 8px;
+} */
+.unlog>span:first-child+span+span+span {
+    margin-left: 10px;
+}
+
+.islog span:nth-child(2),
+.islog span:nth-child(3) {
+    color: #df2229;
+}
+
+.unlog a,
+.islog a {
+    color: #333;
+}
+
+/* #topnav .fabuxx{
+  color: #df2229;
+} */
+
+#topnav span:nth-child(3) a {
+    color: #df2229;
+}
+
+/* 地址下拉框 */
+#topnav .fl .dropdown-layer {
+    position: absolute;
+    left: 0;
+    top: 30px;
+    width: 242px;
+    height: 240px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    display: none;
+    background-color: #fff;
+    z-index: 39;
+    border: 1px solid #ccc;
+    box-shadow: 0 4px 6px 0 rgba(0, 0, 0, .2);
+}
+
+.dropdown-layer li {
+    float: left;
+    width: 24.9%;
+    font-size: 12px;
+    line-height: 30px;
+    text-align: center;
+    color: #666;
+}
+
+.dropdown-layer li a {
+    padding: 4px 8px;
+    color: #333;
+}
+
+.dropdown-layer li a:hover {
+    background-color: #eee;
+    color: #df2229;
+}
+
+.dropdown-layer li .dative {
+    background-color: #df2229;
+    color: #fff;
+}
+
+.dropdown-layer li .dative:hover {
+    background-color: #df2229;
+    color: #fff;
+}
+
+#topnav .fr {
+    float: right;
+}
+
+.fr li {
+    float: left;
+    padding-left: 5px;
+    padding-right: 5px;
+    position: relative;
+    z-index: 39;
+}
+
+.fr li a {
+    color: #333;
+}
+
+.fr .spacer {
+    width: 1px;
+    height: 14px;
+    padding: 0;
+    margin-top: 8px;
+    margin-left: 5px;
+    margin-right: 5px;
+    background-color: #ccc;
+}
+
+/* .fr li:nth-child(1){
+    padding-right: 24px;
+    background: url("https://cdn.chinabidding.cn/public/2020/img/sy_top_icon3.png") no-repeat 74px 13px;
+} */
+.fr li:nth-child(3),
+.fr li:nth-child(5),
+.fr li:nth-child(7) {
+    padding-right: 24px;
+    background: url("https://cdn.chinabidding.cn/public/2020/img/sy_top_icon3.png") no-repeat 62px 13px;
+}
+
+/* 客服下拉框 */
+.fr .dropdown-layer1 {
+    position: absolute;
+    left: -434px;
+    top: 30px;
+    width: 484px;
+    height: 175px;
+    padding-top: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
+    z-index: 9;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    font-size: 12px;
+    line-height: 24px;
+    display: none;
+    box-shadow: 0 4px 6px 0 rgba(0, 0, 0, .2);
+}
+
+.dropdown-layer1 h4 {
+    color: #333;
+}
+
+.dropdown-layer1 span:hover {
+    color: #df2229;
+}
+
+.dropdown-layer1 .last {
+    padding-bottom: 4px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.dropdown-layer1 .pl {
+    float: left;
+    width: 280px;
+}
+
+.dropdown-layer1 .pr,
+.dropdown-layer1 .hot_p {
+    float: left;
+}
+
+.dropdown-layer1 .hot_p {
+    width: 150px;
+    height: 36px;
+    font-size: 12px;
+    margin-top: 15px;
+}
+
+.dropdown-layer1 .hot_p:nth-child(1) {
+    border-right: 1px solid #e0e0e0;
+}
+
+.dropdown-layer1 .hot_p:nth-child(2) {
+    border-right: 1px solid #e0e0e0;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.dropdown-layer1 .hot_p:nth-child(3) {
+    padding-left: 10px;
+}
+
+.dropdown-layer1 .hot_p h5 {
+    color: #333;
+    line-height: 12px;
+    margin-bottom: 12px;
+}
+
+.dropdown-layer1 .hot_p p {
+    color: #666;
+    line-height: 12px;
+}
+
+.dropdown-layer1 .hot_p p:hover {
+    color: #df2229;
+}
+
+#serve:hover {
+    background-color: #fff;
+}
+
+#serve:hover div {
+    display: block;
+}
+
+/* 导航下拉框 */
+.fr .dropdown-layer2 {
+    position: absolute;
+    left: -777px;
+    /* left: -934px; */
+    top: 30px;
+    width: 1038px;
+    height: 137px;
+    z-index: 9;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 10px 20px;
+    font-size: 12px;
+    line-height: 32px;
+    display: none;
+    box-shadow: 0 4px 6px 0 rgba(0, 0, 0, .2);
+}
+
+.fr .dropdown-layer2 .col1,
+.fr .dropdown-layer2 .col2 {
+    float: left;
+    width: 250px;
+}
+
+.fr .dropdown-layer2 h4 {
+    color: #333;
+}
+
+.fr .dropdown-layer2 a {
+    margin-right: 24px;
+    color: #999;
+    white-space: nowrap;
+}
+
+.fr .dropdown-layer2 a:hover {
+    color: #df2229;
+}
+
+.fr .dropdown-layer2 .col2,
+.fr .dropdown-layer2 .col3 {
+    padding-left: 20px;
+    border-left: 1px solid #ccc;
+}
+
+.fr .dropdown-layer2 .col3 {
+    float: left;
+    line-height: 96px;
+}
+
+.fr .dropdown-layer2 .col3 a {
+    color: #df2229;
+    font-weight: bold;
+}
+
+.fr .dropdown-layer2 .zhongbiao {
+    margin-right: 35px;
+}
+#serve,#w_nav{
+  color: #333;
+}
+
+#w_nav:hover {
+    background-color: #fff;
+}
+
+#w_nav:hover div {
+    display: block;
+}
+
+/* 关于网站下拉框 */
+.fr .dropdown-layer7 {
+    position: absolute;
+    /* left: -28px; */
+    right: -28px;
+    width: 73px;
+    top: 30px;
+    display: none;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 5px 15px;
+    z-index: 9;    
+    font-size: 12px;
+     line-height: 32px;
+    box-shadow: 0 4px 6px 0 rgba(0, 0, 0, .2);
+}
+
+
+.dropdown-layer7 h4 {
+    color: #333;
+}
+
+.dropdown-layer7 p a{
+    color: #999;
+}
+
+.dropdown-layer7 a:hover {
+    color: #df2229;
+}
+
+
+.dropdown-layer7 span:hover {
+    color: #df2229;
+}
+
+.dropdown-layer7 .last {
+    padding-bottom: 4px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.dropdown-layer7 .pl {
+    float: left;
+    /* width: 280px; */
+}
+
+.dropdown-layer7 .pr,
+.dropdown-layer7 .hot_p {
+    float: left;
+}
+
+.dropdown-layer7 .hot_p {
+    width: 150px;
+    height: 36px;
+    font-size: 12px;
+    margin-top: 15px;
+}
+
+.dropdown-layer7 .hot_p:nth-child(1) {
+    border-right: 1px solid #e0e0e0;
+}
+
+.dropdown-layer7 .hot_p:nth-child(2) {
+    border-right: 1px solid #e0e0e0;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.dropdown-layer7 .hot_p:nth-child(3) {
+    padding-left: 10px;
+}
+
+.dropdown-layer7 .hot_p h5 {
+    color: #333;
+    line-height: 12px;
+    margin-bottom: 12px;
+}
+
+.dropdown-layer7 .hot_p p {
+    color: #666;
+    line-height: 12px;
+}
+
+.dropdown-layer7 .hot_p p:hover {
+    color: #df2229;
+}
+
+#aboutSite:hover {
+    background-color: #fff;
+}
+
+#aboutSite:hover div {
+    display: block;
+}
+
+
+
+/************* 搜索栏 ***************/
+#header {
+    background-color: #fff;
+    border-bottom: 1px solid #ccc;
+}
+
+#header .w {
+    position: relative;
+    z-index: 29;
+}
+
+#header h1 {
+    position: absolute;
+    left: 0;
+    top: 32px;
+    width: 262px;
+    height: 82px;
+    z-index: 1;
+}
+
+#search {
+    padding-left: 290px;
+    padding-top: 46px;
+    margin-bottom: 30px;
+}
+
+#search .form {
+    border: 2px solid #df2229;
+    width: 516px;
+    height: 38px;
+    position: relative;
+}
+
+#search .form p,
+#search .form1 p {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 426px;
+    height: 38px;
+    line-height: 38px;
+    color: #999;
+    padding-left: 10px;
+    background-color: #fff;
+    font-size: 14px;
+    display: none;
+}
+
+#search .form1 {
+    display: none;
+}
+
+#search .form1 .p1 {
+    left: 2px;
+    top: 2px;
+    width: 164px;
+}
+
+#search .form1 .p2 {
+    top: 2px;
+    left: 200px;
+    width: 208px;
+}
+
+#search input {
+    padding: 2px 17px;
+    border: 0;
+    width: 402px;
+    height: 34px;
+    line-height: 34px;
+    float: left;
+    font-size: 14px;
+    padding-left: 10px;
+}
+
+#search .button,
+#search .button1 {
+    border: none;
+    outline: none;
+    padding: 0;
+    background-color: #df2229;
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+    height: 38px;
+    line-height: 38px;
+    width: 80px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    cursor: pointer;
+}
+
+#search .link1,
+#search .link2 {
+    position: absolute;
+    right: 126px;
+    top: 49px;
+    width: 110px;
+    line-height: 34px;
+    text-align: center;
+    border: 1px solid #ccc;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+#search .link1 a,
+#search .link2 a {
+    color: #df2229;
+}
+
+#search .link1:hover,
+#search .link2:hover {
+    background-color: #df2229;
+}
+
+#search .link1:hover a,
+#search .link2:hover a {
+    color: #fff;
+}
+
+#search .link2 {
+    right: 0;
+}
+
+#search .form1 {
+    width: 520px;
+    height: 42px;
+    position: relative;
+    /* margin-left: 10px; */
+}
+
+.form1 #s_company {
+    width: 150px;
+    border: 2px solid #df2229;
+    margin-right: 10px;
+    background-color: #fff;
+}
+
+.form1 #s_number {
+    width: 206px;
+    border: 2px solid #df2229;
+    background-color: #fff;
+}
+
+.form1 .button1 {
+    height: 42px;
+}
+
+.form1 .form1_error {
+    position: absolute;
+    left: 0;
+    top: 42px;
+    width: 350px;
+    line-height: 24px;
+    padding-left: 20px;
+    font-size: 12px;
+    color: #ffac50;
+    background: url("https://cdn.chinabidding.cn/public/2020/img/zc_cont_icon.png") no-repeat 0 center;
+    display: none;
+}
+
+#hotwords {
+    position: absolute;
+    left: 291px;
+    top: 18px;
+    line-height: 28px;
+    padding-left: 10px;
+    font-size: 14px;
+    color: #666;
+    width: 510px;
+
+}
+
+#hotwords li {
+    float: left;
+    margin-right: 15px;
+    cursor: pointer !important;
+}
+
+#hotwords .last {
+    /* margin-left: 34px; */
+    cursor: auto;
+    margin: 0;
+    float: right;
+}
+
+#hotwords li:last-child span {
+    font-size: 16px;
+}
+
+#hotwords li span {
+    color: #df2229;
+}
+
+#hotwords .active {
+    color: #df2229;
+    font-weight: 800;
+    background: url("https://cdn.chinabidding.cn/public/2020/img/sy_top_sjx.png") no-repeat center bottom;
+}
+
+#header .c_nav h3 {
+    float: left;
+    width: 165px;
+    line-height: 40px;
+    background-color: #df2229;
+    padding-left: 55px;
+    color: #fff;
+    font-size: 18px;
+    position: relative;
+}
+
+#header .c_nav h3 i {
+    position: absolute;
+    left: 22px;
+    top: 14px;
+    width: 20px;
+    height: 14px;
+    background: url("https://cdn.chinabidding.cn/public/2020/img/sy_cont_icon.png") no-repeat 0 0;
+    background-size: 20px 14px;
+}
+
+#header .c_nav .c_col {
+    float: left;
+    line-height: 40px;
+    width: 860px;
+    color: #333;
+    font-size: 16px;
+    background-color: #fff;
+}
+
+.c_nav .c_col li {
+    float: left;
+    padding-left: 12px;
+    padding-right: 12px;
+    /* padding-left: 23px;
+    padding-right: 23px; */
+    position: relative;
+    z-index: 19;
+}
+
+.c_nav .c_col li a {
+    color: #333;
+    font-weight: 400;
+}
+
+.c_nav .c_col a:hover {
+    color: #df2229;
+}
+
+.c_nav .yeji:hover .dropdown-layer5 {
+    display: block;
+}
+
+.dropdown-layer5 {
+    position: absolute;
+    left: 0;
+    top: 34px;
+    width: 118px;
+    height: 127px;
+    background: url("https://cdn.chinabidding.cn/public/2020/img/sy_cont_bg_zb.png") no-repeat 0 0;
+    z-index: 9;
+    text-align: center;
+    display: none;
+    filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, .2));
+}
+
+.dropdown-layer5 .drop_unlogin p {
+    padding-top: 6px;
+    line-height: 58px;
+    height: 58px;
+    color: #333;
+    font-size: 14px;
+    background: url("https://cdn.chinabidding.cn/public/2020/img/sy_cont_line_zb.png") no-repeat 0 bottom;
+}
+
+.dropdown-layer5 .drop_unlogin,
+.dropdown-layer5 .drop_login {
+    line-height: 58px;
+    text-align: center;
+}
+
+.dropdown-layer5 .drop_unlogin a:nth-child(2) {
+    margin-right: 5px;
+}
+
+.dropdown-layer5 .drop_unlogin a:nth-child(3) {
+    margin-left: 5px;
+}
+
+.dropdown-layer5 a {
+    color: #333;
+    font-size: 16px;
+}
+
+.dropdown-layer5 a:hover {
+    color: #df2229;
+    background: url("https://cdn.chinabidding.cn/public/2020/img/dropdown_line1.png") no-repeat 0 bottom;
+}
+
+.dropdown-layer5 .drop_login {
+    display: none;
+}
+
+.dropdown-layer5 .drop_login p {
+    color: #333;
+    font-size: 14px;
+    height: 40px;
+    line-height: 40px;
+    color: #df2229;
+}
+
+.dropdown-layer5 .drop_login>p:first-child {
+    padding-top: 30px;
+    color: #333;
+}
+
+.c_nav .zzbiao:hover .dropdown-layer6 {
+    display: block;
+}
+
+.dropdown-layer6 {
+    position: absolute;
+    left: 13px;
+    top: 34px;
+    width: 118px;
+    height: 147px;
+    background: url("https://cdn.chinabidding.cn/public/2020/img/sy_cont_bg_zb1.png") no-repeat 0 0;
+    z-index: 9;
+    text-align: center;
+    display: none;
+    filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, .2));
+    padding-top: 14px;
+}
+
+.dropdown-layer6 a {
+    display: block;
+    line-height: 32px;
+    height: 32px;
+    text-align: center;
+    color: #333;
+    font-size: 14px;
+}
+
+/****************** 分类+广告 ******************/
+#banner {
+    padding-bottom: 30px;
+}
+
+#banner .sort_l {
+    float: left;
+    width: 220px;
+    height: 410px;
+    background: url("https://cdn.chinabidding.cn/public/2020/img/sy_cnav.png") no-repeat 0 0;
+    background-size: 220px 410px;
+    /* margin-top: -1px; */
+    background-color: #fff;
+}
+
+#banner .sort_r {
+    float: left;
+    width: 860px;
+}
+
+.sort_l .snav {
+    font-size: 16px;
+    height: 40px;
+    line-height: 40px;
+    color: #333;
+    position: relative;
+    z-index: 99;
+}
+
+.sort_l .snav li {
+    padding-left: 20px;
+}
+
+.sort_l .snav a {
+    color: #333;
+}
+
+.sort_r .col2 {
+    width: 860px;
+    padding-top: 10px;
+    height: 400px;
+}
+
+.sort_r .col2 .col20 {
+    width: 620px;
+    height: 400px;
+    margin-left: 10px;
+    margin-right: 10px;
+    float: left;
+    background-color: #fff;
+    position: relative;
+}
+
+
+.sort_r .col2 .video_box {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 620px;
+    height: 400px;
+    float: left;
+    background-color: #fff;
+
+}
+
+.sort_r .col2 .video_box .prism-big-play-btn {
+    left: 50% !important;
+    margin-left: -32px;
+    top: 45%;
+
+}
+
+.sort_r .col2 .video_box .video_close {
+    width: 30px;
+    height: 30px;
+    background-image: url(https://cdn.chinabidding.cn/public/2020/img/video_close.png);
+    background-size: 100%;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    cursor: pointer;
+    z-index: 20;
+
+}
+
+/* 未登录的样式 */
+.sort_r .col2 .col22 {
+    width: 190px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 10px;
+    height: 390px;
+    float: left;
+    background-color: #fff;
+}
+
+.col22 .user_inner {
+    margin-bottom: 10px;
+}
+
+.col22 .user_inner img,
+.col22 .user_txt {
+    float: left;
+}
+
+.col22 .user_inner img {
+    width: 40px;
+    height: 40px;
+}
+
+.col22 .user_txt h4 {
+    height: 18px;
+    line-height: 18px;
+    font-size: 14px;
+    padding-left: 10px;
+    margin-bottom: 5px;
+    color: #333;
+    font-weight: normal;
+}
+
+.col22 .user_txt p {
+    height: 18px;
+    line-height: 18px;
+    font-size: 12px;
+    padding-left: 10px;
+    color: #666;
+}
+
+.col22 .user_lr {
+    padding-bottom: 14px;
+    background: url("https://cdn.chinabidding.cn/public/2020/img/login_line.png") no-repeat 0 bottom;
+}
+
+.col22 .user_lr li {
+    float: left;
+    width: 40px;
+    text-align: center;
+    color: #333;
+    cursor: pointer;
+}
+
+.col22 .user_lr li a {
+    display: block;
+    padding-top: 32px;
+    color: #333;
+}
+
+.col22 .user_lr>li {
+    background: url("https://cdn.chinabidding.cn/public/2020/img/sy_cont_icon3.png?t=20210219a") no-repeat center 4px;
+    margin-right: 34px;
+    background-size: 26px 26px;
+}
+
+.col22 .user_lr>li+li {
+    background: url("https://cdn.chinabidding.cn/public/2020/img/sy_cont_icon4.png?t=20210219a") no-repeat center 4px;
+    margin-right: 34px;
+}
+
+.col22 .user_lr>li+li+li {
+    background: url("https://cdn.chinabidding.cn/public/2020/img/sy_cont_icon5(2).png?t=20210219a") no-repeat center 4px;
+    margin-right: 0;
+}
+
+.col22 .c_news {
+    padding-bottom: 12px;
+    padding-left: 5px;
+    background: url("https://cdn.chinabidding.cn/public/2020/img/login_line.png") no-repeat 0 bottom;
+}
+
+.col22 .c_news h4 {
+    line-height: 40px;
+    font-size: 14px;
+    color: #333;
+    padding-top: 6px;
+}
+
+.col22 .c_news p {
+    line-height: 24px;
+    font-size: 12px;
+    color: #666;
+    text-align: left;
+}
+
+.col22 .c_news a {
+    color: #333;
+}
+
+.col22 .c_news a:hover {
+    color: #df2229;
+}
+
+.col22 .c_code {
+    padding-top: 14px;
+}
+
+.col22 .code1,
+.col22 .code2 {
+    float: left;
+}
+
+.col22 .code1 {
+    margin-right: 24px;
+    margin-left: 10px;
+}
+
+.col22 img {
+    width: 70px;
+    height: 70px;
+}
+
+.col22 p {
+    line-height: 24px;
+    font-size: 12px;
+    color: #333;
+    text-align: center;
+}
+
+/* 登录后的样式 */
+.sort_r .col2 .col23 {
+    width: 190px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 120px;
+    height: 280px;
+    float: left;
+    background-color: #fff;
+    display: none;
+    position: relative;
+}
+
+.col23 .c_user {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 110px;
+    background: url("https://cdn.chinabidding.cn/public/2020/img/member_bg.png") no-repeat 0 0;
+    background-size: 100% 100%;
+    color: #714f1b;
+    margin-bottom: 15px;
+}
+
+.col23 .user_inner img {
+    float: left;
+    width: 38px;
+    height: 38px;
+    border-radius: 38px;
+    border: 1px solid #dda959;
+    margin-top: 10px;
+    margin-left: 15px;
+}
+
+.col23 .user_inner .user_txt {
+    float: left;
+    margin-bottom: 10px;
+}
+
+.col23 .user_txt h4 {
+    line-height: 18px;
+    font-size: 14px;
+    padding-left: 10px;
+    padding-top: 10px;
+    font-weight: normal;
+    display: inline-block;
+    width: 65px;
+}
+
+.col23 .user_txt .renew_btn {
+    display: inline-block;
+    background-color: #fff;
+    width: 72px;
+    height: 22px;
+    line-height: 22px;
+    text-align: center;
+    border-radius: normal;
+    border-radius: 11px;
+    font-size: 12px;
+    color: #dfb77f;
+    cursor: pointer;
+}
+
+.col23 .user_txt p {
+    color: #b38545;
+    line-height: 24px;
+    padding-left: 10px;
+    font-size: 14px;
+    width: 100px;
+}
+
+.c_user .date1,
+.c_user .date2 {
+    line-height: 16px;
+    font-size: 12px;
+    padding-left: 15px;
+}
+
+.col23 .c_news {
+    padding-bottom: 15px;
+    background: url("https://cdn.chinabidding.cn/public/2020/img/login_line.png") no-repeat 0 bottom;
+}
+
+/* .col23 .c_news img{
+    float: left;
+    width: 50px;
+    margin-left: 10px;
+} */
+.col23 .c_news img {
+    float: left;
+}
+
+.col23 .c_news .c_kefu {
+    float: left;
+    margin-left: 10px;
+    line-height: 20px;
+}
+
+.col23 .c_kefu p {
+    color: #999;
+    font-size: 14px;
+    max-width: 130px;
+    height: 20px;
+    overflow: hidden;
+}
+
+.col23 .c_kefu .kefu_name span {
+    color: #333;
+}
+
+.col23 .c_kefu .kefu_phone {
+    color: #df2229;
+    font-size: 16px;
+}
+
+.col23 .c_link {
+    background: url("https://cdn.chinabidding.cn/public/2020/img/login_line.png") no-repeat 0 bottom;
+    padding-top: 20px;
+    padding-bottom: 6px;
+}
+
+.col23 .c_link li {
+    float: left;
+    text-align: center;
+    padding: 0 5px;
+}
+
+.col23 .c_link li:nth-child(2) {
+    padding: 0 24px;
+}
+
+.col23 .c_link p {
+    font-size: 12px;
+    line-height: 28px;
+    color: #333;
+}
+
+.col23 .c_code {
+    padding-top: 20px;
+}
+
+.col23 .code1,
+.col23 .code2 {
+    float: left;
+}
+
+.col23 .code1 {
+    margin-right: 24px;
+    margin-left: 10px;
+}
+
+.col23 .code1 img,
+.col23 .code2 img {
+    width: 70px;
+    height: 70px;
+}
+
+.col23 .code1 p,
+.col23 .code2 p {
+    line-height: 24px;
+    font-size: 12px;
+    color: #333;
+    text-align: center;
+}
+/* 付费会员样式 */
+.sort_r .col2 .col23_pay {
+    width: 180px;
+    height: 390px;
+    background: #FFFFFF;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 10px;
+}
+.col23_pay .c_user {
+    width: 180px;
+    height: 110px;
+    background: url(https://cdn.chinabidding.cn/public/2020/img/sy_cont_bg_dengluh.png) no-repeat 0 0;
+    background-size: 180px 110px;
+    color: #714f1b;
+    position: static;
+    margin-bottom: 0;
+}
+.col23_pay .user_inner img{
+    float: left;
+    width: 38px;
+    height: 38px;
+    border-radius: 38px;
+    border: 1px solid #dda959;
+    margin-top: 10px;
+    margin-left: 15px;
+}
+.col23_pay .user_inner .user_txt{
+    float: left;
+    margin-bottom: 10px;
+}
+.col23_pay .user_txt h4{
+    line-height: 18px;
+    font-size: 14px;
+    padding-left: 10px;
+    padding-top: 10px;
+    font-weight: normal;
+}
+.col23_pay .user_txt p{
+    color:#b38545;
+    line-height: 24px;
+    padding-left: 10px;
+    font-size: 14px;
+    width: 100px;
+}
+.col23_pay .c_user .date1,.col23_pay .c_user .date2{
+    line-height: 16px;
+    font-size: 12px;
+    padding-left: 15px;
+}
+.col23_pay .c_kefu .kefu_phone {
+    color: #df2229;
+    font-size: 12px;
+}
+.col23_pay .c_news{
+    font-size: 12px;
+    height: 34px;
+    line-height: 34px;
+    background:url("https://cdn.chinabidding.cn/public/2020/img/login_line.png") no-repeat 0 bottom;
+}
+.col23_pay .c_news .news_box{
+    width: 180px;
+}
+
+.col23_pay .c_news .phone{
+    font-weight: bold;
+    color: #e0b450;
+}
+.col23_pay .c_link{
+    background:url("https://cdn.chinabidding.cn/public/2020/img/login_line.png") no-repeat 0 bottom;
+    padding-top: 12px;
+    padding-bottom: 4px;
+}
+.col23_pay .c_link li{
+    float: left;
+    text-align: center;
+    padding: 0 5px;
+}
+.col23_pay .c_link{
+    background:url("https://cdn.chinabidding.cn/public/2020/img/login_line.png") no-repeat 0 bottom;
+    padding-top: 12px;
+    padding-bottom: 4px;
+}
+.col23_pay .c_link li{
+    float: left;
+    text-align: center;
+    padding: 0 5px;
+}
+.col23_pay .c_link>li:first-child+li{
+    padding: 0 19px;
+}
+.col23_pay .c_link p{
+    font-size: 12px;
+    line-height: 28px;
+    color: #333;
+}
+.col23_pay .c_code {
+    padding-top: 10px;
+}
+
+.col23_pay .code1,
+.col23_pay .code2 {
+    float: left;
+}
+
+.col23_pay .code1 {
+    margin-right: 24px;
+    margin-left: 10px;
+}
+
+.col23_pay .code1 img,
+.col23_pay .code2 img {
+    width: 70px;
+    height: 70px;
+}
+
+.col23_pay .code1 p,
+.col23_pay .code2 p {
+    line-height: 24px;
+    font-size: 12px;
+    color: #333;
+    text-align: center;
+}
+
+.col23_pay .c_news{
+    margin-top: 9px;
+    padding-bottom: 12px;
+    font-size: 12px;
+    height: 78px;
+    background:url("https://cdn.chinabidding.cn/public/2020/img/login_line.png") no-repeat 0 bottom;
+}
+.col23_pay .c_news img {
+    float: left;
+    margin-top: 10px;
+}
+.col23_pay .c_news .c_kefu {
+    float: left;
+    margin-left: 10px;
+    line-height: 20px;
+}
+.col23_pay .c_news .c_kefu .kefu_caizhao {
+    font-size: 12px;
+    color:#DF222D;
+    line-height: 17px;
+    height: auto;
+}
+.col23_pay .c_kefu .kefu_name span {
+    color:#DF222D;
+}
+.col23_pay .c_news .c_kefu .kefu_zskf {
+    font-size: 12px;
+    color:#DF222D;
+    line-height: 17px;
+    font-weight: Bold;
+    max-width: 150px;
+}
+.col23_pay .c_news .c_kefu .kefu_caizhao .title1{
+    display: inline-block;
+    width: 60px;
+    color: #333333;
+    font-style: normal;
+}
+.col23_pay .c_news .c_kefu .kefu_zskf .title2{
+    display: inline-block;
+    width: 60px;
+    color: #999999;
+    font-weight: 400;
+}
+
+
+/* 右侧弹窗 */
+#banner .dropdown-layer3 {
+    position: absolute;
+    left: 220px;
+    top: -1px;
+    width: 800px;
+    height: 390px;
+    padding: 0 30px 20px 30px;
+    display: none;
+    z-index: 9;
+}
+
+.dropdown-layer3 .hotbox {
+    font-size: 16px;
+    line-height: 24px;
+    color: #333;
+    position: relative;
+    width: 580px;
+    margin-bottom: 10px;
+    margin-top: 20px;
+}
+
+.dropdown-layer3 h4,
+.dropdown-layer3 .hotkey {
+    float: left;
+}
+
+.dropdown-layer3 .hotkey {
+    margin-left: 20px;
+    background-color: #feeeef;
+    font-size: 12px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.dropdown-layer3 .hotkey a {
+    margin-left: 8px;
+    margin-right: 8px;
+    color: #df2229;
+}
+
+.dropdown-layer3 p {
+    width: 580px;
+    color: #333;
+    line-height: 28px;
+    font-size: 12px;
+}
+
+.dropdown-layer3 p a {
+    display: inline-block;
+    margin-right: 10px;
+    word-break: keep-all;
+}
+
+.dropdown-layer3 .hotboxs {
+    /* width: 610px; */
+    width: 0;
+    height: 411px;
+    padding-left: 30px;
+    background-color: #fff;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 39;
+}
+
+.dropdown-layer3 .hot_ad {
+    position: absolute;
+    /* left: 640px; */
+    left: 430px;
+    top: 0;
+    padding-top: 20px;
+    width: 210px;
+    height: 391px;
+    background-color: #fff;
+    z-index: 29;
+    display: none;
+}
+
+.dropdown-layer3 .hot_ad img {
+    width: 180px;
+    height: 110px;
+    margin-bottom: 20px;
+    border: 1px solid #CECECE;
+}
+
+#banner .sort_l li i {
+    float: right;
+    width: 9px;
+    height: 14px;
+    margin-right: 20px;
+    margin-top: 12px;
+    background: url("https://cdn.chinabidding.cn/public/2020/img/sy_cont_icon2.png") no-repeat 0 0;
+}
+
+#banner .sort_l li:hover {
+    background-color: #fedee1;
+    color: #df2229;
+    box-sizing: border-box;
+    border-left: 1px solid #df2229;
+    border-right: 1px solid #df2229;
+}
+
+/* #banner .sort_l li:hover .dropdown-layer3{
+    display: block;
+    box-shadow: 2px 2px 5px rgba(0,0,0,.2);
+} */
+#banner .sort_l li:hover i {
+    background: url("https://cdn.chinabidding.cn/public/2020/img/sy_cont_icon2_sel.png") no-repeat 0 0;
+}
+
+.dropdown-layer3 p a:hover {
+    color: #df2229;
+}
+
+#banner .left-btn,
+#banner .right-btn {
+    opacity: .6;
+}
+
+#banner .left-btn:hover,
+#banner .right-btn:hover {
+    opacity: 1;
+}
+
+/************ 信息推荐+热搜 ************/
+#recommend .rec_l,
+#recommend .rec_r {
+    float: left;
+    width: 505px;
+    height: 360px;
+    background-color: #fff;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+#recommend .rec_r {
+    position: relative;
+}
+
+#recommend .rec_l {
+    margin-right: 10px;
+}
+
+.rec_l h4,
+.rec_r h4 {
+    color: #333;
+    font-size: 22px;
+    line-height: 50px;
+}
+
+.rec_l h4 a,
+.rec_r h4 a {
+    color: #333;
+}
+
+.rec_l h4 span {
+    font-size: 14px;
+    color: #999;
+    font-weight: normal;
+    margin-left: 20px;
+}
+
+.rec_l h4 .rec_ml2 {
+    margin-left: 80px;
+}
+
+.rec_l h4 span a {
+    color: #999;
+}
+
+.rec_l h4 span a:hover {
+    color: #df2229;
+}
+
+.rec_l .list li {
+    font-size: 14px;
+    color: #333;
+    line-height: 34px;
+    padding-left: 20px;
+    background: url("https://cdn.chinabidding.cn/public/2020/img/dot.png") no-repeat 0 center;
+    position: relative;
+}
+
+.rec_l .list li a {
+    color: #333;
+}
+
+.rec_l .list span {
+    float: right;
+    color: #999;
+    font-size: 12px;
+}
+
+.rec_l .list li i {
+    position: absolute;
+    right: 0;
+    top: 7px;
+    width: 15px;
+    height: 19px;
+    background: url("https://cdn.chinabidding.cn/public/2020/img/sy_cont_icon_huore.png") no-repeat 0 0;
+    background-size: 15px 19px;
+}
+
+.rec_l .list a:hover {
+    color: #df2229;
+}
+
+.rec_l h4 .recb,
+.rec_r h4 a {
+    padding-right: 30px;
+    background: url("https://cdn.chinabidding.cn/public/2020/font/sy_cont_icon_gd.svg") no-repeat right center;
+    background-size: 16px 16px;
+    cursor: pointer;
+}
+
+.rec_l h4 .recb:hover,
+.rec_r h4 a:hover {
+    background: url("https://cdn.chinabidding.cn/public/2020/font/sy_cont_icon_gd_hover.svg") no-repeat right center;
+    background-size: 16px 16px;
+}
+
+.rec_r .com_l {
+    float: left;
+    width: 220px;
+    margin-right: 54px;
+}
+
+.rec_r .com_l li {
+    margin-bottom: 24px;
+    height: 42px;
+}
+
+.com_l .coml_l {
+    float: left;
+    margin-top: 2px;
+}
+
+.com_l .coml_r {
+    float: left;
+    margin-left: 10px;
+}
+
+.com_l .coml_r a,
+.com_l .coml_r p {
+    display: block;
+    line-height: 16px;
+    font-size: 14px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.com_l .coml_r p {
+    margin-bottom: 0;
+}
+
+.rec_r .com_r {
+    float: left;
+    width: 220px;
+}
+
+.rec_r .com_r li {
+    margin-bottom: 29px;
+}
+
+.rec_r .com_r i {
+    font-style: normal;
+    background-color: #b8b8b8;
+    display: inline-block;
+    width: 14px;
+    line-height: 14px;
+    margin-right: 10px;
+    font-size: 10px;
+    color: #fff;
+    text-align: center;
+}
+
+.rec_r .com_r p {
+    line-height: 16px;
+    font-size: 14px;
+    text-align: left;
+    color: #333;
+}
+
+.rec_r .com_more {
+    position: absolute;
+    left: 50%;
+    bottom: 14px;
+    width: 68px;
+    line-height: 20px;
+    color: #999;
+    font-size: 14px;
+    margin-left: -34px;
+    cursor: pointer;
+}
+
+/* 热门活动 */
+#sale {
+    display: none;
+}
+
+#sale h4 {
+    line-height: 64px;
+    text-align: center;
+    color: #333;
+    font-size: 24px;
+    background: url("https://cdn.chinabidding.cn/public/2020/img/sy_cont_ima.png") no-repeat 446px center;
+    ;
+}
+
+#sale .sale_list {
+    overflow: hidden;
+}
+
+/* 4等分宽度260，3等分340，2等分525，1等分1070 */
+#sale .sale_list li {
+    float: left;
+    width: 260px;
+    height: 180px;
+    padding: 0 5px;
+}
+
+#sale .sale_list li:hover {
+    opacity: 0.8;
+}
+
+/* 热门频道 */
+#channel h4 {
+    line-height: 64px;
+    text-align: center;
+    color: #333;
+    font-size: 24px;
+    background: url("https://cdn.chinabidding.cn/public/2020/img/sy_cont_ima.png") no-repeat 446px center;
+    ;
+}
+
+#channel .channel_list li {
+    float: left;
+    cursor: pointer;
+}
+
+#channel .channel_list li a {
+    display: block;
+    width: 260px;
+    height: 180px;
+    margin: 0 5px;
+}
+
+#channel .channel_box {
+    width: 100%;
+    height: 180px;
+    overflow: hidden;
+}
+
+.channel_list li h5 {
+    padding: 20px 20px 26px 20px;
+    color: #fff;
+    font-size: 22px;
+    text-align: right;
+}
+
+.channel_list li img {
+    margin-left: 28px;
+}
+
+#channel .channel_list li:hover {
+    opacity: 0.8;
+}
+
+/*************** 热门产品 ****************/
+#product h4 {
+    line-height: 64px;
+    text-align: center;
+    color: #333;
+    font-size: 24px;
+    background: url("https://cdn.chinabidding.cn/public/2020/img/sy_cont_ima.png") no-repeat 446px center;
+    ;
+}
+
+#product .pro_list li {
+    width: 168px;
+    height: 322px;
+    float: left;
+    margin-right: 12px;
+    padding: 18px;
+    background-color: #fff;
+    border: 1px solid #fff;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+#product .pro_list li a {
+    display: block;
+}
+
+#product .pro_act {
+    margin-right: 0 !important;
+}
+
+.pro_list li img {
+    width: 168px;
+    height: 168px;
+}
+
+.pro_list li h5 {
+    font-size: 18px;
+    color: #333;
+    font-weight: normal;
+    text-align: center;
+    line-height: 58px;
+}
+
+.pro_list li .space {
+    width: 50px;
+    height: 4px;
+    background-color: #333;
+    margin-left: 56px;
+    margin-bottom: 34px;
+}
+
+.pro_list li h6 {
+    font-weight: normal;
+    width: 90px;
+    line-height: 32px;
+    background-color: #f0f0f0;
+    font-size: 14px;
+    text-align: center;
+    border-radius: 16px;
+    margin-left: 39px;
+    color: #333;
+}
+
+#product .pro_list li:hover {
+    border: 1px solid #df2229;
+}
+
+.pro_list li .dropdown-layer4 {
+    position: absolute;
+    left: 0;
+    bottom: -115px;
+    width: 204px;
+    height: 95px;
+    background-color: #df2229;
+    /* color: rgba(255,255,255,.8); */
+    color: #fff;
+    font-size: 14px;
+    line-height: 30px;
+    text-align: center;
+    padding-top: 20px;
+    transition: 0.5s;
+    z-index: 29;
+}
+
+#product .pro_list .pro_act:hover .dropdown-layer4 {
+    bottom: 0;
+}
+
+.dropdown-layer4 .unlogin p {
+    margin-top: 10px;
+    line-height: 40px;
+}
+
+.dropdown-layer4 .drop_l {
+    width: 102px;
+    float: left;
+    border-radius: 51px;
+    font-size: 16px;
+    color: #fff;
+    font-weight: bold;
+}
+
+.pro_list li .dropdown-layer4 .drop_l:hover {
+    background: url("https://cdn.chinabidding.cn/public/2020/img/drop_line1.png") no-repeat center 28px;
+}
+
+.dropdown-layer4 .unlogin {
+    display: none;
+    color: #fff;
+}
+
+.dropdown-layer4 .islogin p {
+    color: #fff;
+    line-height: 40px;
+}
+
+/* 猜你喜欢 */
+#like {
+    margin-bottom: 10px;
+}
+
+#like h4 {
+    line-height: 64px;
+    text-align: center;
+    color: #333;
+    font-size: 24px;
+    background: url("https://cdn.chinabidding.cn/public/2020/img/sy_cont_ima.png") no-repeat 446px center;
+    ;
+}
+
+#like .l_col1 {
+    float: left;
+    width: 510px;
+    height: 360px;
+    background-color: #fff;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-right: 10px;
+}
+
+#like .l_col2,
+#like .l_col3 {
+    float: left;
+    width: 260px;
+    height: 360px;
+    background: url("https://cdn.chinabidding.cn/public/2020/img/sy_cont_bg4.png") no-repeat 0 0;
+    background-size: 260px 360px;
+}
+
+#like .l_col2 {
+    margin-right: 10px;
+}
+
+.l_col1 h5 {
+    font-size: 22px;
+    line-height: 50px;
+    background-color: #fff;
+}
+
+.l_col1 h5 a {
+    padding-right: 30px;
+    background: url("https://cdn.chinabidding.cn/public/2020/img/sy_cont_icon6_nomal.png") no-repeat right center;
+    background-size: 16px;
+    cursor: pointer;
+    color: #333;
+}
+
+.l_col1 h5 a:hover {
+    background: url("https://cdn.chinabidding.cn/public/2020/img/sy_cont_icon6_sel.png") no-repeat right center;
+    background-size: 16px;
+}
+
+.l_col1 .list li {
+    font-size: 14px;
+    color: #333;
+    height: 34px;
+    line-height: 34px;
+    padding-left: 20px;
+    background: url("https://cdn.chinabidding.cn/public/2020/img/dot.png") no-repeat 0 center;
+    position: relative;
+}
+
+.l_col1 .list li a {
+    color: #333;
+}
+
+.l_col1 .list span {
+    position: absolute;
+    right: 0;
+    top: 0;
+    color: #999;
+    height: 34px;
+    line-height: 34px;
+    font-size: 12px;
+}
+
+.l_col1 .list a:hover {
+    color: #df2229;
+}
+
+.l_col1 .list_l {
+    float: left;
+    width: 138px;
+    height: 90px;
+    margin-right: 16px;
+}
+
+.l_col1 .list_r {
+    float: left;
+    width: 350px;
+    height: 90px;
+}
+
+.l_col1 .l_p1 {
+    font-size: 16px;
+    line-height: 16px;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.l_col1 .l_p2 {
+    font-size: 14px;
+    line-height: 24px;
+    color: #888;
+    height: 48px;
+    margin-bottom: 5px;
+    overflow: hidden;
+}
+
+.l_col1 .l_p3 {
+    font-size: 14px;
+    line-height: 16px;
+    color: #ccc;
+}
+
+.l_col1 .list>li:first-child {
+    background: none;
+    padding-left: 0;
+    margin-bottom: 10px;
+    height: 90px;
+}
+
+.l_col2 h5,
+.l_col3 h5 {
+    line-height: 50px;
+    text-align: left;
+    color: #333;
+    font-size: 22px;
+    padding-left: 15px;
+}
+
+.l_col2 li,
+.l_col3 li {
+    float: left;
+    color: #333;
+    line-height: 30px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-left: 8px;
+    margin-right: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    white-space: nowrap;
+}
+
+.l_col2 li a,
+.l_col3 li a {
+    color: #333;
+}
+
+.l_col2 li:hover,
+.l_col3 li:hover {
+    color: #df2229;
+    border: 1px solid #df2229;
+}
+
+/* 国信信息+地区导航 */
+#news {
+    padding-bottom: 10px;
+}
+
+#news .n_col1 {
+    float: left;
+    width: 780px;
+    height: 360px;
+    background-color: #fff;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-right: 10px;
+}
+
+.n_col1 h5 {
+    font-size: 22px;
+    line-height: 50px;
+    background-color: #fff;
+}
+
+.n_col1 h5 a {
+    color: #333;
+    padding-right: 30px;
+    background: url("https://cdn.chinabidding.cn/public/2020/img/sy_cont_icon6_nomal.png") no-repeat right center;
+    cursor: pointer;
+}
+
+.n_col1 h5 a:hover {
+    background: url("https://cdn.chinabidding.cn/public/2020/img/sy_cont_icon6_sel.png") no-repeat right center;
+}
+
+.news_l {
+    float: left;
+    width: 250px;
+    margin-right: 20px;
+}
+
+.news_l img {
+    margin-bottom: 10px;
+}
+
+.news_r li {
+    font-size: 14px;
+    color: #333;
+    height: 34px;
+    line-height: 34px;
+    padding-left: 20px;
+    background: url("https://cdn.chinabidding.cn/public/2020/img/dot.png") no-repeat 0 center;
+    position: relative;
+}
+
+.news_r li a {
+    color: #333;
+}
+
+.news_r {
+    float: left;
+    width: 500px;
+    margin-top: -10px;
+}
+
+.news_r li span {
+    position: absolute;
+    right: 0;
+    top: 0;
+    color: #999;
+    line-height: 34px;
+    font-size: 12px;
+}
+
+.news_r li a:hover {
+    color: #df2229;
+}
+
+#news .n_col2 {
+    float: left;
+    width: 230px;
+    height: 360px;
+    background-color: #fff;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.n_col2 h5 {
+    color: #333;
+    font-size: 22px;
+    line-height: 50px;
+    background-color: #fff;
+}
+
+.n_col2 .geo {
+    margin-bottom: 6px;
+}
+
+.n_col2 .geo h6,
+.n_col2 .geo p {
+    float: left;
+    font-size: 14px;
+    line-height: 28px;
+}
+
+.n_col2 .geo h6 {
+    width: 40px;
+    color: #333;
+    font-weight: normal;
+}
+
+.n_col2 .geo p {
+    width: 190px;
+    color: #666;
+}
+
+.n_col2 .geo a {
+    float: left;
+    color: #333;
+    padding-left: 5px;
+    padding-right: 5px;
+    word-break: keep-all;
+}
+
+.n_col2 .geo a:hover {
+    color: #df2229;
+}
+
+/* 中国采购与招标网独家发布 */
+#release {
+    padding-bottom: 10px;
+}
+
+#release h5 {
+    font-size: 22px;
+    line-height: 50px;
+    background-color: #fff;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+#release h5 a {
+    color: #333;
+    padding-right: 30px;
+    background: url("https://cdn.chinabidding.cn/public/2020/img/sy_cont_icon6_nomal.png") no-repeat right center;
+    background-size: 16px;
+    cursor: pointer;
+
+}
+
+#release .release_r h5 a {
+
+    padding-left: 14px;
+}
+
+#release h5 a:hover {
+    background: url("https://cdn.chinabidding.cn/public/2020/img/sy_cont_icon6_sel.png") no-repeat right center;
+    background-size: 16px;
+}
+
+#release .release_l {
+    float: left;
+    width: 540px;
+    height: 354px;
+}
+
+.r_col1 {
+    height: 304px;
+    background-color: #fff;
+}
+
+.r_col1>ul {
+    width: 505px;
+    float: left;
+    padding-left: 15px;
+    padding-right: 20px;
+    background-color: #fff;
+}
+
+.r_col1>ul+ul {
+    width: 505px;
+    float: left;
+    padding-left: 20px;
+    padding-right: 15px;
+    background-color: #fff;
+}
+
+.r_col1 .list li {
+    font-size: 14px;
+    color: #333;
+    line-height: 34px;
+    height: 34px;
+    padding-left: 20px;
+    background: url("https://cdn.chinabidding.cn/public/2020/img/dot.png") no-repeat 0 center;
+    position: relative;
+}
+
+.r_col1 .list li a {
+    color: #333;
+}
+
+.r_col1 .list span {
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: #999;
+    font-size: 12px;
+}
+
+.r_col1 .list a:hover {
+    color: #df2229;
+}
+
+.r_col1 .list_l {
+    float: left;
+    width: 138px;
+    height: 90px;
+    margin-right: 16px;
+}
+
+.r_col1 .list_r {
+    float: left;
+    width: 350px;
+    height: 90px;
+}
+
+.r_col1 .l_p1 {
+    font-size: 16px;
+    line-height: 16px;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.r_col1 .l_p2 {
+    font-size: 14px;
+    line-height: 24px;
+    height: 48px;
+    color: #888;
+    margin-bottom: 5px;
+}
+
+.r_col1 .l_p3 {
+    font-size: 14px;
+    line-height: 16px;
+    color: #ccc;
+}
+
+.r_col1 .list>li:first-child {
+    background: none;
+    padding-left: 0;
+    margin-bottom: 10px;
+    height: 90px;
+}
+
+/* 合作伙伴 */
+#c_foot {
+    padding-bottom: 10px;
+}
+
+#c_foot .w {
+    background-color: #fff;
+}
+
+#c_foot h4 {
+    color: #333;
+    font-size: 22px;
+    line-height: 50px;
+    background-color: #fff;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+#c_foot ul {
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 10px;
+}
+
+#c_foot li {
+    font-size: 14px;
+    line-height: 28px;
+    word-break: keep-all;
+    margin-bottom: 10px;
+}
+
+#c_foot li a {
+    color: #333;
+}
+
+#c_foot li a:hover {
+    color: #df2229;
+}
+
+/* 版权信息 */
+#c_right {
+  font-size: 14px;
+  border-top: 2px solid #df2229;
+}
+
+#c_right .w {
+    color: #333;
+    font-size: 14px;
+    text-align: center;
+}
+
+#c_right h6 {
+    line-height: 48px;
+    font-weight: normal;
+}
+
+#c_right h6 a {
+    font-size: 14px;
+    color: #333;
+}
+
+#c_right p {
+    line-height: 24px;
+    font-weight: normal;
+}
+
+#c_right p a {
+    color: #333;
+}
+
+#c_right p .rec {
+    padding-left: 24px;
+    background: url("https://cdn.chinabidding.cn/public/2020/img/rec.png") no-repeat 2px 0;
+}
+
+#c_right p span {
+    margin-right: 10px;
+}
+
+
+/* 底部快速注册 */
+.fast_box {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .5);
+    z-index: 110;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#88000000', endColorstr='#88000000');
+}
+
+
+
+.fastlog {
+    width: 360px;
+    height: 466px;
+    margin-left: -495px;
+    margin-top: -250px;
+    padding-left: 614px;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    bottom: 0;
+    background: url("https://cdn.chinabidding.cn/public/2020/img/fast_bg.png") no-repeat 0 0;
+    z-index: 100;
+}
+
+
+
+.close {
+    position: absolute;
+    right: 14px;
+    top: 20px;
+   
+}
+
+.contract {
+    width: 310px;
+    text-align: center;
+    position: absolute;
+    /* right: -38px; */
+    bottom: 65px;
+    line-height: 32px;
+    font-size: 12px;
+    color: #FFBCBC;
+}
+
+.contract .cont1 {
+    float: left;
+    width: 264px;
+}
+
+.contract .cont2 {
+    float: left;
+    width: 310px;
+}
+
+.contract .cont2 i {
+    font-style: normal;
+    color: #fff;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.login-form {
+    /* position: absolute;
+    right: 4px;
+    top: 11px; */
+    width: 100%;
+    padding-top: 27px;
+    /* height: 140px; */
+}
+
+.login-form h1 {
+    line-height: 24px;
+    font-size: 22px;
+    padding-right: 50px;
+    text-align: center;
+    color: #fff;
+}
+
+.login-form input {
+    border: 2px solid #fff;
+    background-color: #fff;
+    height: 28px;
+    line-height: 28px;
+    font-size: 14px;
+    padding: 0 10px;
+    /* border-radius: 4px; */
+    color: #333;
+}
+
+.msg_error {
+    height: 20px;
+    width: 100%;
+    /* position: absolute; */
+    position: relative;
+    display: none;
+}
+
+.msg_error p {
+    line-height: 18px;
+    /* background-color: #ffc4ca; */
+    font-size: 12px;
+    color: #FCB800;
+    padding: 0 15px 0 18px;
+    float: left;
+}
+
+.msg_error i {
+    width: 12px;
+    height: 12px;
+    position: absolute;
+    left: 1px;
+    top: 50%;
+    margin-top: -6px;
+    background: url("https://cdn.chinabidding.cn/public/2020/img/zctc_zhuyi.png");
+}
+
+.log_col1,
+.log_col2,
+.log_col3,
+.log_col4,
+.log_col5,
+.log_col6 {
+    float: left;
+    width: 310px;
+    height: 32px;
+    margin-right: 50px;
+    margin-top: 20px;
+    position: relative;
+}
+
+.login-form .error_color input {
+    border: 2px solid #FFAE00;
+    color: #FFAE00;
+}
+
+.log_col5 {
+    margin-right: 16px;
+}
+
+#lxname,
+#companyName {
+    width: 286px;
+}
+
+.login-form .log_p {
+    position: absolute;
+    left: 2px;
+    top: 3px;
+    color: #999;
+    height: 28px;
+    line-height: 28px;
+    padding-left: 10px;
+    width: 298px;
+    background-color: #fff;
+    display: none;
+}
+
+.log_col2 .log_p {
+    width: 100px;
+}
+
+.log_col3 .log_p {
+    width: 130px;
+}
+
+.log_col4 {
+    padding-top: 0;
+}
+
+.log_col5 .log_p {
+    width: 200px;
+}
+
+#loginname {
+    width: 286px;
+}
+#loginpassword {
+    width: 286px;
+}
+
+
+#yzm {
+    width: 174px;
+}
+
+#yzmImage {
+    position: absolute;
+    cursor: pointer;
+    right: 1px;
+    top: 0px;
+    *top: 1px;
+    height: 32px;
+    width: 108px;
+    background-color: #fff;
+}
+
+#yzmcode {
+    width: 216px;
+    padding-right: 80px;
+}
+
+.log_col3 {
+    position: relative;
+}
+
+#getCode {
+    position: absolute;
+    top: 0px;
+    cursor: pointer;
+    right: 20px;
+    line-height: 32px;
+    height: 32px;
+    color: #DB2831;
+}
+#getCodeDX {
+    position: absolute;
+    top: 0px;
+    cursor: pointer;
+    right: 20px;
+    line-height: 32px;
+    height: 32px;
+    color: #DB2831;
+}
+
+.log_col3 .notclick {
+    pointer-events: none;
+}
+
+.log_col4 div {
+    float: left;
+}
+
+.login-btn {
+    width: 100%;
+    line-height: 36px;
+    color: #fff;
+    background-color: #FFB400;
+    border-radius: 4px;
+    text-align: center;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.login-wx {
+    line-height: 20px;
+    color: #fff;
+    font-size: 14px;
+    margin-bottom: 15px;
+    padding-left: 26px;
+    background: url("https://cdn.chinabidding.cn/public/2020/img/dl_cont_image.png") no-repeat 0 0;
+    background-size: 20px;
+    position: absolute;
+    bottom: 0;
+    left: 590px;
+}
+
+.login-wx a {
+    color: #fff;
+}
+
+.to_login {
+    line-height: 20px;
+    color: #fff;
+    font-size: 14px;
+    margin-bottom: 25px;
+    padding-left: 26px;
+    background-size: 20px;
+    position: absolute;
+    bottom: 0;
+    right: 53px;
+}
+
+.to_login a {
+    color: #fff;
+}
+
+.to_login a span {
+    color: #FFDE00;
+}
+
+/* 二维码打开 */
+.shadow {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #333;
+    z-index: 109;
+    display: none;
+}
+
+.wxcode {
+    width: 282px;
+    height: 386px;
+    background-color: #fff;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 70px;
+}
+
+.wxcode .close1 {
+    height: 30px;
+    width: 282px;
+    padding-bottom: 30px;
+    background-color: #333;
+    text-align: center;
+}
+
+.wxcode .close1 img {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+
+.wxcode h4 {
+    text-align: center;
+    font-weight: normal;
+    color: #fff;
+    background-color: #333;
+    font-size: 20px;
+    padding-bottom: 18px;
+}
+
+.wxcode .wx_box {
+    width: 282px;
+    height: 282px;
+    margin-bottom: 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+.wx_box .reload_wx {
+    width: 282px;
+    height: 282px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: rgba(0, 0, 0, .7);
+    color: #eee;
+    font-size: 16px;
+    line-height: 282px;
+    text-align: center;
+    cursor: pointer;
+    display: none;
+}
+
+.wx_box .reload_wx:hover {
+    background-color: rgba(0, 0, 0, .5);
+}
+
+.wxcode img {
+    width: 282px;
+    height: 282px;
+}
+
+.wxcode .info {
+    width: 270px;
+    height: 40px;
+    padding: 6px;
+    text-align: center;
+    line-height: 20px;
+    color: #fff;
+    background-color: #191919;
+    border-radius: 40px;
+}
+
+/* 新手 */
+.handBox {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    background-color: rgba(0, 0, 0, .4);
+    display: none;
+    z-index: 109;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#88000000', endColorstr='#88000000');
+    width: 100%;
+}
+
+.handCon {
+    width: 550px;
+    height: 424px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -275px;
+    margin-top: -212px;
+    background: url("https://cdn.chinabidding.cn/public/2020/img/cloud/sy_cont_bg_tanchu.png") no-repeat 0 0;
+    background-size: 550px 424px;
+}
+
+.handCon .register_now {
+    position: absolute;
+    right: 60px;
+    bottom: 50px;
+    background-color: #db2831;
+    font-size: 12px;
+    width: 96px;
+    height: 28px;
+    line-height: 28px;
+    text-align: center;
+    color: #fff;
+}
+
+.handCon .hand_close {
+    position: absolute;
+    right: 40px;
+    top: 20px;
+    width: 30px;
+    height: 30px;
+    background: url("https://cdn.chinabidding.cn/public/2020/img/yuanbo/ybtc_right_icon.png") no-repeat 8px 8px;
+    background-size: 14px 14px;
+    cursor: pointer;
+}
+
+.handCon h4 {
+    font-size: 20px;
+    color: #333;
+    line-height: 72px;
+    text-align: center;
+    padding-top: 24px;
+}
+
+.handCon .handwd {
+    display: none;
+}
+
+.handCon .ask {
+    padding-left: 80px;
+    margin-bottom: 5px;
+    padding-right: 50px;
+    position: relative;
+}
+
+.handCon .ask .img_ask {
+    position: absolute;
+    left: 45px;
+    top: 4px;
+    width: 24px;
+    height: 24px;
+}
+
+.handCon .ask .p1 {
+    font-size: 16px;
+    color: #333;
+    line-height: 26px;
+}
+
+.handCon .ask .p2 {
+    font-size: 14px;
+    color: #999;
+    line-height: 24px;
+}
+
+.handCon .ans {
+    padding-left: 80px;
+    padding-right: 36px;
+    padding-top: 8px;
+    position: relative;
+}
+
+.handCon .ans .img_ans {
+    position: absolute;
+    left: 45px;
+    top: 15px;
+    *top: 30px;
+    width: 24px;
+    height: 24px;
+}
+
+.handCon .ans .p1,
+.handCon .ans .p2 {
+    font-size: 14px;
+    color: #666;
+    text-align: justify;
+    line-height: 38px;
+}
+
+.handCon .ans .p2,
+.handCon .ans .p3 {
+    line-height: 22px;
+    padding-left: 14px;
+}
+
+.handCon .ans .p2 {
+    position: relative;
+}
+
+.handCon .ans .p2 i {
+    position: absolute;
+    left: 0;
+    top: 9px;
+    width: 4px;
+    height: 4px;
+    border-radius: 4px;
+    background-color: #666;
+}
+
+.handCon .ans .p3 {
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+
+.handCon .ans .mb {
+    margin-bottom: 0;
+}
+
+.handCon .ans .p4,
+.handCon .ans .p5 {
+    font-size: 14px;
+    color: #666;
+    text-align: justify;
+    line-height: 24px;
+}
+
+.handCon .ans:nth-child(2) .p4,
+.handCon .ans:nth-child(3) .p4 {
+    padding-top: 6px;
+}
+
+.handCon .pt {
+    padding-top: 6px;
+}
+
+.handCon .ans .p5 {
+    padding-left: 28px;
+    position: relative;
+}
+
+.handCon .ans .p5 img {
+    position: absolute;
+    left: 0;
+    top: 4px;
+    width: 16px;
+    height: 16px;
+}
+
+.handCon .ans .pt img {
+    top: 10px;
+}
+
+.sort_r .col20 .left-btn,
+.sort_r .col20 .right-btn {
+    display: none;
+    *display: block;
+}
+
+.sort_r .col20:hover .left-btn,
+.sort_r .col20:hover .right-btn {
+    display: block;
+}
+
+/* 隐私协议201217 */
+.agreeshadow {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    background-color: rgba(0, 0, 0, .4);
+    z-index: 110;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#88000000', endColorstr='#88000000');
+    width: 100%;
+    display: none;
+}
+
+.agreeshadow .agreement {
+    width: 940px;
+    height: 600px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -470px;
+    margin-top: -300px;
+}
+
+.agreeshadow .closei {
+    position: absolute;
+    right: 10px;
+    top: 8px;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    cursor: pointer;
+    color: #999;
+}
+
+/* 搜索热词展示210124 */
+#header .hots {
+    position: absolute;
+    left: 290px;
+    top: 92px;
+    width: 520px;
+    height: 20px;
+    line-height: 20px;
+    overflow: hidden;
+    z-index: 2;
+}
+
+#header .hots a {
+    float: left;
+    font-size: 12px;
+    color: #333;
+    margin-right: 10px;
+    word-break: keep-all;
+}
+
+#header .hots a:hover {
+    color: #df2229;
+}
+
+
+.fx_grid_c1 {
+    width: 620px;
+    margin: 0 auto
+}
+
+.fx_banner {
+    background: #f0f0f0;
+    width: 620px;
+    overflow: hidden;
+    position: relative;
+    display: none;
+}
+
+.fx_banner_img {
+    width: 620px
+}
+
+.fx_banner_img li {
+    float: left;
+    height: 400px;
+    width: 620px;
+    position: relative;
+}
+
+.fx_banner_common {
+    position: relative;
+    z-index: 9
+}
+
+.fx_banner_common a {
+    z-index: 9;
+    position: absolute;
+    top: 50%;
+    margin-top: -230px;
+    width: 40px;
+    height: 60px;
+    cursor: pointer;
+    display: block;
+    overflow: hidden;
+    opacity: .5;
+    filter: alpha(opacity=50);
+}
+
+.fx_banner_pre {
+    left: 0;
+    background: url("https://cdn.chinabidding.cn/public/2020/img/sy_cont_icon52.png");
+}
+
+.fx_banner_next {
+    right: 0;
+    background: url("https://cdn.chinabidding.cn/public/2020/img/sy_cont_icon51.png");
+}
+
+.fx_banner_pre:hover,
+.fx_banner_next:hover {
+    opacity: 1;
+    filter: alpha(opacity=100)
+}
+
+.fx_banner .control {
+    width: 200px;
+    position: absolute;
+    top: 370px;
+    left: 50%;
+    margin-left: -100px;
+    text-align: center
+}
+
+.fx_banner .control li {
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+    margin: 0 5px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    background: #fff;
+    opacity: .5;
+    filter: alpha(opacity=50);
+}
+
+.fx_banner .control li a {
+    display: none
+}
+
+.fx_banner .control li.current {
+    background: #fff;
+    opacity: 1;
+    filter: alpha(opacity=100);
+}
+
+/* 新增推荐渠道样式 */
+#recommend_n h4 {
+    line-height: 64px;
+    text-align: center;
+    color: #333;
+    font-size: 24px;
+    background: url(https://cdn.chinabidding.cn/public/2020/img/sy_cont_ima.png) no-repeat 446px center;
+  }
+  #recommend_n .head {
+    height: 40px;
+    line-height: 40px;
+    color: #fff;
+    margin-bottom: 10px;
+    padding: 0 20px;
+  }
+  #recommend_n .head img {
+    margin-top: 7px;
+    margin-right: 15px;
+  }
+  #recommend_n .head h1 {
+    font-size: 18px;
+    float: left;
+  }
+  #recommend_n .head .right {
+    font-size: 12px;
+  }
+  #recommend_n .free,
+  #recommend_n .special,
+  #recommend_n .companyList {
+    float: left;
+    padding-bottom: 10px;
+    background-color: #fff;
+    height: 230px;
+  }
+  #recommend_n .free .left,
+  #recommend_n .special .left,
+  #recommend_n .companyList .left {
+    float: left;
+  }
+  /* #recommend_n .free .right, */
+  #recommend_n .special .right,
+  #recommend_n .companyList .right {
+    float: right;
+  }
+  #recommend_n .free li,
+  #recommend_n .special li,
+  #recommend_n .companyList li {
+    padding: 0 20px;
+    height: 34px;
+    line-height: 34px;
+    font-size: 14px;
+    color: #333;
+  }
+  #recommend_n .free .item .left,
+  #recommend_n .special .item .left,
+  #recommend_n .companyList .item .left {
+    color: #FF2D0B;
+    border: 1px solid #FF2D0B;
+    font-size: 11px;
+    height: 14px;
+    line-height: 14px;
+    margin-top: 10px;
+    padding: 0 5px;
+    margin-right: 10px;
+  }
+  #recommend_n .free .head,
+  #recommend_n .special .head,
+  #recommend_n .companyList .head {
+    height: 40px;
+    line-height: 40px;
+    color: #fff;
+    margin-bottom: 10px;
+  }
+  #recommend_n .free .head img,
+  #recommend_n .special .head img,
+  #recommend_n .companyList .head img {
+    margin-top: 7px;
+    margin-right: 15px;
+  }
+  #recommend_n .free .head h1,
+  #recommend_n .special .head h1,
+  #recommend_n .companyList .head h1 {
+    font-size: 18px;
+    float: left;
+  }
+  #recommend_n .free .head .right,
+  #recommend_n .special .head .right,
+  #recommend_n .companyList .head .right {
+    font-size: 12px;
+  }
+  #recommend_n .free {
+    width: 500px;
+  }
+  #recommend_n .free .fSwiper,#recommend_n .special .fSwiper {
+    overflow: hidden;
+    height: 170px;
+  }
+
+  #recommend_n .free .fSwiper li {
+    width: 460px;
+    /* float: left; */
+  }
+
+  #recommend_n .free .head {
+    background-color: #FF8831;
+  }
+  #recommend_n .free .item .content {
+    float: left;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 340px;
+  }
+  #recommend_n .free .item .right {
+    color: #FF2D0B;
+  }
+  #recommend_n .free .item .right span {
+    display: inline-block;
+    width: 40px;
+    text-align: right;
+  }
+  #recommend_n .free .item .right img {
+    width: 15px;
+    height: 15px;
+    margin-right: 5px;
+    margin-bottom: 1px;
+  }
+  #recommend_n .special {
+    width: 280px;
+    margin: 0 10px;
+  }
+  #recommend_n .special .head {
+    background-color: #3395FB;
+  }
+  #recommend_n .companyList {
+    width: 280px;
+  }
+  #recommend_n .companyList .head {
+    background-color: #FD5B4E;
+  }
+  #recommend_n .special .item,
+  #recommend_n .companyList .item {
+    position: relative;
+    padding-left: 45px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  #recommend_n .special .item .left,
+  #recommend_n .companyList .item .left {
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    margin: 0;
+    padding: 0 4px;
+  }
+  #recommend_n .special .item{
+    padding-left: 50px;
+  }
+  #recommend_n .special .item .left{
+    top: 5px;
+    width: 24px;
+    height: 24px;
+    background: url('https://cdn.chinabidding.cn/public/2020/img/index/qiye.png') no-repeat 0 0;
+    background-size: 24px;
+    border: none;
+  }
+
+/* 防汛样式 */
+/* #header{
+  height: 230px;
+  background: url("https://cdn.chinabidding.cn/public/2020/img/activity/fxzt_bg_image.png") no-repeat center;
+  background-size: cover;
+}
+#header .communistwrap{
+  height: 230px;
+  background: url("https://cdn.chinabidding.cn/public/2020/img/activity/fxzt_cont_image.png") no-repeat center;
+  background-size: 1280px 230px;
+}
+#search .form{
+  background-color: #fff;
+}
+#search .link1,#search .link2{
+  background-color: #fff;
+  top: 121px;
+}
+#search{
+  padding-top: 118px;
+}
+#header h1{
+  top: 104px;
+}
+#hotwords{
+  top: 90px;
+}
+#header .hots{
+  top: 162px;
+}
+#header .rescue{
+  position: absolute;
+  right: -100px;
+  top: 0;
+  width: 1200px;
+  height: 90px;
+} */
+
+
+
+ /* 发布信息入驻弹框提示 */
+ #agencyReg_module{
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 9999;
+  background:rgba(0,0,0,0.5);
+  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#7f000000,endColorstr=#7f000000);
+}
+
+#agencyReg_module>.agencyReg_frame{
+  width: 458px;
+  height: 320px;
+  background:#fff;
+  /* position: absolute;
+  top: 100px;
+  left: 50%;
+  transform: translateX(-50%); */
+  margin: 0 auto;
+  margin-top: 200px;
+  border-radius: 6px;
+  color: #333;
+  padding: 0 20px;
+}
+
+#agencyReg_module>.agencyReg_frame>.title{
+  font-size: 20px;
+  font-weight: 400;
+  height: 50px;
+  line-height: 50px;
+  border-bottom: 1px solid #DCDEE2;
+  position: relative;
+  color: #000;
+}
+#agencyReg_module>.agencyReg_frame>.title>.agencyReg_moduleClose{
+  position: absolute;
+  right: 14px;
+  cursor: pointer;
+}
+#agencyReg_module>.agencyReg_frame>.title>img{
+  width: 30px;
+  height: 30px;
+  vertical-align: -8px;
+  margin-right: 5px;
+}
+
+#agencyReg_module>.agencyReg_frame>.content{
+  padding-top: 50px;
+}
+#agencyReg_module>.agencyReg_frame>.content>.text1{
+  font-size: 20px;
+  line-height: 33px;
+  text-align: center;
+  padding-top: 14px;
+  padding-bottom: 24px;
+}
+#agencyReg_module>.agencyReg_frame>.content>.text2{
+  font-size: 16px;
+  color: #333;
+  text-align: center;
+  padding-bottom: 50px;
+  line-height: 1.5;
+}
+
+#agencyReg_module>.agencyReg_frame>.btnGroup{
+  /* width: 283px; */
+  /* margin: 0 auto;
+  overflow: hidden; */
+}
+
+#agencyReg_module>.agencyReg_frame>.btnGroup>.btn{
+  width: 127px;
+  height: 48px;
+  line-height: 48px;
+  background-color: #fff;
+  color: #333;
+  border-radius: 2px 2px 2px 2px;
+  border: 1px solid #DCDEE2;
+  margin: 0 auto;
+  cursor: pointer;
+  text-align: center;
+  font-size: 18px;
+}
+
+#agencyReg_module>.agencyReg_frame>.btnGroup>.btn>a{
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+}
+
+#agencyReg_module>.agencyReg_frame>.btnGroup>.active{
+  color: #fff;
+  background-color: #5489FF;
+}
+
+

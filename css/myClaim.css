@@ -1,0 +1,138 @@
+.preheat{
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  z-index: 109;
+  background-color:rgba(0, 0, 0, 0.6);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#88000000',endColorstr='#88000000');
+}
+.preheat .membership_box{
+  width: 700px;
+  height: 500px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 119;
+  transform: translate(-50%, -50%);
+  margin-left:0;
+  margin-top:-12px;
+  text-align: center;
+}
+.preheat .closebtn {
+  position: absolute;
+  right: 10%;
+  top: -25px;
+  cursor: pointer;
+}
+.preheat .yure {
+  height: 500px;
+}
+.preheat .linquBtn {
+  bottom: 16px;
+  left: 50%;
+  transform: translateX(-51%);
+  position: absolute;
+  width: 265px;
+  height: 75px;
+  cursor: pointer;
+}
+
+
+.myClaim{
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  z-index: 109;
+  background-color:rgba(0, 0, 0, 0.6);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#88000000',endColorstr='#88000000');
+}
+.myClaim .membership_box{
+  width: 700px;
+  height: 500px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 119;
+  transform: translate(-50%, -50%);
+  margin-left:0;
+  margin-top:-12px;
+  text-align: center;
+}
+.myClaim .closebtn {
+  position: absolute;
+  right: 12%;
+  top: 24px;
+  cursor: pointer;
+}
+.myClaim .claim_bg {
+  margin: 0 auto;
+  width: 564px;
+  height: 499px;
+  background: url(/public/2020/img/homeClaim/wdlq_bg.png);
+  padding-top: 1px;
+}
+.myClaim .claim_menu {
+  margin-top: 85px;
+  margin-left: 8px;
+  width: 548px;
+  height: 43px;
+  border-bottom: 2px solid #E5F5FF;
+  display: flex;
+}
+.myClaim .claim_menu li {
+  flex: 1;
+  font-weight: 500;
+  font-size: 22px;
+  cursor: pointer;
+}
+.myClaim .claim_menu .active {
+  font-weight: bold;
+  color: rgb(15, 93, 224)
+}
+.myClaim .claim_menu .active span {
+  display: inline-block;
+  border-bottom: 4px solid rgb(15, 93, 224);
+  padding-bottom: 12px;
+}
+.myClaim .claim_tab {
+  margin: 35px 40px 0 40px;
+  text-align: left;
+  font-size: 14px;
+  color: #333;
+}
+.myClaim .claim_tab .claim_explain p {
+  margin: 0.9em 0;
+  line-height: 19px;
+}
+.myClaim .claim_tab>div{
+  display: none;
+}
+.myClaim .claim_tab>div:nth-child(1){
+  display: block;
+}
+.myClaim .claim_tab .virtual_goods .goods_head {
+  height: 50px;
+  background: #F2FAFF;
+  line-height: 50px;
+  font-weight: bold;
+}
+.myClaim .claim_tab .virtual_goods .goodName {
+  margin-left: 30px;
+  display: inline-block;
+  width: 290px;
+}
+
+.myClaim .claim_tab .virtual_goods .goods_list{
+  height: 250px;
+  overflow: auto;
+}
+
+.myClaim .claim_tab .virtual_goods .goods_list li {
+  height: 50px;
+  line-height: 50px;
+}
+.myClaim .claim_tab .virtual_goods .goods_list li:nth-child(2n) {
+  background: #F2FAFF;
+}

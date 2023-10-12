@@ -1,0 +1,958 @@
+/********** pc端reset初始化样式 ***********/
+@charset "utf-8";
+body,p,h1,h2,h3,h4,h5,h6,ul,ol,dl,dd,input,textarea{padding: 0;margin: 0;}
+a{text-decoration: none;color: inherit;}
+li{list-style: none;}
+img{vertical-align: middle;border: 0;}
+input,textarea{outline: none;background: none;}
+input,textarea,select{color: inherit;font-size: inherit;font-family: inherit;}
+textarea{resize:none;}
+input[type="button"],input[type="submit"],input[type="reset"]{cursor: pointer;}
+/************** 公共样式 ****************/
+html{font-family: "微软雅黑","宋体",Arial;font-size: 12px;color: #666;}
+.w{width: 1080px;margin-left: auto;margin-right: auto;}
+.sl{white-space: nowrap;overflow: hidden;text-overflow:ellipsis;}
+.cl:after{content: "";display: block;clear: both;height:0;overflow:hidden;visibility: hidden;}
+/* .cl:after,.cl{content:"after"; after:"after"} */
+.cl{zoom: 1;}
+.clear,.clearfix{zoom:1}
+.clear:after,.clearfix:after{content:' ';display:block;clear:both;height:0;visibility:hidden}
+.hidden,.hide{display:none}
+/* a:hover{color: #4DB8EF;} */
+input::-webkit-input-placeholder { /* WebKit browsers 适配谷歌 */
+    font-size: 14px;
+    color: #999;
+}
+input:-moz-placeholder { /* Mozilla Firefox 4 to 18 适配火狐 */
+    color: #999;
+    font-size: 14px;
+}
+input::-moz-placeholder { /* Mozilla Firefox 19+ 适配火狐 */
+    color: #999;
+    font-size: 14px;
+}
+input:-ms-input-placeholder { /* Internet Explorer 10+  适配ie*/
+    color: #999;
+    font-size: 14px;
+}
+#c_right .bidding,#c_right .sbiao{
+    display: none;
+}
+
+/* 预加载 */
+#preload-01 {
+  background: url(https://cdn.chinabidding.cn/public/2020/img/fast_bg.png) no-repeat -9999px -9999px;
+}
+
+/* 顶部样式修改 */
+ ._logout {
+   margin-left: 10px;
+ }
+
+
+/* 共用注册成功样式 */
+.regshadow,.logshadowz,.forgetshadow{
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    background-color: rgba(0,0,0,.4);
+    display: none;
+    z-index: 109;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#88000000',endColorstr='#88000000');
+    width:100%;
+}
+
+.regshadow {
+  z-index: 112;
+}
+
+.regshadow .regtxt,.logshadowz .regtxt,.forgetshadow .regtxt{
+    width: 640px;
+    height: 320px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -320px;
+    margin-top: -160px;
+    background-color: #fff;
+    border-radius: 12px;
+    font-size: 14px;
+    color: #333;
+}
+.regshadow .success,.logshadowz .success,.forgetshadow .success{
+    position: absolute;
+    left: 130px;
+    top: 90px;
+    width: 66px;
+    height: 66px;
+}
+.regshadow .closei,.logshadowz .closei,.forgetshadow .closei{
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    font-size: 18px;
+    color: #999;
+    cursor: pointer;
+}
+.regshadow .regtxt h4,.logshadowz .regtxt h4,.forgetshadow .regtxt h4{
+    line-height: 40px;
+    font-size: 18px;
+    margin-left: 210px;
+    padding-top: 90px;
+}
+.regshadow .regtxt .p1,.logshadowz .regtxt .p1,.forgetshadow .regtxt .p1{
+    line-height: 20px;
+    margin-left: 210px;
+}
+.regshadow .regtxt .p2,.logshadowz .regtxt .p2{
+    color: #999;
+    line-height: 20px;
+    margin-left: 210px;
+    padding-top: 30px;
+}
+.regshadow .regtxt .p2 a,.logshadowz .regtxt .p2 a{
+    color: #DB2831;
+}
+.regshadow .regtxt .p2 i,.logshadowz .regtxt .p2 i{
+    font-style: normal;
+}
+
+.logshadowz .success,.forgetshadow .success{
+  left: 85px;
+}
+.logshadowz .regtxt .p1{
+  width: 336px;
+}
+.logshadowz .regtxt .p2{
+  padding-top: 10px;
+  margin-bottom: 50px;
+}
+.logshadowz .regtxt h4,.logshadowz .regtxt .p1,.logshadowz .regtxt .p2,
+.forgetshadow .regtxt h4,.forgetshadow .regtxt .p1{
+  margin-left: 170px;
+}
+.logshadowz .p1 a,.logshadowz .p2 span{
+  color: #DB2831;
+}
+.logshadowz .btns a{
+  float: left;
+  width: 100px;
+  height: 36px;
+  line-height: 36px;
+  text-align: center;
+  background-color: #DB2831;
+  color: #fff;
+  border-radius: 6px;
+  margin-left: 206px;
+}
+.logshadowz .btns>a:first-child+a{
+  color: #333;
+  background-color: #fff;
+  width: 98px;
+  height: 34px;
+  border: 1px solid #e2e0e0;
+  margin-left: 30px;
+}
+
+.forgetshadow .regtxt{
+  height: 280px;
+}
+.forgetshadow .fpass{
+  position: absolute;
+  left: 258px;
+  bottom: 56px;
+  width: 100px;
+  height: 36px;
+  line-height: 36px;
+  text-align: center;
+  color: #fff;
+  background-color: #DB2831;
+  border-radius: 6px;
+}
+
+/* 协议样式 */
+#treaty{
+  width: 940px;
+  height: 600px;
+  background-color: #fff;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 8px;
+  overflow: hidden;
+}
+#treaty h2{
+  font-size: 16px;
+  line-height: 50px;
+  height: 50px;
+  padding-left: 13px;
+  color: #333;
+  background-color: #f2f2f2;
+}
+#treaty .content{
+  width: 900px;
+  height: 530px;
+  padding: 0 20px;
+  margin: 10px 0;
+  overflow-y: scroll;
+}
+#treaty .content h4{
+  font-weight: 540;
+  font-size: 14px;
+  color: #000;
+  line-height: 28px;
+}
+#treaty .content p{
+  font-size: 13px;
+  color: #333;
+  line-height: 23px;
+}
+#treaty .content p span{
+  font-weight: lighter;
+  display: inline-block;
+  width: 32px;
+  text-align: center;
+}
+#treaty .content .p1{
+  margin-bottom: 6px;
+}
+#treaty .content .p2{
+  color: #666;
+  line-height: 20px;
+}
+
+/* 电销促销 */
+.spring_box {
+  /* display: none; */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, .5);
+  z-index: 110;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#88000000', endColorstr='#88000000');
+}
+
+.spring_box .spring {
+  width: 600px;
+  height: 450px;
+  margin-left: -300px;
+  margin-top: -250px;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  background: url("https://cdn.chinabidding.cn/public/2020/img/spring_pop.png") no-repeat 0 0;
+  cursor: pointer;
+  z-index: 100;
+}
+
+
+.spring .spring_close {
+  width: 30px;
+  height: 30px;
+  background: url(https://cdn.chinabidding.cn/public/2020/img/video_close.png) center no-repeat;
+  background: none\9;
+  filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='https://cdn.chinabidding.cn/public/2020/img/video_close.png', sizingMethod='scale');
+  background-size: 100% 100%;
+  position: absolute;
+  left: 50%;
+  margin-left: -15px;
+  bottom: -30px;
+  /* cursor: pointer; */
+  z-index: 20;
+}
+
+.spring p {
+  color: #333;
+  font-size: 22px;
+  color: #fff;
+  position: absolute;
+  bottom: 20px;
+  padding-left: 255px;
+}
+
+.spring p .phone {
+  margin-left: 8px;
+}
+
+#c_right .gov{
+  color: #333;
+}
+#c_right .gov1{
+  color: #fff;
+}
+#c_right .gov:hover,#c_right .gov1:hover{
+  color: #df2229;
+}
+
+
+/* 右侧悬浮窗 */
+.elevator {
+  width: 58px;
+  position: fixed;
+  left: 50%;
+  top: 199px;
+  z-index: 19;
+  /* display: none; */
+}
+
+.elevator.quick_reg {
+  margin-top: -270px;
+  top: 50%;
+}
+
+.elevator_list {
+  width: 58px;
+  font-size: 14px;
+  line-height: 18px;
+  color: #333;
+  background-color: #fff;
+}
+
+.elevator_list .space {
+  padding-top: 0;
+  padding-bottom: 0;
+  height: 1px;
+  background: url("https://cdn.chinabidding.cn/public/2020/img/sy_right_image.png") no-repeat center top;
+}
+
+.elevator_list li .go_rev {
+  display: block;
+  width: 28px;
+  height: 24px;
+  background: url("https://cdn.chinabidding.cn/public/2020/img/sy_right_icon.png") no-repeat center center;
+  background-size: 18px;
+}
+
+.elevator_list li a {
+  display: block;
+  color: #333;
+  padding: 9px 15px;
+}
+
+.elevator_list li .go_top {
+  display: block;
+  width: 28px;
+  height: 24px;
+  background: url("https://cdn.chinabidding.cn/public/2020/img/sy_right_icon_norm2.png") no-repeat center center;
+  background-size: 18px;
+}
+
+.e_left .elevator_list>li:first-child a {
+  background-color: #4b90ee;
+  color: #fff;
+}
+
+.e_left .elevator_list li:hover a {
+  background-color: #df2229;
+  color: #fff;
+}
+
+.e_left .elevator_list>li:first-child:hover a {
+  background-color: #4b90ee;
+}
+
+.elevator_list>li:first-child+li+li+li+li+li+li+li:hover .go_rev {
+  background: url("https://cdn.chinabidding.cn/public/2020/img/sy_right_icon4.png") no-repeat center center;
+}
+
+.elevator_list>li:first-child+li+li+li+li+li+li+li+li+li:hover .go_top {
+  background: url("https://cdn.chinabidding.cn/public/2020/img/sy_right_icon_norm5.png") no-repeat center center;
+}
+
+.e_left {
+  margin-left: -618px;
+  top: 220px;
+}
+
+.e_left .elevator_list>li:first-child a {
+  background-color: #fff;
+  color: #333;
+}
+
+.elevator.e_right {
+  /*background: url(https://cdn.chinabidding.cn/public/2020/img/zxkf_g.gif) no-repeat;*/
+  background: url(https://cdn.chinabidding.cn/public/2020/img/zxkf_g2.gif) no-repeat;
+  background-size: 100% 100%;
+  margin-left: 545px;
+  width: 90px;
+  height: 223px;
+  padding-top: 146px;
+  /* background-color: #fff; */
+}
+
+.elevator.e_right .elevator_list {
+  width: 66px;
+  margin-left: 12px;
+  height: 120px;
+  /*margin-top: 5px;*/
+  /* background: rgba(0, 0, 0, .4); */
+  background: none;
+}
+
+.elevator.e_right .elevator_list li {
+  line-height: 16px;
+}
+
+.elevator.e_right .elevator_list li a {
+  line-height: 13px;
+  padding: 6px 12px;
+  color: #333;
+  font-size: 12px;
+  letter-spacing: 1px;
+  margin-bottom: 1px;
+  text-align: center;
+}
+.elevator.e_right .elevator_list li a:hover{
+  color: #fb893f;
+  background-color: #ffe5d3;
+}
+
+.e_right .elevator_tip {
+  display: none;
+  position: absolute;
+  width: 119px;
+  padding-left: 44px;
+  padding-right: 23px;
+  height: 65px;
+  padding-top: 7px;
+  left: -190px;
+  top: 194px;
+  background: url(https://cdn.chinabidding.cn/public/2020/img/sy_cont_zskfbg.png) no-repeat center;
+}
+
+.e_right .elevator_tip .before {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  top: 10px;
+  background: url(https://cdn.chinabidding.cn/public/2020/img/sy_cont_kf.png) no-repeat center;
+  background-size: 100% 100%;
+  left: 14px;
+
+}
+
+.e_right .elevator_tip .after {
+  position: absolute;
+  top: 7px;
+  right: 17px;
+  background: url(https://cdn.chinabidding.cn/public/2020/img/sy_cont_kfgb.png) no-repeat center;
+  background-size: 100% 100%;
+  width: 13px;
+  height: 13px;
+  cursor: pointer;
+}
+
+.e_right .elevator_tip .contentkf .p1 {
+  color: #333;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.e_right .elevator_tip .contentkf .p2,
+.e_right .elevator_tip .contentkf .p3 {
+  color: #666;
+  font-size: 12px;
+  line-height: 20px;
+}
+
+.e_right .requ{
+  width: 44px;
+  height: 44px;
+  position: absolute;
+  left: 23px;
+  bottom: 12px;
+  opacity: 0;
+}
+
+/* 20100603清凉一下 rx */
+#cool_box,#autumn_box {
+  /* display: none; */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, .5);
+  z-index: 110;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#88000000', endColorstr='#88000000');
+}
+
+#cool_box .cool,#autumn_box .autumn {
+  width: 600px;
+  height: 450px;
+  margin-left: -300px;
+  margin-top: -250px;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  cursor: pointer;
+  z-index: 100;
+}
+#cool_box .cool{
+  background: url("https://cdn.chinabidding.cn/public/2020/img/activity/coolsale.png") no-repeat 0 0;
+}
+#autumn_box .autumn {
+  width: 700px;
+  height: 500px;
+  margin-left: -350px;
+  /*margin-top: -210px;*/
+  background: url("/public/2020/img/activity/nzfl.png") no-repeat 0 0;
+}
+
+#cool_box p{
+  position: absolute;
+  left: 200px;
+  top: 359px;
+  font-size: 27px;
+  font-weight: 600;
+  color: #58f7f7;
+  text-shadow:0 0 6px #09016c;
+  /* text-shadow: #09016c 4px 0 0, #09016c 0 4px 0, #09016c -4px 0 0, #09016c 0 -4px 0; */
+}
+#autumn_box .phone{
+  margin-left: 15px;
+  /*font-size: 28px;*/
+}
+#autumn_box p{
+  position: absolute;
+  left: 248px;
+  top: 356px;
+  font-size: 40px;
+  font-weight: normal;
+  width: 400px;
+  text-align: left;
+  color: #FBEDA2;
+  /*text-shadow: 2px 2px #fecf94;*/
+}
+
+#cool_box .cool_close,#autumn_box .cool_close {
+  width: 30px;
+  height: 30px;
+  background: url("https://cdn.chinabidding.cn/public/2020/img/video_close.png") center no-repeat;
+  background: none\9;
+  filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='https://cdn.chinabidding.cn/public/2020/img/video_close.png', sizingMethod='scale');
+  background-size: 100% 100%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-top: -280px;
+  margin-left: 300px;
+  cursor: pointer;
+  z-index: 20;
+}
+#autumn_box .cool_close {
+  margin-left: 335px;
+  margin-top: -265px;
+}
+
+/* 搜索历史共享样式 */
+.historywrap {
+  position: absolute;
+  left: -2px;
+  top: 40px;
+  width: 438px;
+  line-height: 30px;
+  background-color: #fff;
+  z-index: 99;
+  box-shadow: 0 3px 5px rgba(0,0,0,.5);
+  display: none;
+}
+.historywrap ul li{
+  position:relative;
+}
+.historywrap ul li i{
+  position:absolute;
+  right:0;
+  top:3px;
+  width:20px;
+  height:20px;
+  text-align:center;
+  line-height:20px;
+  font-style:normal;
+  cursor:pointer;
+  font-size:16px;
+}
+.historywrap ul a{
+  display: block;
+  padding: 0 12px;
+  font-size: 14px;
+  color: #666;
+}
+.historywrap li:hover{
+  background-color: #fbe9ea;
+}
+.historywrap .clearh{
+  height: 30px;
+  background: #f7f7f7;
+}
+.historywrap .clearh a{
+  float: right;
+  font-size: 14px;
+  color: #666;
+  margin-right: 12px;
+}
+.historywrap .clearh a:hover{
+  color: #DB2831;
+}
+
+
+/* 招标分类改版css */
+
+.hot_channel {
+  width: 100%;
+  height: 19px;
+  font-family: Microsoft YaHei;
+  font-weight: 400;
+  line-height: 19px;
+  color: #999999;
+  opacity: 1;
+  margin: 20px 0 10px 0;
+}
+
+.list1{
+display: flex;
+width: 100%;
+}
+.list1 .list_p{
+display: flex;
+flex-direction: column;
+align-items: center;
+text-align: center;
+justify-content: center;
+width: 76px;
+height: 80px;
+background: #FFE6E9;
+opacity: 1;
+border-radius: 0px;
+margin-right: 10px ;
+flex-shrink: 0;
+}
+.list1 .list_p p{
+width: 48px;
+height: 19px;
+word-break: break-all;
+margin-top: 5px;
+font-size: 12px;
+font-family: Microsoft YaHei;
+font-weight: 400;
+line-height: 14px;
+color: #FF9095;
+opacity: 1;
+}
+
+/* 2022四月营销活动弹出 */
+.containter{
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  z-index: 109;
+  background-color:rgba(0, 0, 0, 0.6);
+  display: none;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#88000000',endColorstr='#88000000');
+}
+.containter_box{
+  width: 100%;
+  height: 100%;
+  /*background: url(https://cdn.chinabidding.cn/public/2020/img/syhd_tc_bg8.png) no-repeat center;*/
+  background: url(/public/2020/img/newYear/tc230227.png) no-repeat center;
+}
+.containter_box{
+  width: 700px;
+  height: 560px;
+  position: absolute;
+  top: 46%;
+  left: 50%;
+  z-index: 119;
+  /*transform: translate(-50%,-50%);*/
+  margin-left:-340px;
+  margin-top:-240px;
+}
+.closebtn {
+  position: absolute;
+  right: -20px;
+  top: 20px;
+  cursor: pointer;
+}
+.meta {
+  position: absolute;
+  width: 450px;
+  /*bottom: 79px;*/
+  top: 349px;
+  left: 278px;
+  font-size: 28px;
+  font-weight: 600;
+  color: #FCFF00;
+  /*text-shadow: 2px 2px #fecf94;*/
+  font-family: "微软雅黑", "宋体", Arial;
+  line-height: normal;
+  /*防止其他页面影响*/
+  margin: auto;
+  text-align: center;
+}
+.meta img {
+  margin-right: 8px;
+  margin-bottom: 3px;
+}
+.meta .phone, .meta .name {
+  /*color: #FCFE00;*/
+}
+.meta .phone {
+  margin-left: 12px;
+}
+
+.customerWxImg {
+  position: absolute;
+  margin: 0;
+  background-size: 100% 100%;
+  width: 90px;
+  height: 90px;
+  top: 417px;
+  left: 296px;
+}
+
+/*-------------------专属客服弹出样式-------------------------*/
+.membership{
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  z-index: 109;
+  background-color:rgba(0, 0, 0, 0.6);
+  display: none;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#88000000',endColorstr='#88000000');
+}
+.membership .membership_box{
+  width: 100%;
+  height: 100%;
+  /*background: url(https://cdn.chinabidding.cn/public/2020/img/syhd_tc_bg6.png) no-repeat center;*/
+  background: url(https://cdn.chinabidding.cn/public/2020/img/newYear/img_tcbg.png) no-repeat center;
+}
+.membership .membership_box{
+  width: 451px;
+  height: 518px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 119;
+  transform: translate(-50%, -50%);
+  margin-left:0;
+  margin-top:-12px;
+}
+.membership .closebtn {
+  position: absolute;
+  right: -33px;
+  top: -3px;
+  cursor: pointer;
+}
+.membership .meta {
+  position: absolute;
+  width: 450px;
+  top: 227px;
+  left: 0;
+  line-height: normal;
+  margin: auto;
+  text-align: center;
+  font-size: 19px;
+  font-family: Microsoft YaHei-Regular, Microsoft YaHei;
+  font-weight: 400;
+  color: #414049;
+}
+.membership .meta .phone,.membership .meta .name {
+  color: #414049;
+  font-size: 22px;
+  font-weight: Bold;
+}
+.membership .meta .phone {
+  margin-left: 8px;
+  color: #F66247;
+}
+.membership .startDate {
+  position: absolute;
+  top: 169px;
+  left: 46px;
+  font-size: 22px;
+  font-family: Microsoft YaHei-Regular, Microsoft YaHei;
+  font-weight: 400;
+  color: #EFDDBB;
+}
+.membership .endDate {
+  position: absolute;
+  top: 169px;
+  left: 255px;
+  font-size: 22px;
+  font-family: Microsoft YaHei-Regular, Microsoft YaHei;
+  font-weight: 400;
+  color: #EFDDBB;
+}
+.membership .startDate>span,.membership .endDate>span {
+  font-size: 15px;
+}
+.membership .jiantou {
+  position: absolute;
+  top: 169px;
+  left: 215px;
+  font-size: 22px;
+  color: #313242;
+}
+.membership .wechatBox {
+  width: 100%;
+  position: absolute;
+  top: 274px;
+  text-align: center;
+}
+.membership .wxImg {
+  width: 104px;
+  height: 104px;
+}
+.membership .wxSao {
+  margin: 5px 0 0 0;
+  font-size: 12px;
+  font-family: Microsoft YaHei-Regular, Microsoft YaHei;
+  font-weight: 400;
+  color: #A8926C;
+}
+.membership .reminder {
+  margin: 6px 40px 0 40px;
+  font-size: 16px;
+  font-family: Microsoft YaHei-Regular, Microsoft YaHei;
+  font-weight: 400;
+  color: #333333;
+  line-height: 26px;
+  text-align: left;
+}
+.membership .closeToday {
+  position: absolute;
+  bottom: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 14px;
+  font-family: Microsoft YaHei-Regular, Microsoft YaHei;
+  font-weight: 400;
+  color: #EAE6E6;
+  cursor: pointer;
+}
+
+/*-------收费用户弹出提示--------*/
+.chargeTanc{
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  z-index: 109;
+  background-color:rgba(0, 0, 0, 0.6);
+  display: none;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#88000000',endColorstr='#88000000');
+}
+.chargeTanc .containter_box1{
+  width: 664px;
+  height: 430px;
+  position: absolute;
+  background: #fff;
+  border-radius: 15px 15px 15px 15px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  text-align: center;
+}
+.chargeTanc .tanc_close {
+  position: absolute;
+  right: 11px;
+  top: 6px;
+  z-index: 999;
+  cursor: pointer;
+}
+.chargeTanc .tancHeader{
+  width: 664px;
+  height: 122px;
+  background: url('/public/2020/img/homeCharge/img1.png');
+  position: relative;
+  top: -43px;
+  margin-bottom: -60px;
+}
+.chargeTanc .tancContent {
+  width: 551px;
+  height: 340px;
+  background: url('/public/2020/img/homeCharge/img2.png');
+  background-position: bottom;
+  padding: 0 65px 0 48px;
+  text-align: left;
+}
+.chargeTanc h2{
+  margin: 0;
+  margin-top: 35px;
+  margin-bottom: 20px;
+  font-size: 22px;
+  font-family: Microsoft YaHei UI-Bold, Microsoft YaHei UI;
+  font-weight: bold;
+  color: #333333;
+}
+.chargeTanc p{
+  font-size: 14px;
+  font-family: Microsoft YaHei UI-Regular, Microsoft YaHei UI;
+  font-weight: 400;
+  color: #333333;
+  line-height: 24px;
+}
+.chargeTanc .tzHeader {
+  line-height: 35px;
+}
+.chargeTanc .tanc_close_today {
+  width: 108px;
+  height: 38px;
+  border-radius: 24px;
+  border: 1px solid #CCCCCC;
+  font-size: 14px;
+  font-family: Microsoft YaHei UI-Regular, Microsoft YaHei UI;
+  font-weight: 400;
+  color: #333333;
+  line-height: 38px;
+  text-align: center;
+  margin-top: 70px;
+  cursor: pointer;
+}
+.chargeTanc .red {
+  color: #DF2229;
+}
+
+/*-------电子招标弹出提示--------*/
+.dzzbDialog{
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  z-index: 109;
+  background-color:rgba(0, 0, 0, 0.6);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#88000000',endColorstr='#88000000');
+}
+.dzzbDialog .containter_box{
+  width: 469px;
+  height: 424px;
+  position: absolute;
+  background: url(/public/2020/img/dzzbTc.png) no-repeat center;
+  border-radius: 15px 15px 15px 15px;
+  top: 46%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  text-align: center;
+  margin: 0;
+}
+.dzzbDialog .tanc_close {
+  position: absolute;
+  right: 8px;
+  top: 12px;
+  z-index: 999;
+  cursor: pointer;
+}
+.dzzbDialog .tanc_linqu {
+  position: absolute;
+  width: 254px;
+  height: 58px;
+  bottom: 31px;
+  left: 23%;
+  cursor: pointer;
+}

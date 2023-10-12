@@ -1,0 +1,74 @@
+
+/* 招标分类改版css */
+
+.hot_channel {
+  width: 100%;
+  height: 19px;
+  font-family: Microsoft YaHei;
+  font-weight: 400;
+  line-height: 19px;
+  color: #999999;
+  opacity: 1;
+  margin: 20px 0 10px 0;
+}
+
+.list1{
+display: flex;
+width: 100%;
+}
+.list1 .list_p{
+width: 76px;
+height: 80px;
+background: #FFE6E9;
+opacity: 1;
+border-radius: 0px;
+margin-right: 10px ;
+flex-shrink: 0;
+}
+
+.list1 .list_p a{
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+width: 100%;
+height: 100%;
+}
+
+.list_p  img{
+margin:15px 24px 5px 24px;
+}
+.list1 .list_p p{
+margin:0;
+width: 48px;
+text-align: center; 
+height: 19px;
+word-break: break-all;
+font-size: 12px;
+font-family: Microsoft YaHei;
+font-weight: 400;
+line-height: 13px;
+color: #FF9095;
+opacity: 1;
+}
+.img1{
+margin:11px 22px 5px 22px !important;
+}
+.img2{
+margin:14px 23px 4px 23px !important;
+}
+.img3{
+margin:14px 30px 4px 30px !important;
+}
+.img4{
+margin:14px 26px 8px 26px !important;
+}
+.img5{
+margin:15px 27px 5px 26px !important;
+}
+.img6{
+margin:11px 24px 3px 24px !important;
+}
+.img7{
+margin:19px 21px 5px 21px !important;
+}
