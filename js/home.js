@@ -351,12 +351,12 @@ function c_news_l(newsData) {
   }
   $("#news .news_l").html(html);
   for (var j = 2; j < newsData.length; j++) {
-    if (newsData[j].title.length < 26) {
+    if (newsData[j].title.length < 32) {
       html1 += "<li><a href=javascript:ajaxlink(" + "'" + newsData[j].url + "','" + newsData[j].id + "'" + ") title=" + newsData[j].title + ">" + newsData[j]
         .title + "</a><span>" + newsData[j].date + "</span></li>"
     } else {
       html1 += "<li><a href=javascript:ajaxlink(" + "'" + newsData[j].url + "','" + newsData[j].id + "'" + ") title=" + newsData[j].title + ">" + newsData[j]
-        .title.substring(0, 25) + "..." + "</a><span>" + newsData[j].date + "</span></li>"
+        .title.substring(0, 31) + "..." + "</a><span>" + newsData[j].date + "</span></li>"
     }
   }
   $("#news .news_r").html(html1);

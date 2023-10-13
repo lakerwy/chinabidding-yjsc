@@ -138,406 +138,251 @@
 
 <div class="bid_container">
     <!-- 顶部注册导航 -->
-    <div id="topnav">
-        <div class="w cl">
-            <div class="fl">
-                <div id="mycity">
-                    <i></i>
-                    <a href="javascript:void(0);" id="city">全国</a>
-                    <ul class="dropdown-layer">
-                        <li>
-                            <a href="javascript:void(0);" onclick="changeCity('全国')" data_id="0">全国</a>
-                        </li>
-                        <li>
-                            <a href="javascript:void(0);" onclick="changeCity('北京')" data_id="1">北京</a>
-                        </li>
-                        <li>
-                            <a href="javascript:void(0);" onclick="changeCity('上海')" data_id="2">上海</a>
-                        </li>
-                        <li>
-                            <a href="javascript:void(0);" onclick="changeCity('天津')" data_id="3">天津</a>
-                        </li>
-                        <li>
-                            <a href="javascript:void(0);" onclick="changeCity('重庆')" data_id="4">重庆</a>
-                        </li>
-                        <li>
-                            <a href="javascript:void(0);" onclick="changeCity('山西')" data_id="6">山西</a>
-                        </li>
-                        <li>
-                            <a href="javascript:void(0);" onclick="changeCity('河南')" data_id="17">河南</a>
-                        </li>
-                        <li>
-                            <a href="javascript:void(0);" onclick="changeCity('辽宁')" data_id="8">辽宁</a>
-                        </li>
-                        <li>
-                            <a href="javascript:void(0);" onclick="changeCity('吉林')" data_id="9">吉林</a>
-                        </li>
-                        <li>
-                            <a href="javascript:void(0);" onclick="changeCity('内蒙古')" data_id="7">内蒙古</a>
-                        </li>
-                        <li>
-                            <a href="javascript:void(0);" onclick="changeCity('江苏')" data_id="11">江苏</a>
-                        </li>
-                        <li>
-                            <a href="javascript:void(0);" onclick="changeCity('山东')" data_id="16">山东</a>
-                        </li>
-                        <li>
-                            <a href="javascript:void(0);" onclick="changeCity('安徽')" data_id="13">安徽</a>
-                        </li>
-                        <li>
-                            <a href="javascript:void(0);" onclick="changeCity('福建')" data_id="14">福建</a>
-                        </li>
-                        <li>
-                            <a href="javascript:void(0);" onclick="changeCity('湖北')" data_id="18">湖北</a>
-                        </li>
-                        <li>
-                            <a href="javascript:void(0);" onclick="changeCity('湖南')" data_id="19">湖南</a>
-                        </li>
-                        <li>
-                            <a href="javascript:void(0);" onclick="changeCity('广东')" data_id="20">广东</a>
-                        </li>
-                        <li>
-                            <a href="javascript:void(0);" onclick="changeCity('江西')" data_id="15">江西</a>
-                        </li>
-                        <li>
-                            <a href="javascript:void(0);" onclick="changeCity('四川')" data_id="27">四川</a>
-                        </li>
-                        <li>
-                            <a href="javascript:void(0);" onclick="changeCity('海南')" data_id="22">海南</a>
-                        </li>
-                        <li>
-                            <a href="javascript:void(0);" onclick="changeCity('贵州')" data_id="23">贵州</a>
-                        </li>
-                        <li>
-                            <a href="javascript:void(0);" onclick="changeCity('西藏')" data_id="25">西藏</a>
-                        </li>
-                        <li>
-                            <a href="javascript:void(0);" onclick="changeCity('陕西')" data_id="26">陕西</a>
-                        </li>
-                        <li>
-                            <a href="javascript:void(0);" onclick="changeCity('甘肃')" data_id="28">甘肃</a>
-                        </li>
-                        <li>
-                            <a href="javascript:void(0);" onclick="changeCity('青海')" data_id="29">青海</a>
-                        </li>
-                        <li>
-                            <a href="javascript:void(0);" onclick="changeCity('新疆')" data_id="30">新疆</a>
-                        </li>
-                        <li>
-                            <a href="javascript:void(0);" onclick="changeCity('黑龙江')" data_id="10">黑龙江</a>
-                        </li>
-                        <li>
-                            <a href="javascript:void(0);" onclick="changeCity('广西')" data_id="21">广西</a>
-                        </li>
-                        <li>
-                            <a href="javascript:void(0);" onclick="changeCity('宁夏')" data_id="31">宁夏</a>
-                        </li>
-                        <li>
-                            <a href="javascript:void(0);" onclick="changeCity('河北')" data_id="5">河北</a>
-                        </li>
-                        <li>
-                            <a href="javascript:void(0);" onclick="changeCity('浙江')" data_id="12">浙江</a>
-                        </li>
-                        <li>
-                            <a href="javascript:void(0);" onclick="changeCity('云南')" data_id="24">云南</a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="unlog cl">
-                    <span>您好！</span>
-                    <span>
-                            <a href="javascript:void(0);" onclick="loginTo(1)">请登录</a>
-                        </span>
-                    <span>
-                            <a href="javascript:void(0);" onclick="loginTo(2)">免费注册</a>
-                        </span>
-                    <span>
-                            <a href="javascript:void(0)" onclick="sendMsg()" class="fabuxx">发布信息</a>
-                        </span>
-                </div>
-                <div class="islog">
-                        <span>
-                            您好，13877776665
-                        </span>
-                    <span>
-                            <a href="javascript:void(0)" class="_logout" onclick="outLogin()">退出</a>
-                        </span>
-                    <span>
-                            <a href="javascript:void(0)" onclick="sendMsg()" class="fabuxx">发布信息</a>
-                        </span>
+    <div id="navigation">
+        <div class="navigation_w">
+            <div class="logo">
+                <img src="./img/logo.png" alt="">
+            </div>
+            <div class="navigation_list">
+                <ul class="ul_navigation">
+                    <li class="product">
+                        <div id="service">
+                            <span>产品与服务</span>
+                            <span class="icon_sq"></span>
+                        </div>
+                        <div class="fold">
+                            <a href="javascript:void(0)">元博网关系圈</a>
+                            <a href="javascript:void(0)">探项网</a>
+                            <a href="javascript:void(0)">元博征信</a>
+                            <a href="javascript:void(0)">元博标书</a>
+                            <a href="javascript:void(0)">元博课堂</a>
+                            <a href="javascript:void(0)">招标大厅</a>
+                            <a href="javascript:void(0)">专家服务</a>
+                        </div>
+                    </li>
+                    <li class="customer">
+                        <div id="customer">
+                            <span>客服中心</span>
+                            <span id="icon_sq_four" class="icon_sq"></span>
+                        </div>
+                        <div class="contact">
+                            <div class="contact_one">
+                                <p class="contact_title">元博网采购与招标网</p>
+                                <div>入会咨询：400-006-6655-1</div>
+                                <div>客户服务：400-006-6655-7</div>
+                                <div>发布信息咨询：400-006-6655-2</div>
+                                <div>广告热线咨询：13810622917</div>
+                            </div>
+                            <div class="contact_two">
+                                <p class="contact_title">元博网关系圈</p>
+                                <div>咨询热线：400-616-2300</div>
+                                <p style="margin-top: 30px;" class="contact_title">申报AAA信用企业</p>
+                                <div>咨询热线：400-968-9685</div>
+                            </div>
+                            <div class="contact_three">
+                                <p class="contact_title">专家服务</p>
+                                <div>咨询热线：010-57122657</div>
+                                <p style="margin-top: 30px;" class="contact_title">拓犇牛标书业务</p>
+                                <div>咨询热线：18510505491</div>
+                            </div>
+                        </div>
+                    </li>
+                    <li><span>发布信息</span></li>
+                    <li class="understand">
+                        <div id="understand">
+                            <span>了解采购与招标网</span>
+                            <span id="icon_sq_two" class="icon_sq"></span>
+                        </div>
+                        <div class="about">
+                            <a href="javascript:void(0)">关于我们</a>
+                            <a href="javascript:void(0)">合作伙伴说</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="login_button">
+                <ul class="ul_login">
+                    <li class="app" id="app">
+                        <div>
+                            <span>移动端</span>
+                            <span id="icon_sq" class="icon_sq"></span>
+                        </div>
+                        <div class="app_dropdown">
+                            <div class="code1">
+                                <img src="https://cdn.chinabidding.cn/public/2020/img/sy_cont_image2.png" alt="">
+                                <p>关注公众号</p>
+                            </div>
+                            <div class="code2">
+                                <img src="https://cdn.chinabidding.cn/public/2020/img/sy_cont_image3.png" alt="">
+                                <p>下载APP</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li><span>商务室</span></li>
+                    <li><span>登录</span></li>
+                    <li class="registNow">立即注册</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- 搜索栏 -->
+    <div class="searchbar" >
+        <div id="search">
+            <div class="form cl">
+                <p>请输入公告关键词，多关键词用空格隔开，如“北京 防控物资”</p>
+                <input type="text" placeholder="请输入公告关键词，多关键词用空格隔开，如“北京 防控物资”" autocomplete="off"
+                       id="inpTxt">
+                <button class="button">搜索</button>
+                <div class="historywrap"></div>
+            </div>
+            <div class="form1 cl">
+                <p class="p1">请输入证书上的公司名</p>
+                <p class="p2">请输入证书编号</p>
+                <input type="text" placeholder="请输入证书上的公司名" autocomplete="off" id="s_company">
+                <input type="text" placeholder="请输入证书编号" autocomplete="off" id="s_number">
+                <button class="button1">搜索</button>
+                <div class="form1_error">
                 </div>
             </div>
-            <ul class="fr">
-<!--                <li>-->
-<!--                    <a href="javascript:void(0);" onclick="yjscLink()">一键商城</a>-->
-<!--                </li>-->
-<!--                <li class="spacer"></li>-->
-                <li style="background: none; padding-right: 0">
-                    <!-- <a href="/yuan/login/loginnew/tobussroom?source=1" target="_blank">我的商务室</a> -->
-                    <a href="javascript:void(0);" onclick="swsLink()">我的商务室</a>
-                </li>
-                <li class="spacer"></li>
-                <li id="serve">
-                    <span href="javascript:void(0);">客服中心</span>
-                    <div class="dropdown-layer1">
-                        <div class="serve-cl">
-                            <h4>元博网采购与招标网</h4>
-                            <p class="cl">
-                                <span class="pl">入会咨询：400-006-6655-1</span>
-                                <span class="pr">客户服务：400-006-6655-7</span>
-                                <span class="pl">发布信息咨询：400-006-6655-2</span>
-                                <span class="pr">广告热线咨询：13810622917</span>
-                            </p>
-                        </div>
-                        <div class="serve-cl">
-                            <h4>元博网关系圈</h4>
-                            <p class="cl">
-                                <span class="pl">咨询热线：400-616-2300</span>
-                            </p>
-                            <h4 style="margin-top: 23px;">申报AAA信用企业</h4>
-                            <p class="cl">
-                                <span class="pl">咨询热线：400-968-9685</span>
-                            </p>
-                        </div>
-                        <div class="serve-cl">
-                            <h4>专家服务</h4>
-                            <p class="cl">
-                                <span class="pl">咨询热线：010-57122657</span>
-                            </p>
-                            <h4 style="margin-top: 23px;">拓犇牛标书业务</h4>
-                            <p class="cl">
-                                <span class="pl">咨询热线：18510505491</span>
-                            </p>
-                        </div>
-                        <!--                            <h4>-->
-                        <!--                                元博网采购与招标网-->
-                        <!--                            </h4>-->
-                        <!--                            <p class="cl">-->
-                        <!--                                <span class="pl">咨询热线：400-006-6655</span>-->
-                        <!--                                <span class="pr">发布信息：010-82744233</span>-->
-                        <!--                            </p>-->
-                        <!--                            <p class="cl">-->
-                        <!--                                <span class="pl">入会咨询：400-006-6655-1</span>-->
-                        <!--                                <span class="pr">周末发布信息咨询：400-006-6655-2</span>-->
-                        <!--                            </p>-->
-                        <!--                            <p class="cl last">-->
-                        <!--                                <span class="pl">客户服务：400-006-6655-7</span>-->
-                        <!--                                <span class="pr">广告热线咨询：13810622917</span>-->
-                        <!--                            </p>-->
-                        <!--                            <div class="cl">-->
-                        <!--                                <div class="hot_p">-->
-                        <!--                                    <h5>元博网关系圈</h5>-->
-                        <!--                                    <p>咨询热线：400-616-2300</p>-->
-                        <!--                                </div>-->
-                        <!--                                <div class="hot_p">-->
-                        <!--                                    <h5>申报AAA信用企业</h5>-->
-                        <!--                                    <p>咨询热线：400-968-9685</p>-->
-                        <!--                                </div>-->
-                        <!--                                <div class="hot_p">-->
-                        <!--                                    <h5>专家服务</h5>-->
-                        <!--                                    <p>咨询热线：010-57122657</p>-->
-                        <!--                                </div>-->
-                        <!--                            </div>-->
-                    </div>
-                </li>
-                <li class="spacer"></li>
-                <li id="w_nav">
-                    <span href="javascript:void(0);">网站导航</span>
-                    <div class="dropdown-layer2 cl">
-                        <div class="col1">
-                            <h4>主要频道</h4>
-                            <p>
-                                <a href="https://www.chinabidding.cn/public/2020/html/zbcg.html"
-                                   target="_blank">招标中标信息</a>
-                                <a href="https://www.chinabidding.cn/public/2020/html/project.html"
-                                   target="_blank">项目信息</a>
-                                <a href="https://www.chinabidding.cn/cblcn/biddingdoc/personalData"
-                                   target="_blank">标易查大数据</a>
-                                <a href="javascript:void(0);" onclick="loginTo1()">中标业绩</a>
-                                <a href="javascript:yjscLink(3)">代写标书</a>
-                                <a href="https://zjk.chinabidding.cn/" target="_blank">专家服务</a>
-                                <a href="javascript:yjscLink(4)">信用查询</a>
-                            </p>
-                        </div>
-                        <div class="col2">
-                            <h4>热门频道</h4>
-                            <p>
-                                <a href="https://www.chinabidding.cn/public/2020/html/channel.html?channel_id=3"
-                                   target="_blank">铁路</a>
-                                <a href="https://www.chinabidding.cn/public/2020/html/channel.html?channel_id=4"
-                                   target="_blank">电力</a>
-                                <a href="https://www.chinabidding.cn/public/2020/html/channel.html?channel_id=1"
-                                   target="_blank">医疗</a>
-                                <a href="https://www.chinabidding.cn/public/2020/html/channel.html?channel_id=6"
-                                   target="_blank">环保</a>
-                                <br />
-                                <a href="https://www.chinabidding.cn/public/2020/html/channel.html?channel_id=2"
-                                   target="_blank">教育</a>
-                                <a href="https://www.chinabidding.cn/public/2020/html/channel.html?channel_id=5"
-                                   target="_blank">工程建材</a>
-                                <a href="https://www.chinabidding.cn/public/2020/html/channel.html?channel_id=7"
-                                   target="_blank">建筑装饰装修</a>
-                                <br />
-                                <a href="https://www.chinabidding.cn/public/2020/html/channel.html?channel_id=10"
-                                   target="_blank">办公家具</a>
-                                <a href="https://www.chinabidding.cn/public/2020/html/channel.html?channel_id=8"
-                                   target="_blank">智慧物流</a>
-                                <a href="https://www.chinabidding.cn/public/2020/html/channel.html?channel_id=9"
-                                   target="_blank">无人科技</a>
-                            </p>
-                        </div>
-                        <div class="col2">
-                            <h4>热门产品</h4>
-                            <p>
-                                <a href="javascript:yjscLink(3)">标书代写</a>
-                                <a href="https://sbiao360.com/shop/index.php?controller=site&action=pro_list&cat=171"
-                                   target="_blank">数据简报</a>
-                                <a href="https://www.chinabidding.cn/cblcn/biddingdoc/personalData"
-                                   target="_blank">大数据定制</a>
-                                <a href="javascript:yjscLink(4)">信用等级认证</a>
-                                <a href="javascript:qimoChatClick()">中标认证</a>
-                            </p>
-                        </div>
-                        <div class="col3">
-                            <p>
-                                <a href="https://www.sbiao360.com" target="_blank">元博网关系圈</a>
-                                <a href="https://www.chinabidding.cn/public/2020/html/ybcloud.html"
-                                   target="_blank">元博网大数据</a>
-                            </p>
-                        </div>
-                    </div>
-                </li>
-                <li class="spacer"></li>
-                <li id="aboutSite">
-                    <a href="https://cdn.chinabidding.cn/public/cblcn/about/gywm.html" target="_blank"
-                       rel="nofollow">关于网站</a>
-                    <div class="dropdown-layer7">
-                        <h4>
-                            客户案例
-                        </h4>
-                        <p class="cl">
-                            <a href="http://chinabidding.cn/public/2020/html/case.html" target="_blank"
-                               class="pl">合作伙伴说
-                                > </a>
-                        </p>
-                    </div>
-                </li>
-                <!--                    <li class="spacer"></li>-->
-                <!--                    <li>-->
-                <!--                        <a href="https://www.chinabidding.cn/old_index" target="_blank">返回旧版</a>-->
-                <!--                    </li>-->
-                <li class="spacer"></li>
+            <ul id="hotwords">
+                <li class="active" onclick="changeKey('0')">查招标采购</li>
+                <span class="shu"></span>
+                <li onclick="changeKey('1')">查项目</li>
+                <span class="shu shu2"></span>
+                <li onclick="changeKey('2')">查企业</li>
+<!--                <li onclick="changeKey('3')">信用查询</li>-->
+                <li style="cursor: default !important;" class="last">咨询热线：<span>400-006-6655</span></li>
+            </ul>
+            <div class="top_search">
+                <span class="top_search_title">热搜榜：</span>
+                <div class="hots cl">
+                    <a href="javascript:void(0);" onclick="linkhots('矿山')">矿山</a>
+                    <a href="javascript:void(0);" onclick="linkhots('武汉')">武汉</a>
+                    <a href="javascript:void(0);" onclick="linkhots('机床')">机床</a>
+                    <a href="javascript:void(0);" onclick="linkhots('物流')">物流</a>
+                    <a href="javascript:void(0);" onclick="linkhots('规划')">规划</a>
+                    <a href="javascript:void(0);" onclick="linkhots('石灰')">石灰</a>
+                    <a href="javascript:void(0);" onclick="linkhots('供水管网')">供水管网</a>
+                    <a href="javascript:void(0);" onclick="linkhots('管材')">管材</a>
+                    <a href="javascript:void(0);" onclick="linkhots('造价')">造价</a>
+                    <a href="javascript:void(0);" onclick="linkhots('种子')">种子</a>
+                </div>
+                <span class="refresh">
+                    <span class="icon"></span>
+                    换一批
+                </span>
+            </div>
+        </div>
+    </div>
+    <!--  招标中标信息分类  -->
+    <ul class="infoClass w">
+        <li>
+            <div class="info_title">
+                招中标<br>信息
+            </div>
+            <div class="info_cont">
+                <a href="javascript:void(0)" onclick="changeNav(1)">货物招标</a>
+                <a href="javascript:void(0)" onclick="changeNav(3)">服务招标</a>
+                <a href="javascript:void(0)" onclick="changeNav(4)">政府采购</a>
+                <a href="javascript:void(0)" onclick="changeNav(2)">工程招标</a>
+            </div>
+        </li>
+        <li>
+            <div class="info_title info_title2">
+                VIP<br>项目
+            </div>
+            <div class="info_cont">
+                <a href="javascript:void(0)">拟在建项目</a>
+                <a href="javascript:void(0)">项目核准</a>
+                <a href="javascript:void(0)">项目动态</a>
+                <a href="javascript:void(0)">项目公示</a>
+                <a href="javascript:void(0)">项目预告</a>
+                <a href="javascript:void(0)">项目专题</a>
+            </div>
+        </li>
+        <li>
+            <div class="info_title info_title3">
+                热门<br>频道
+            </div>
+            <div class="info_cont">
+                <a href="javascript:void(0)">铁路</a>
+                <a href="javascript:void(0)">医疗</a>
+                <a href="javascript:void(0)">电力</a>
+                <a href="javascript:void(0)">环保</a>
+                <a href="javascript:void(0)">教育</a><br>
+                <a href="javascript:void(0)">北京</a>
+                <a href="javascript:void(0)">天津</a>
+                <a href="javascript:void(0)">河北</a>
+                <a href="javascript:void(0)">内蒙古</a>
+            </div>
+        </li>
+        <li>
+            <div class="info_title info_title4">
+                数据<br>定制
+            </div>
+            <div class="info_cont">
+                <a href="javascript:void(0)">元博网大数据</a>
+                <a href="javascript:void(0)">数据简报</a>
+            </div>
+        </li>
+    </ul>
+    <div class="adv w">
+        <img src="./img/banner-s.png" alt="">
+    </div>
+    <div class="productNav">
+        <h4 class="nav-title" style="background-size: 284px 21px">产品与服务推荐</h4>
+        <div class="w cl">
+            <ul class="productNav-up">
                 <li>
-                    <a href="javascript:void(0)" id="revision_btn">改版通知</a>
+                    <a href="https://www.sbiao360.com" target="_blank">
+                        <h3>元博关系圈</h3>
+                        <h4>解析招投标关系的平台</h4>
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:yjscLink(2)">
+                        <h3 style="margin-top: 35px">探项网</h3>
+                        <h4>专注提供工程项目<br>资讯平台</h4>
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:yjscLink(4)">
+                        <h3>元博征信</h3>
+                        <h4>招投标大数据信用平台</h4>
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:yjscLink(3)">
+                        <h3>拓犇牛标书</h3>
+                        <h4>您的投标管家</h4>
+                    </a>
+                </li>
+            </ul>
+            <ul class="productNav-down">
+                <li>
+                    <a href="javascript:yjscLink(1)">
+                        <h3>招标大厅</h3>
+                        <h4>招标代理的智能服务平台</h4>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://study.chinabidding.cn/" target="_blank">
+                        <h3>元博课堂</h3>
+                        <h4>招投标终身学习平台</h4>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://zjk.chinabidding.cn" target="_blank">
+                        <h3>专家库</h3>
+                        <h4>专业智慧，投标智库</h4>
+                    </a>
                 </li>
             </ul>
         </div>
     </div>
-    <!-- 搜索栏 -->
-    <div id="header">
-        <div class="communistwrap">
-            <div class="w">
-                <h1>
-                    <img src="https://cdn.chinabidding.cn/public/2020/img/sy_cont_logo_new.png" alt="采购与招标网">
-                </h1>
-                <div id="search">
-                    <div class="form cl">
-                        <p>请输入公告关键词，多关键词用空格隔开，如“北京 防控物资”</p>
-                        <input type="text" placeholder="请输入公告关键词，多关键词用空格隔开，如“北京 防控物资”" autocomplete="off"
-                               id="inpTxt">
-                        <button class="button">搜索</button>
-                        <div class="historywrap"></div>
-                    </div>
-                    <div class="form1 cl">
-                        <p class="p1">请输入证书上的公司名</p>
-                        <p class="p2">请输入证书编号</p>
-                        <input type="text" placeholder="请输入证书上的公司名" autocomplete="off" id="s_company">
-                        <input type="text" placeholder="请输入证书编号" autocomplete="off" id="s_number">
-                        <button class="button1">搜索</button>
-                        <div class="form1_error">
-
-                        </div>
-                    </div>
-                    <ul id="hotwords">
-                        <li class="active" onclick="changeKey('0')">查招标采购</li>
-                        <li onclick="changeKey('1')">查项目</li>
-                        <li onclick="changeKey('2')">查企业</li>
-                        <li onclick="changeKey('3')">信用查询</li>
-                        <li style="cursor: default !important;" class="last">咨询热线：<span>400-006-6655</span></li>
-                    </ul>
-                    <div class="link1" style="width:124px">
-                        <a href="https://www.sbiao360.com" target="_blank">
-                            元博网关系圈
-                        </a>
-                    </div>
-                    <div class="link2">
-                        <a href="https://www.chinabidding.cn/public/2020/html/ybcloud.html" target="_blank">
-                            元博网大数据
-                        </a>
-                    </div>
-                </div>
-                <div class="hots cl">
-                </div>
-                <div class="c_nav cl">
-                    <h3><i></i>招标信息全部分类</h3>
-                    <ul class="c_col cl">
-                        <li class="zzbiao">
-                            <a href="https://www.chinabidding.cn/public/2020/html/zbcg.html"
-                               target="_blank">招标中标信息</a>
-                            <div class="dropdown-layer6">
-                                <a href="javascript:void(0)" onclick="changeNav(2)">工程招标中标</a>
-                                <a href="javascript:void(0)" onclick="changeNav(1)">货物招标中标</a>
-                                <a href="javascript:void(0)" onclick="changeNav(3)">服务招标中标</a>
-                                <a href="javascript:void(0)" onclick="changeNav(4)">政府采购</a>
-                            </div>
-                        </li>
-                        <li>
-                            <a href="https://www.chinabidding.cn/public/2020/html/project.html"
-                               target="_blank">VIP项目</a>
-                        </li>
-<!--                        <li style="position: relative; padding-right: 34px;">-->
-<!--                            <a style="color: #df2229" href="https://shop.yjsc.com.cn/new/shop/view/bidding/index.html"-->
-<!--                               target="_blank">电子招标</a>-->
-<!--                            <img style="position: absolute; left: 84px; width: 26px; top: -3px" src="/public/2020/img/new_dzzb.png" alt="">-->
-<!--                        </li>-->
-                        <li style="position: relative; padding-right: 34px;">
-                           <a style="color: #df2229" href="javascript:yjscLink(1)">招标大厅</a>
-                            <!-- <a style="color: #df2229" href="https://www.chinabidding.cn/public/bidagency/index.html#" target="_blank">招标大厅</a> -->
-                            <img style="position: absolute; left: 85px; width: 26px; top: -3px" src="https://cdn.chinabidding.cn/public/2020/img/HOT_zbdt.png" alt="">
-                        </li>
-                        <li class="yeji" style="position: relative; padding-right: 34px;">
-                           <a style="color: #df2229" href="javascript:yjscLink(2)">探项网</a>
-                            <!-- <a style="color: #df2229" href="https://www.chinabidding.cn/public/ybxm/html/index.html" target="_blank">探项网</a> -->
-                            <img style="position: absolute; left: 71px; width: 26px; top: -3px" src="https://cdn.chinabidding.cn/public/2020/img/HOT_zbdt.png" alt="">
-                        </li>
-                        <li>
-                           <a href="javascript:yjscLink(3)">标书代写</a>
-                            <!-- <a href="javascript:yjscLink(3)" target="_blank">标书代写</a> -->
-                        </li>
-                        <li>
-                            <a href="https://zjk.chinabidding.cn" target="_blank">专家服务</a>
-                        </li>
-                        <li>
-                            <a href="javascript:yjscLink(4)">
-                                <img style="width: 86px;height: 20px;margin-top: -5px;" src="https://cdn.chinabidding.cn/public/2020/img/index/zx-logo.png" alt="">
-                            </a>
-                        </li>
-                        <li>
-                            <a href="javascript:viod(0)" onclick="loginMsgSync()">元博课堂</a>
-                        </li>
-                        <li style="padding-right: 0;">
-                            <a style="color: #df2229" href="javascript:yjscLink(1,'/#/publicize/index')">电子招标</a>
-                        </li>
-                    </ul>
-                </div>
-                <!-- 0724防汛入口 -->
-                <a href="https://www.chinabidding.cn/public/2020/html/activity/rescue.html" class="rescue"
-                   target="_blank" title="河南加油"></a>
-            </div>
-        </div>
-    </div>
     <!-- 分类+广告 -->
     <div id="banner">
+        <h4 class="nav-title">招标采购导航</h4>
         <div class="w cl">
             <div class="sort_l">
                 <ul class="snav">
@@ -1675,255 +1520,11 @@
                     </li>
                 </ul>
             </div>
-            <div class="sort_r">
-                <div class="col2 cl">
-                    <div class="col20">
-                        <div class="col21">
-                            <div id="js_banner" class="fx_banner">
-                                <ul id="js_banner_img" class="fx_banner_img clear">
-                                    `                                        <li class="chargeActive">
-                                    <a href="javascript:getActivity();" rel="nofollow">
-                                        <img src="https://cdn.chinabidding.cn/public/2020/img/banner220913.png"
-                                             style="width:620px; height:400px">
-                                    </a>
-                                </li>
-                                    <li class="BiddingDialog">
-                                        <a href="https://mp.weixin.qq.com/s/FkLzTFMroHLIf7695POgMQ" rel="nofollow">
-                                            <img src="https://cdn.chinabidding.cn/public/2020/img/banner_tbn2.png"
-                                                 style="width:620px; height:400px">
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="https://www.chinabidding.cn/public/ybxm/html/index.html"
-                                           target="_blank" rel="nofollow">
-                                            <img src="https://www.chinabidding.cn/public/2020/img/banner_txw1.png"
-                                                 style="width:620px; height:400px">
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="https://v.qq.com/x/page/q32246ynbfc.html" target="_blank"
-                                           rel="nofollow">
-                                            <img src="https://cdn.chinabidding.cn/public/2020/img/video_bg.png"
-                                                 style="width:620px; height:400px">
-                                        </a>
-                                    </li>
-                                    <!--                                        <li>-->
-                                    <!--                                            <a href="https://www.chinabidding.cn/public/2020/html/activity/results.htmla"-->
-                                    <!--                                               target="_blank" rel="nofollow">-->
-                                    <!--                                                <img src="https://cdn.chinabidding.cn/public/2020/img/banner_result.png"-->
-                                    <!--                                                     style="width:620px; height:400px">-->
-                                    <!--                                            </a>-->
-                                    <!--                                        </li>-->
-                                    <!--                                        <li>-->
-                                    <!--                                            <a href="javascript:;" rel="nofollow" class="banner_0225">-->
-                                    <!--                                                <img src="https://cdn.chinabidding.cn/public/2020/img/banner_0225.png"-->
-                                    <!--                                                    style="width:620px; height:400px">-->
-                                    <!--                                            </a>-->
-                                    <!--                                        </li>-->
-                                    <!--                                        <li>-->
-                                    <!--                                            <a href="https://www.chinabidding.cn/cblcn/biddingdoc/personalData"-->
-                                    <!--                                                target="_blank" rel="nofollow">-->
-                                    <!--                                                <img src="https://cdn.chinabidding.cn/public/2020/img/t1.png"-->
-                                    <!--                                                    style="width:620px; height:400px">-->
-                                    <!--                                            </a>-->
-                                    <!--                                        </li>-->
-                                </ul>
-                                <div class="fx_banner_common fx_grid_c1">
-                                    <a id="js_banner_pre" href="javascript:;" class="fx_banner_pre"></a>
-                                    <a id="js_banner_next" href="javascript:;" class="fx_banner_next"></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="video_box video_under">
-                            <div id="J_prismPlayer" class="prism-player"></div>
-                            <div class="video_close"></div>
-                        </div>
-                    </div>
-                    <div class="col22">
-                        <div class="c_user">
-                            <div class="user_inner cl">
-                                <img src="https://cdn.chinabidding.cn/public/2020/img/sy_cont_image.png">
-                                <div class="user_txt">
-                                    <h4></h4>
-                                    <p>注册赢好礼</p>
-                                </div>
-                            </div>
-                            <ul class="user_lr cl">
-                                <li>
-                                    <a href="https://www.chinabidding.cn/public/2020/html/register.html?source=1"
-                                       target="_blank">
-                                        注册
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="https://www.chinabidding.cn/public/2020/html/login.html?source=1"
-                                       target="_blank">
-                                        登录
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="javascript:void(0)" onclick="sendMsg()">
-                                        发公告
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="c_news">
-                            <h4>新手入门</h4>
-                            <p>
-                                <a href="javascript:void(0);" onclick="handShow(0)">如何快速找到商机？</a>
-                            </p>
-                            <p>
-                                <a href="javascript:void(0);" onclick="handShow(1)">网站只能查找招标信息吗？</a>
-                            </p>
-                            <p>
-                                <a href="javascript:void(0);" onclick="handShow(2)">如何定时收到商机提醒？</a>
-                            </p>
-                            <p>
-                                <a href="javascript:void(0);" onclick="handShow(3)">网站优势在哪里？</a>
-                            </p>
-                        </div>
-                        <div class="c_code cl">
-                            <div class="code1">
-                                <img src="https://cdn.chinabidding.cn/public/2020/img/sy_cont_image2.png" alt="">
-                                <p>关注公众号</p>
-                            </div>
-                            <div class="code2">
-                                <img src="https://cdn.chinabidding.cn/public/2020/img/sy_cont_image3.png" alt="">
-                                <p>下载APP</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col23 col23_free">
-                        <div class="c_user">
-                            <div class="user_inner cl">
-                                <img src="https://cdn.chinabidding.cn/public/2020/img/sy_cont_gimage.png">
-                                <div class="user_txt">
-                                    <div>
-                                        <h4></h4>
-                                        <a class="renew_btn" style="display: none;" target="_blank"
-                                           href="https://www.chinabidding.cn/caidou/Renewals/index">前往续费></a>
-                                    </div>
-                                    <p class="sl"></p>
-                                </div>
-                            </div>
-                            <p class="date1"></p>
-                            <p class="date2"></p>
-                        </div>
-                        <div class="c_news cl">
-                            <img src="https://cdn.chinabidding.cn/public/2020/img/kefu.png" alt="">
-                            <div class="c_kefu">
-                                <p class="kefu_name">专属客服：<span></span></p>
-                                <p class="kefu_phone sl">400-006-6655</p>
-                            </div>
-                        </div>
-                        <ul class="c_link cl">
-                            <li>
-                                <a href="javascript:void(0);" onclick="swsLink()" rel="nofollow">
-                                    <img
-                                            src="https://cdn.chinabidding.cn/public/2020/img/sy_cont_ioc_shangwushi.png?t=20210225a">
-                                    <p>商务室</p>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="javascript:void(0);" onclick="czscLink()" rel="nofollow">
-                                    <img
-                                            src="https://cdn.chinabidding.cn/public/2020/img/sy_cont_ioc_czsc.png?t=20210225a">
-                                    <p>采钻商城</p>
-                                </a>
-                            </li>
-                            <li>
-                                <!-- 2022/10/21修改 -->
-                                <!-- <a href="https://www.chinabidding.cn/info/fbxx/fbgg" target="_blank" rel="nofollow"> -->
-                                <a href="javascript:void(0);" onclick="sendMsg()" rel="nofollow">
-                                    <img src="https://cdn.chinabidding.cn/public/2020/img/sy_cont_icon5(2).png?t=20210225a"
-                                         alt="">
-                                    <p>发公告</p>
-                                </a>
-                            </li>
-                        </ul>
-                        <div class="c_code">
-                            <div class="code1">
-                                <img src="https://cdn.chinabidding.cn/public/2020/img/sy_cont_image2.png" alt="">
-                                <p>关注公众号</p>
-                            </div>
-                            <div class="code2">
-                                <img src="https://cdn.chinabidding.cn/public/2020/img/sy_cont_image3.png" alt="">
-                                <p>下载APP</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col23 col23_pay">
-                        <div class="c_user">
-                            <div class="user_inner cl">
-                                <img src="https://cdn.chinabidding.cn/public/2020/img/sy_cont_gimage.png">
-                                <div class="user_txt">
-                                    <h4 style="margin: 0">下午好</h4>
-                                    <p style="margin: 0" class="sl">尊敬的会员</p>
-                                </div>
-                            </div>
-                            <p class="date1">会员服务截止日期:</p>
-                            <p class="date2" style="margin-top: 5px;">2025-01-16</p>
-                        </div>
-                        <div class="c_news cl">
-                            <div class="news_box" style="float: left;margin-bottom: 10px;">
-                                <img src="/public/2020/img/index_kf.png" alt="">
-                                <div class="c_kefu">
-                                    <p class="kefu_caizhao kefu_name">
-                                        <i class="title1"></i><span>张三三</span>
-                                    </p>
-                                    <p class="kefu_zskf" style="overflow: inherit"><span style="position: relative;top: -7px;color:#333" class="title2">专属客服：</span><span class="kefu_phone">13810410859</span></p>
-                                </div>
-                            </div>
-                            <div class="news_box" style="padding-bottom: 10px;">
-                                <img src="/public/2020/img/index_kf.png" alt="">
-                                <div class="c_kefu">
-                                    <p class="kefu_caizhao"><span class="title1">标书/征信</span>王达
-                                    </p>
-                                    <p class="kefu_zskf"><span class="title2">业务咨询：</span>13810410859</p>
-                                </div>
-                            </div>
-                        </div>
-                        <ul class="c_link cl">
-                            <li>
-                                <a href="javascript:void(0);" onclick="swsLink()">
-                                    <img src="https://cdn.chinabidding.cn/public/2020/img/sy_cont_ioc_shangwushi.png">
-                                    <p>商务室</p>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="javascript:void(0);" onclick="czscLink()" rel="nofollow">
-                                    <img src="https://cdn.chinabidding.cn/public/2020/img/sy_cont_ioc_czsc.png">
-                                    <p>采钻商城</p>
-                                </a>
-                            </li>
-                            <li>
-                                <!-- 2022/10/21修改 -->
-                                <!-- <a href="https://www.chinabidding.cn/info/fbxx/fbgg" target="_blank"> -->
-                                <a href="javascript:void(0);" onclick="sendMsg()">
-                                    <img src="https://cdn.chinabidding.cn/public/2020/img/sy_cont_icon5(2).png" alt="">
-                                    <p>发公告</p>
-                                </a>
-                            </li>
-                        </ul>
-                        <div class="c_code">
-                            <div class="code1">
-                                <img src="https://cdn.chinabidding.cn/public/2020/img/sy_cont_image2.png" alt="">
-                                <p>关注公众号</p>
-                            </div>
-                            <div class="code2">
-                                <img src="https://cdn.chinabidding.cn/public/2020/img/sy_cont_image3.png" alt="">
-                                <p>下载APP</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
         </div>
     </div>
-    <!-- 推荐频道 -->
+    <!-- 推荐频道  标讯推荐-->
     <div id="recommend_n" class="cl w">
-        <h4>推荐频道</h4>
+        <h4>标讯推荐</h4>
         <div class="free">
             <div class="head">
                 <img src="https://cdn.chinabidding.cn/public/2020/img/special/hot.png" alt="" class="left">
@@ -1959,14 +1560,14 @@
             <h4>
                 信息频道
             </h4>
-            <div class="l_col1" style="width: 505px">
+            <div class="l_col1 like_box" >
                 <h5>
                     <a href="https://www.chinabidding.cn/zbxx/" target="_blank">招标采购信息</a>
                 </h5>
                 <ul class="list">
                 </ul>
             </div>
-            <div class="l_col1" style="margin-right: 0; width: 505px">
+            <div class="l_col1 like_box" style="margin-right: 0;">
                 <h5>
                     <a href="https://www.chinabidding.cn/public/2020/html/project.html" target="_blank">项目信息</a>
                 </h5>
@@ -2198,79 +1799,6 @@
                     </li>
                 </ul>
             </div>
-        </div>
-    </div>
-    <!-- 热门产品 -->
-    <div id="product" style="margin-bottom: 10px">
-        <div class="w cl">
-            <h4>热门产品</h4>
-            <ul class="pro_list cl">
-                <li>
-                    <a href="javascript:yjscLink(3)" rel="nofollow">
-                        <img src="https://cdn.chinabidding.cn/public/2020/img/sy_cont_image8.png" alt="">
-                        <h5>标书代写</h5>
-                        <div class="space"></div>
-                        <h6>
-                            查看详情
-                        </h6>
-                    </a>
-                </li>
-                <li>
-                    <a href="https://sbiao360.com/shop/index.php?controller=site&action=pro_list&cat=171"
-                       target="_blank" rel="nofollow">
-                        <img src="https://cdn.chinabidding.cn/public/2020/img/sy_cont_image5.png" alt="">
-                        <h5>数据简报</h5>
-                        <div class="space"></div>
-                        <h6>
-                            查看详情
-                        </h6>
-                    </a>
-                </li>
-                <li>
-                    <a href="https://www.chinabidding.cn/cblcn/biddingdoc/personalData" target="_blank"
-                       rel="nofollow">
-                        <img src="https://cdn.chinabidding.cn/public/2020/img/sy_cont_image14.png" alt="">
-                        <h5>大数据定制</h5>
-                        <div class="space"></div>
-                        <h6>
-                            查看详情
-                        </h6>
-                    </a>
-                </li>
-                <li>
-                    <a href="javascript:yjscLink(4)" rel="nofollow">
-                        <img src="https://cdn.chinabidding.cn/public/2020/img/sy_cont_image4.png" alt="">
-                        <h5>信用等级认证</h5>
-                        <div class="space"></div>
-                        <h6>
-                            查看详情
-                        </h6>
-                    </a>
-                </li>
-                <li class="pro_act">
-                    <a href="javascript:yjscLink(1)" rel="nofollow">
-                        <img src="/public/2020/img/sy_zbdt.jpg" alt="">
-                        <h5>招标大厅</h5>
-                        <div class="space"></div>
-                        <h6>
-                            查看详情
-                        </h6>
-                        <div class="dropdown-layer4" style="display: none">
-                            <div class="unlogin">
-                                <a href="https://www.chinabidding.cn/public/2020/html/login.html?source=1"
-                                   class="drop_l">登录</a>
-                                <a href="https://www.chinabidding.cn/public/2020/html/register.html?source=1"
-                                   class="drop_l" target="_blank">注册</a>
-                                <p>咨询客服:400-006-6655</p>
-                            </div>
-                            <div class="islogin">
-                                <p>联系专属客服</p>
-                                <p>400-006-6655</p>
-                            </div>
-                        </div>
-                    </a>
-                </li>
-            </ul>
         </div>
     </div>
     <!-- 国信信息+地区导航 -->
@@ -2870,7 +2398,6 @@
                 $("#search .form p").show();
             }
         }
-
         setTimeout(function () {
             $("#search .historywrap").hide();
         }, 200)
