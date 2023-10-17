@@ -1,0 +1,1373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>元博网采购与招标网-注册</title>
+    <link rel="shortcut icon" href="../img/favicon1.ico">
+    <link rel="stylesheet" href="../css/reset.css?t=20210823a">
+    <link rel="stylesheet" href="../css/login.css?t=20210430a">
+    <link rel="stylesheet" href="../font/iconfont.css?t=20210725b">
+    <style>
+        #container {
+            overflow: inherit !important;
+        }
+        #container .imgList li img {
+            height: 520px !important;
+            background: white;
+        }
+        #container .imgList {
+            overflow: hidden;
+        }
+        #container .left-btn,
+        #container .right-btn {
+            display: none;
+            *display: block;
+        }
+
+        #container:hover .left-btn,
+        #container:hover .right-btn {
+            display: block;
+        }
+
+        #container .left-btn, #container .right-btn {
+            display: none !important;
+        }
+    </style>
+</head>
+<body>
+    <div class="addshadow">
+        <div class="w">
+            <div class="tips-wrapper cl">
+                <a href="javascript:void(0);" onclick="linkTo()">
+                    <img src="" alt="">
+                </a>
+                <h3>账户注册</h3>
+                <h4>
+                    <a href="https://www.chinabidding.cn/public/cblcn/about/lxwm.html" target="_blank">更多联系>></a>
+                </h4>
+                <div class="tip-pho">
+                    <p class="tip-p1">服务热线 :</p>
+                    <p class="tip-p2">400-006-6655</p>
+                </div>  
+            </div>
+        </div>
+    </div>
+    <div id="container">
+        <div class="w" style="height: 0">
+            <div class="consult" title="点击立即人工咨询"  onclick="qimoChatClick()"></div>
+            <div class="reg-form">
+                <div class="isreg cl">
+                    <div class="isreg_l">
+                        免费注册
+                    </div>
+                    
+                </div>
+                <div class="reg_col1">
+                    <p class="reg_p">请输入手机号</p>
+                    <input type="text" id="loginname" name="loginname" placeholder="请输入手机号" onKeypress="javascript:if(event.keyCode == 32)event.returnValue = false;" autocomplete="off">
+                    <div class="reg_error">
+                        
+                    </div>
+                </div>
+                <div class="reg_col2">
+                    <div id="captcha"></div> 
+                    <div class="reg_error">
+                        
+                    </div>
+                </div>
+                <div class="reg_col3 regmore">
+                    <p class="reg_p">请输入手机验证码</p>
+                    <input type="text" id="logincode" name="logincode" placeholder="请输入手机验证码" onKeypress="javascript:if(event.keyCode == 32)event.returnValue = false;">
+                    <div class="col3-code" id="getCode" autocomplete="off">
+                        获取验证码
+                    </div>
+                    <div class="reg_error">
+                        
+                    </div>
+                </div>
+                <div class="reg_col4 regmore">
+                    <p class="reg_p">请输入联系人姓名</p>
+                    <input type="text" id="loginpwd" name="loginpwd" placeholder="请输入联系人姓名" onKeypress="javascript:if(event.keyCode == 32)event.returnValue = false;" autocomplete="new-password">
+                    <div class="reg_error">
+                        
+                    </div>
+                </div>
+                <div class="reg_col5 regmore">
+                    <p class="reg_p">请输入公司名称</p>
+                    <input type="text" id="loginrepwd" name="loginrepwd" placeholder="请输入公司名称" onKeypress="javascript:if(event.keyCode == 32)event.returnValue = false;" autocomplete="new-password">
+                    <div class="reg_error">
+                        
+                    </div>
+                </div>
+                <div class="reg_col6">
+                    <p>注册</p>
+                </div>
+                <div class="reg_col8">
+                    <p>注册代表您同意本网站<span> 隐私政策和用户服务协议</span></p>
+                </div>
+                
+                <div class="form_foot">
+                    <!-- <div class="reg_col7" onclick="getTicket()">
+                        <a href="javascript:void(0);" >
+                            <img src="https://cdn.chinabidding.cn/public/2020/img/pdss_cont_image.png">
+                        </a>
+                        微信扫码注册
+                    </div> -->
+                    <div class="isreg_r">
+                        已有账号<a href="javascript:void(0);"> 马上登录</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="js_banner" class="fx_banner">
+            <ul id="js_banner_img" class="fx_banner_img clear">
+                <li>
+<!--                    <img src="https://cdn.chinabidding.cn/public/2020/img/zc_bg2.png" style="width:100%; height:520px">-->
+                    <img src="https://cdn.chinabidding.cn/public/2020/img/zc_img4.png" style="width:100%; height:520px">
+                </li>
+                <li>
+                    <img src="https://cdn.chinabidding.cn/public/2020/img/zc_bg.png"
+                         style="cursor: pointer;" style="width:100%; height:520px" onclick="qimoChatClick()">
+                </li>
+            </ul>
+            <div class="fx_banner_common fx_grid_c1">
+                <a id="js_banner_pre" href="javascript:;" class="fx_banner_pre"></a>
+                <a id="js_banner_next" href="javascript:;" class="fx_banner_next"></a>
+            </div>
+        </div>
+    </div>
+    <div class="w">
+        <div class="copyright">
+          <p class="bidding">
+            Copyright©2001-2022 北京国信创新科技股份有限公司 Rights Reserved 京ICP证070104号&nbsp;
+            <a class="rec gov" href="https://beian.miit.gov.cn/" target="_blank">京ICP备 09089782号-11</a>
+            <a href="https://beian.miit.gov.cn/" target="_blank" class="gov">京公网安备 11010802021866号</a>
+          </p>
+          <p class="bidding">
+            本站网络实名/通用网址:"采购与招标网"
+          </p>
+          <p class="sbiao">元博网 网站备案/许可证号
+            <a href="https://beian.miit.gov.cn/" target="_blank" class="gov">京ICP备09089782号-24</a>
+            <a href="https://beian.miit.gov.cn/" target="_blank" class="gov">京公网安备11010802020638</a>
+          </p>
+          <p>
+            <span>业务咨询：400-006-6655 转1;</span>
+            <span>发布信息：400-006-6655 转2;</span>
+            <span>售后服务：400-006-6655 转7;</span>
+          </p>
+        </div>
+    </div>
+    <!-- 二维码弹窗 -->
+    <div class="shadow">
+        <div class="wxcode">
+            <div class="close1">
+                <img src="https://cdn.chinabidding.cn/public/2020/img/cb_fastlog_close.png" alt="" onclick="closeShadow()">
+            </div>
+            <h4>微信登录</h4>
+            <div class="wx_box">
+                <img src="https://mp.weixin.qq.com/cgi-bin/showqrcode?ticket=gQFu8DwAAAAAAAAAAS5odHRwOi8vd2VpeGluLnFxLmNvbS9xLzAySUxzSDAxcnViRlQxWFQwNzF1MXAAAgR3Rr5eAwSAOgkA" alt="">
+                <div class="reload_wx" onclick="refreshWX()">
+                    二维码已失效，请点击刷新
+                </div>
+            </div>
+            <div class="info">
+                <p>请使用微信扫描二维码登录</p>
+                <p>"采购与招标网"</p>
+            </div>
+        </div>
+    </div>
+    <!-- 客服 -->
+    <div class="elevator e_right" style="margin-left:0; left:auto; right:0; top:100px; z-index:109;">
+    </div>
+    <!-- 注册成功 rx201110--->
+    <div class="regshadow" style="z-index: 10000;">
+        <div class="regtxt">
+            <img src="https://cdn.chinabidding.cn/public/2020/img/zc_image_cg.png" class="success">
+            <h4>注册成功！</h4>
+            <p class="p1">登录密码已发送短信至注册手机号！请妥善保存</p>
+            <p class="p2">页面将在<i>5</i>S之后自动跳转 <a href="javascript:void(0);" onclick="regSuccess()">点击立即跳转</a></p>
+            <i class="iconfont closei" onclick="regSuccess()">&#xe617;</i>
+        </div>
+    </div>
+    <!-- 隐私协议 rx201217 -->
+    <div class="agreeshadow">
+        <div class="agreement">
+          <div id="treaty">
+            <h2>元博网采购与招标网隐私政策及用户服务协议</h2>
+            <div class="content">
+                <h4>1. 特别提示</h4>
+                <p class="p1">
+                    1.1 元博网采购与招标网（以下简称采招网）同意按照本协议的规定及其不定时发布的操作规则提供基于互联网的相关服务（以下称“网络服务”）。
+                    为获得网络服务，服务使用人（以下称“用户”）应当同意本协议的全部条款并按照页面上的提示完成全部的注册程序。用户注册即代表用户同意本网站隐私政策和用户服务协议。</p>
+                <h4>2. 服务内容</h4>
+                <p>
+                    2.1 采招网网络服务的具体内容由采招网根据实际情况提供，并保留随时变更、中断或终止部分或全部网络服务的权利。
+                </p>
+                <p>
+                    2.2 采招网在提供网络服务时，会对部分网络服务的用户收取一定的费用。在此情况下，采招网会在相关页面上做明确的提示。如用户拒绝支付该项费用，
+                    则不能使用相关的网络服务。
+                </p>
+                <p class="p1">
+                    2.3 用户理解，采招网仅提供相关的网络服务，除此之外与相关网络服务有关的设备（如电脑、调制解调器及其他与接入互联网有关的装置）及所需的费用
+                    （如为接入互联网而支付的电话费及上网费）均应由用户自行负担。
+                </p>
+                <h4>3. 使用规则</h4>
+                <p>
+                    3.1 用户在申请使用采招网网络服务时，必须提供准确的企业及个人资料，如资料有任何变动，必须及时更新。
+                </p>
+                <p>
+                    3.2 用户注册成功后，采招网将给予每个用户一个用户名及相应的密码，该用户名和密码由用户负责保管；用户应当对以其用户名进行的所有活动和事件负法律责任。
+                </p>
+                <p>
+                    3.3 用户必须同意接受采招网通过电子邮件或其他方式向用户发送的相关网站服务信息。
+                </p>
+                <p>
+                    3.4 用户必须同意遵循以下原则：
+                    <p class="p2"><span>（a）</span>遵守中国有关的法律和法规；</p>
+                    <p class="p2"><span>（b）</span>不得为任何非法目的而使用网络服务系统；</p>
+                    <p class="p2"><span>（c）</span>遵守所有与网络服务有关的网络协议、规定和程序；</p>
+                    <p class="p2"><span>（d）</span>不得利用采招网网络服务系统进行任何可能对互联网的正常运转造成不利影响的行为；</p>
+                    <p class="p2"><span>（e）</span>不得利用采招网网络服务系统传输任何骚扰性的、中伤他人的、辱骂性的、恐吓性的、庸俗淫秽的或其他任何非法的信息资料；</p>
+                    <p class="p2"><span>（f）</span>不得利用采招网网络服务系统进行任何不利于采招网的行为；</p>
+                    <p class="p2"><span>（g）</span>如发现任何非法使用用户名或用户出现安全漏洞的情况，应立即通告采招网。</p>
+                </p>
+                <p>
+                    3.5用户必须同意遵循以下规则：
+                    <p class="p2"><span>（a）</span>一个用户名只属于一个企业或个人，同一时间只能在一台机器上使用，并且一周内不能在超过7台不同的机器上使用。
+                        未经采招网书面许可，用户不得将其用户名、密码转售、赠与、转借、租供给第三方或用于商业性用途。否则，由此造成的一切后果和责任由
+                        用户承担；同时，采招网有权单方面中止为其提供的服务。</p>
+                    <p class="p2 p1"><span>（b）</span>未经采招网书面许可，用户不得利用采招网所获得的信息用于商业用途，如发现用户与采招网形成竞争或损害采招网的利益，
+                        或采招网认为对其正常运营造成损害的其他行为，采招网有权单方面终止其使用资格，由此造成的一切后果和责任由用户承担。 </p>
+                </p>
+                <h4>4. 内容所有权</h4>
+                <p>
+                    4.1 采招网提供的网络服务内容受版权、商标和其它财产所有权法律的保护。
+                </p>
+                <p class="p1">
+                    4.2 用户只有在获得采招网或其他相关权利人的授权之后才能使用这些内容，而不能擅自复制、再造这些内容、或创造与内容有关的派生产品。
+                </p>
+                <h4>5. 隐私保护</h4>
+                <p>
+                    5.1 保护用户隐私是采招网的一项基本政策，采招网保证不对外公开或向第三方提供用户注册资料及用户在使用网络服务时存储在采招网的非公开内容，但下列情况除外： 
+                    <p class="p2"><span>（a）</span>事先获得用户的明确授权；</p>
+                    <p class="p2"><span>（b）</span>根据有关的法律法规要求；</p>
+                    <p class="p2"><span>（c）</span>按照相关政府主管部门的要求；</p>
+                    <p class="p2"><span>（d）</span>为维护社会公众的利益；</p>
+                    <p class="p2 p1"><span>（e）</span>为维护采招网的合法权益。</p>
+                </p>
+                <h4>6. 免责声明</h4>
+                <p>
+                    6.1 用户使用采招网网络服务所存在的风险将完全由其自己承担；因其使用采招网网络服务而产生的一切后果也由其自己承担，采招网对用户不承担任何责任。
+                </p>
+                <h4>7. 服务变更、中断或终止</h4>
+                <p>
+                    7.1 如因系统维护或升级的需要而需暂停网络服务，采招网将尽可能事先进行通告。
+                </p>
+                <p>
+                    7.2 如发生下列任何一种情形，采招网有权随时中断或终止向用户提供本协议项下的网络服务而无需通知用户：
+                    <p class="p2"><span>（a）</span>用户提供的个人资料不真实；</p>
+                    <p class="p2"><span>（b）</span>用户违反本协议中规定的使用规则。</p>
+                </p>
+                <p class="p1">
+                    7.3 除前款所述情形外，采招网同时保留在事先通知用户的情况下随时中断或终止部分或全部网络服务的权利，对于所有服务的中断或终止而造成的任何损失，采招网无需对用户或任何第三方承担任何责任。
+                </p>
+                <h4>8. 违约赔偿</h4>
+                <p class="p1">
+                    8.1 用户同意保障和维护采招网及其他用户的利益，如因用户违反有关法律、法规或本协议项下的任何条款而给采招网或任何其他第三人造成损失，用户同意承担由此造成的损害赔偿责任。
+                </p>
+                <h4>9. 修改协议</h4>
+                <p>
+                    9.1 采招网将可能不时的修改本协议的有关条款，一旦条款内容发生变动，采招网将会在相关的页面提示修改内容。
+                </p>
+                <p class="p1">
+                    9.2 如果不同意采招网对服务条款所做的修改，用户有权停止使用网络服务。如果用户继续使用网络服务，则视为用户接受服务条款的变动。
+                </p>
+                <h4>10. 通知和送达</h4>
+                <p class="p1">
+                    10.1 本协议项下所有的通知均可通过重要页面公告、电子邮件或常规的信件传送等方式进行；该等通知于发送之日视为已送达收件人。
+                </p>
+                <h4>11. 其他规定</h4>
+                <p>
+                    11.1 本协议构成双方对本协议之约定事项及其他有关事宜的完整协议，除本协议规定的之外，未赋予本协议各方其他权利。
+                </p>
+                <p>
+                    11.2 如本协议中的任何条款无论因何种原因完全或部分无效或不具有执行力，本协议的其余条款仍应有效并且有约束力。
+                </p>
+            </div>
+          </div>
+            <i class="iconfont closei" onclick="closeAgree()">&#xe617;</i>
+        </div>
+    </div>
+    <!-- 子账号登录 rx210118 -->
+    <div class="logshadowz">
+      <div class="regtxt">
+        <img src="https://cdn.chinabidding.cn/public/2020/img/public/tx.png" class="success">
+        <h4>企业公共账号无法登录个人商务室</h4>
+        <p class="p1">请使用个人子账号<a href="https://www.chinabidding.cn/public/2020/html/login.html?source=1&url=/yuan/login/loginnew/tobussroom" target="_blank">[重新登录]</a>。如果您没有开通个人子账号，请与专属客服联系</p>
+        <p class="p2">专属客服联系电话：<span>400-006-6655</span></p>
+        <i class="iconfont closei" onclick="closelogsz()">&#xe617;</i>
+        <div class="btns cl">
+          <a  href="https://www.chinabidding.cn/public/2020/html/login.html?source=1&url=/yuan/login/loginnew/tobussroom" target="_blank">前往登录</a>
+          <a href="javascript:void(0);" onclick="closelogsz()">取消</a>
+        </div>
+      </div>
+    </div>
+
+    <script type="text/javascript" src="../js/libs/jquery-1.8.3.min.js"></script>
+    <script src="https://cdn.bootcss.com/crypto-js/3.1.9-1/crypto-js.min.js"></script>
+    <script type="text/javascript" src="../js/libs/common.js?t=20230703a"></script>
+    <script src="../js/libs/confuse.js"></script>
+    <script src="../js/utils/growing.js" type="text/javascript"></script>
+    <script src="../js/utils/accessStatistics.js?t=20220211a" type="text/javascript" charset="utf-8"></script>
+    <script src="https://dlswbr.baidu.com/heicha/mw/abclite-2048-s.js"></script>
+    <script src="../js/libs/werty.js"></script>
+    <script src="../js/index.js?t=20230815b"></script>
+    <script type="text/javascript">
+        var ticketId = "", wxId = "", wxFlag = true;
+        // 滑块验证
+        var flag1 = false;   //手机号是否验证成功
+        var flag2 = false;   //判断滑块验证是否成功
+        var codeData = {};   //验证成功后，传回来的数据
+        var CAPTCHA_OBJ;    //滑块验证对象
+        var lastPhone = "";    //上一次获取验证码的手机号
+        var url = 'https://cstaticdun.126.net/load.min.js' + '?t=' + getTimestamp(1 * 60 * 1000) // 时长1分钟，建议时长分钟级别
+        // 存储ggw_id和utm_term
+        var ggw_id = setGgwId();
+        var utm_term = setUtm();
+        var utm_source = getUtmSource();
+        var utm_campaign =getUtmType("utm_campaign");
+        var utm_content =getUtmType("utm_content");
+        var utm_keyid = getUtmType("utm_keyid");
+        var qhclickid = getUtmType("qhclickid");
+        var bd_vid = getUtmType("bd_vid");
+        // var logidUrl = sessionStorage.getItem('url')  + "?bd_vid =" + bd_vid;
+        var logidUrl = "";
+        if (localStorage.getItem("logidUrl")){
+            logidUrl = localStorage.getItem("logidUrl");
+        }
+
+        var site_durl = getUrlInfo(0);
+        var site_title = getUrlInfo(1);
+        var keywords = "";
+        var visit_source = "";
+        var companySname = "";
+        var companySource = 18;
+
+        //banner切换
+        if (!((!!window.ActiveXObject || "ActiveXObject" in window) && IEVersion() <= 8)) {
+            $("#js_banner").remove();
+            $('#container').slider({
+                imgList: [
+                    {
+                        img: 'https://cdn.chinabidding.cn/public/2020/img/zc_bg.png',
+                        a: 'javascript:void(0);'
+                    }
+                ], //图片的列表
+                imgLR: [{
+                    img: 'https://cdn.chinabidding.cn/public/2020/img/sy_cont_icon5.png'
+                },
+                    {
+                        img: 'https://cdn.chinabidding.cn/public/2020/img/sy_cont_icon5(1).png'
+                    }
+                ], //左右切换按钮
+                width: '100%', //图片的宽
+                height: 410, //图片的高
+                isAuto: false, //是否自动轮播
+                moveTime: 5000, //运动时间
+                direction: 'right', //轮播的方向
+                btnWidth: 40, //按钮的宽
+                btnHeight: 60, //按钮的高
+                spanWidth: 10, //span按钮的宽
+                spanHeight: 10, //span按钮的高
+                spanColor: 'rgba(255,255,255,.3)', //span按钮的颜色
+                activeSpanColor: 'rgba(255,255,255,1)', //选中的span颜色
+                btnBackgroundColor: 'rgba(0, 0, 0, 0.3)', //两侧按钮的颜色
+                spanRadius: '50%', //span按钮的圆角程度
+                spanMargin: 3 //span之间的距离
+            })
+        } else {
+            $("#js_banner").show();
+            new $.Tab({
+                target: $('#js_banner_img li'),
+                effect: 'slide3d',
+                animateTime: 1000,
+                stay: 3500,
+                autoPlay: true,
+                merge: true,
+                prevBtn: $('#js_banner_pre'),
+                nextBtn: $('#js_banner_next')
+            });
+        }
+
+        loadScript(url, function () {
+            // 进行初始化验证码等后续逻辑
+            initNECaptcha({
+                captchaId: '21ddb75593e043d9a00419e7e5c772f9',
+                element: '#captcha',
+                mode: 'float',
+                width: '314px',
+                onReady: function (instance) {
+                    $(".yidun_tips .yidun_tips__text").html("向右拖动滑块填充拼图");                    
+                    $(".yidun_tips").removeAttr("style");
+                },
+                onVerify: function (err, data) {
+                    if (!err) {
+                        // 当验证失败时，内部会自动refresh方法，无需手动再调用一次
+                        if(regPhone()){
+                            flag2 = true;
+                            $(".reg_col2 .reg_error").html("").hide();
+                            codeData = data;
+                            lastPhone = $("#loginname").val();   //存上次滑动的号码
+                            $(".reg-form .regmore").show();
+                            // $("#container .w").css("height","520px");
+                            $('#container .imgList').css("height", "520px")
+                            $('#container .imgList li').css("height", "520px")
+                            $('#container .imgList li a').css("height", "520px")
+                            $(".reg-form").css("height","420px");
+                            huadong();   //自动请求验证码
+                        }else{
+                            CAPTCHA_OBJ.refresh();
+                        }
+                    }else{ 
+                        $(".yidun_tips__text").html("向右拖动滑块").show();return;
+                    }
+                }
+            },function onload (instance){
+                CAPTCHA_OBJ = instance;
+            })
+        })
+        
+        function getTimestamp (msec) {
+            msec = !msec && msec !== 0 ? msec : 1
+            return parseInt((new Date()).valueOf() / msec, 10)
+        }
+        
+        function loadScript (src, cb) {
+            var head = document.head || document.getElementsByTagName('head')[0]
+            var script = document.createElement('script')
+
+            cb = cb || function () {}
+
+            script.type = 'text/javascript'
+            script.src = src
+
+            if (!('onload' in script)) {
+            script.onreadystatechange = function () {
+                if (this.readyState !== 'complete' && this.readyState !== 'loaded') return
+                this.onreadystatechange = null
+                cb(script)
+            }
+            }
+
+            script.onload = function () {
+                this.onload = null
+                cb(script)
+            }
+
+            head.appendChild(script)
+        }
+
+        // 注册逻辑
+        $("#loginname").blur(function(){
+            if ((!!window.ActiveXObject || "ActiveXObject" in window) && IEVersion()<=9) {
+                if($(".reg_col1 input").val()==""){
+                    $(".reg_col1 .reg_p").show();
+                }
+            }
+            regPhone()
+        })
+        $("#logincode").blur(function(){
+            if ((!!window.ActiveXObject || "ActiveXObject" in window) && IEVersion()<=9) {
+                if($(".reg_col3 input").val()==""){
+                    $(".reg_col3 .reg_p").show();
+                }
+            }
+            regCode()
+        })
+        $("#loginpwd").blur(function(){  //201105_rx姓名校验
+            if ((!!window.ActiveXObject || "ActiveXObject" in window) && IEVersion()<=9) {
+                if($(".reg_col4 input").val()==""){
+                    $(".reg_col4 .reg_p").show();
+                }
+            }
+            regPwd()
+        })
+        $("#loginrepwd").blur(function(){  //201105_rx公司名校验
+            if ((!!window.ActiveXObject || "ActiveXObject" in window) && IEVersion()<=9) {
+                if($(".reg_col5 input").val()==""){
+                    $(".reg_col5 .reg_p").show();
+                }
+            }
+            regRePwd()
+        })
+        $("#getCode").click(function(){
+            if(!flag2){
+                $(".reg_col2 .reg_error").show().html("请完成滑动验证");
+            }
+            // flag在滑块验证完成后
+            if(flag1 && flag2){
+                // 判断和上次获取验证码的手机号是否一致
+                if(lastPhone && lastPhone!=$("#loginname").val()){
+                    CAPTCHA_OBJ && CAPTCHA_OBJ.refresh();
+                    flag2 = false;
+                    codeData = {}; 
+                }
+                huadong();
+            }
+        })
+        $(".reg_col6 p").click(function(){
+            if(sessionStorage.getItem("route")){
+                var result = JSON.parse(sessionStorage.getItem("route"));
+                // ggw_id = result.ggw_id;
+                keywords = result.s_txt;
+                visit_source = result.s_url;
+                if(result.s_source){
+                    companySource = result.s_source;
+                }
+            }
+            // 元博课堂来源
+            if(window.location.href.indexOf('source=4')!=-1){
+                companySource = 39
+            }
+
+            // regmore显示校验所有 regmore不显示校验1，2
+            if($(".reg-form .regmore").css("display") == "none"){
+                regPhone();
+                regImg();
+            }else{
+                regPhone();
+                var flag22 = regImg();
+                var flag3 = regCode();
+                var flag4 = regPwd();
+                var flag5 = regRePwd();
+                if(flag1 && flag22 && flag3 && flag4 && flag5){
+                    //1030判断注册的公司名
+                    companySname = getCompanySource($(".reg_col5 input").val());
+                    $(".reg_col1 .reg_error").html("").hide();
+                    $(".reg_col2 .reg_error").html("").hide();
+                    $(".reg_col3 .reg_error").html("").hide();
+                    $(".reg_col4 .reg_error").html("").hide();
+                    $(".reg_col5 .reg_error").html("").hide();
+                    var logTxt = $("#loginname").val();
+                    var codeTxt = $("#logincode").val();
+                    var pwdTxt = $("#loginpwd").val();
+                    var repwdTxt = $("#loginrepwd").val();
+                    var time = new Date();
+                    var nowTime = String(time.getFullYear())+String(time.getMonth()+1)+String(time.getDate())+String(time.getHours())+String(time.getMinutes())+String(time.getSeconds());
+                    if ((!!window.ActiveXObject || "ActiveXObject" in window) && IEVersion()<=8) {
+                        var httpxml ;
+                        if(window.XMLHttpRequest){
+                            //大多数浏览器
+                            httpxml = new XMLHttpRequest();
+                        }else{
+                            //古董级浏览器
+                            httpxml = new ActiveXObject("Microsoft.XMLHTTP");
+                        }
+                        httpxml.open("post","/yuan/register/registernew/register",true);
+                        httpxml.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+                        httpxml.onreadystatechange =function () {
+                            if(httpxml.readyState==4 && httpxml.status==200){
+                                var s;
+                                if (typeof(JSON) == 'undefined'){
+                                    s = eval("("+httpxml.responseText+")");
+                                }else{
+                                    s = JSON.parse(httpxml.responseText);
+                                }
+                                if(s.code == 201){//成功
+                                    // ##wu 注册成功
+                                    // var arr = window.location.href;
+                                    // if(arr.indexOf("=")!=-1 && arr.split("?")[1].split("=")[0]=="source"){
+                                    //     if(arr.split("?")[1].split("=")[1] == 1){
+                                    //         window.location.href = 'https://www.chinabidding.cn/public/2020/html/index.html';
+                                    //     }else if(arr.split("?")[1].split("=")[1] == 2){
+                                    //         window.location.href = 'https://www.chinabidding.cn/public/2020/html/yuanbo.html';
+                                    //     }else if(arr.split("?")[1].split("=")[1] == 3){
+                                    //         window.location.href = 'https://www.chinabidding.cn/public/2020/html/ybcloud.html';
+                                    //     }else{
+                                    //         window.location.href = 'https://www.chinabidding.cn/public/2020/html/index.html';
+                                    //     }
+                                    // }else{
+                                    //     window.location.href = 'https://www.chinabidding.cn/public/2020/html/index.html';
+                                    // }
+                                    
+                                    $(".regshadow").show();
+                                    gio('track', 'zhucechenggong');
+                                    // 5s倒计时
+                                    var timer=null;
+                                    var index=5;
+                                    timer=setInterval(function(){
+                                        index--;
+                                        $(".regshadow .regtxt .p2 i").html(index);
+                                        if(index==0){
+                                            clearInterval(timer);
+                                            regSuccess();
+                                        }
+                                    },1000)
+
+                                }else if(s.code == 502){//请填写完整信息
+                                    $(".reg_col1 .reg_error").show().html("<i></i>"+s.msg);
+                                }else if(s.code == 501){//该手机号已被使用
+                                    $(".reg_col1 .reg_error").show().html("<i></i>"+s.msg);
+                                }else if(s.code == 504){//密码不合法
+                                    $(".reg_col4 .reg_error").show().html("<i></i>"+s.msg);
+                                }else if(s.code == 506){//公司名不合法
+                                    $(".reg_col5 .reg_error").show().html("<i></i>"+s.msg);
+                                }else if(s.code == 507){//用户名不合法
+                                    $(".reg_col4 .reg_error").show().html("<i></i>"+s.msg);
+                                }else if(s.code == 510){//请输入正确的手机号或验证码
+                                    $(".reg_col1 .reg_error").show().html("<i></i>"+s.msg);
+                                }else if(s.code == 511 || s.code == 512){//511请先获取验证码  512验证码输入错误次数过多
+                                    $(".reg_col3 .reg_error").show().html("<i></i>"+s.msg);
+                                }else if(s.code == 513){//手机验证码错误
+                                    $(".reg_col3 .reg_error").show().html("<i></i>"+s.msg);
+                                }else if(s.code == 514){//登录过于频繁，请稍后重试
+                                    $(".reg_col1 .reg_error").show().html("<i></i>"+s.msg);
+                                }
+                            }
+                        }
+                        httpxml.send("phone="+convert1(logTxt)+"&phonecode="+convert1(codeTxt)+"&t="+nowTime+"&custName="+convert1(pwdTxt)+"&companyName="+convert1(companySname)+"&utm_term="+convert1(utm_term)+"&site_title="+convert1(site_title)+"&site_durl="+convert1(site_durl)+"&utm_source="+convert1(utm_source)+"&ggw_id="+convert1(ggw_id)+"&companySource="+ companySource +"&keywords="+convert1(keywords)+"&visit_source="+convert1(visit_source)+"&utm_campaign="+convert1(utm_campaign)+"&utm_content="+convert1(utm_content)+"&utm_keyid="+convert1(utm_keyid)+"&qhclickid="+convert1(qhclickid)+"&logidUrl="+convert1(logidUrl));
+                    }else{
+                        $.ajax({
+                            type:"post",
+                            url:"/yuan/register/registernew/register",
+                            data:{
+                                phone: convert1(logTxt),
+                                phonecode: convert1(codeTxt),
+                                custName: convert1(pwdTxt),
+                                companyName: convert1(companySname),
+                                t: nowTime,
+                                ggw_id: convert1(ggw_id),
+                                site_durl: convert1(site_durl),
+                                site_title: convert1(site_title),
+                                utm_term: convert1(utm_term),
+                                utm_source: convert1(utm_source),
+                                utm_campaign: convert1(utm_campaign),
+                                utm_content: convert1(utm_content),
+                                utm_keyid: convert1(utm_keyid),
+                                qhclickid: convert1(qhclickid),
+                                companySource: companySource,
+                                keywords: convert1(keywords),
+                                visit_source: convert1(visit_source),
+                                logidUrl: convert1(logidUrl),
+                            },
+                            dataType:"json",
+                            success:function(data){
+                                if(data.code == 201){//成功
+                                    // ##wu 注册成功
+                                    // var path = '';
+                                    // prevHtml ? (path = 'https://www.chinabidding.cn/public/2020/html/login.html?source=' + prevHtml) : (path = 'https://www.chinabidding.cn/public/2020/html/login.html');
+                                    // window.location.href = path;
+
+                                    $(".regshadow").show();
+                                    gio('track', 'zhucechenggong');
+                                    // 5s倒计时
+                                    var timer=null;
+                                    var index=5;
+                                    timer=setInterval(function(){
+                                        index--;
+                                        $(".regshadow .regtxt .p2 i").html(index);
+                                        if(index==0){
+                                            clearInterval(timer);
+                                            regSuccess();
+                                        }
+                                    },1000)
+                                    
+                                }else if(data.code == 502){//请填写完整信息
+                                    $(".reg_col1 .reg_error").show().html("<i></i>"+data.msg);
+                                }else if(data.code == 501){//该手机号已被使用
+                                    $(".reg_col1 .reg_error").show().html("<i></i>"+data.msg);
+                                }else if(data.code == 504){//密码不合法
+                                    $(".reg_col4 .reg_error").show().html("<i></i>"+data.msg);
+                                }else if(data.code == 506){//公司名不合法
+                                    $(".reg_col5 .reg_error").show().html("<i></i>"+data.msg);
+                                }else if(data.code == 507){//用户名不合法
+                                    $(".reg_col4 .reg_error").show().html("<i></i>"+data.msg);
+                                }else if(data.code == 510){//请输入正确的手机号或验证码
+                                    $(".reg_col1 .reg_error").show().html("<i></i>"+data.msg);
+                                }else if(data.code == 511 || data.code == 512){//511请先获取验证码  512验证码输入错误次数过多
+                                    $(".reg_col3 .reg_error").show().html("<i></i>"+data.msg);
+                                }else if(data.code == 513){//手机验证码错误
+                                    $(".reg_col3 .reg_error").show().html("<i></i>"+data.msg);
+                                }else if(data.code == 514){//登录过于频繁，请稍后重试
+                                    $(".reg_col1 .reg_error").show().html("<i></i>"+data.msg);
+                                }
+                            }
+                        })
+                    }
+                }
+            }
+        })
+        function regImg(){
+            if(flag2){
+                $(".reg_col2 .reg_error").html("").hide();
+                return true
+            }else{
+                $(".reg_col2 .reg_error").show().html("请完成滑动验证");
+                return false
+            }
+        }
+        function regPhone(){
+            var logTxt = $("#loginname").val();
+            var reg=/^1([38][0-9]|4[579]|5[0-3,5-9]|6[6]|7[0135678]|9[123589])\d{8}$/;
+            if(logTxt == ""){
+                flag1 = false;
+                $(".reg_col1 .reg_error").show().html("请输入手机号");
+                return false
+            }else{
+                if(reg.test(logTxt)){
+                    flag1 = true;
+                    $(".reg_col1 .reg_error").html("").hide();
+                    return true
+                }else{
+                    flag1 = false;
+                    $(".reg_col1 .reg_error").show().html("请输入正确手机号");
+                    return false
+                }
+            }
+        }
+        function regCode(){
+            var codeTxt = $("#logincode").val();
+            if(codeTxt == ""){
+                $(".reg_col3 .reg_error").show().html("请输入手机验证码");
+                return false
+            }else{
+                $(".reg_col3 .reg_error").html("").hide();
+                return true
+            }
+        }
+        function regPwd(){
+            var pwdTxt = $("#loginpwd").val();
+            // var Reg = /^[0-9A-Za-z\s`~!@#$%^&*()_\-+=<>?:"{}|,.\/;'\\[\]·~！@#￥%……&*（）——\-+={}|《》？：“”【】、；‘'，。、]+$/im;
+            var Reg = /^[A-Za-z\u4E00-\u9FFF]+$/;
+            if(pwdTxt == ""){
+                $(".reg_col4 .reg_error").show().html("请输入联系人姓名");
+                return false
+            }else{
+                if(pwdTxt.length>=2){
+                    if(pwdTxt.length<=25){
+                        if(Reg.test(pwdTxt)){
+                            $(".reg_col4 .reg_error").html("").hide();
+                            return true
+                        }else{
+                            $(".reg_col4 .reg_error").show().html("联系人姓名不能包含符号、空格与数字");
+                            return false
+                        }
+                    }else{
+                            $(".reg_col4 .reg_error").show().html("联系人姓名输入过长（2-25位）");
+                            return false
+                        }
+                }else{
+                    $(".reg_col4 .reg_error").show().html("联系人姓名输入过短（2-25位）");
+                    return false
+                }
+            }
+        }
+        function regRePwd(){
+            var repwdTxt = $("#loginrepwd").val();
+            var Reg = /^[0-9A-Za-z\u4E00-\u9FFF（）()]+$/;
+            if(repwdTxt == ""){
+                $(".reg_col5 .reg_error").show().html("请输入公司名称");
+                return false
+            }else{
+                if(repwdTxt.length>=4){
+                    if(repwdTxt.length<=50){
+                        if(Reg.test(repwdTxt)){
+                            $(".reg_col5 .reg_error").html("").hide();
+                            return true
+                        }else{
+                            $(".reg_col5 .reg_error").show().html("公司名称不能包含符号与空格");
+                            return false
+                        }
+                    }else{
+                        $(".reg_col5 .reg_error").show().html("公司名称输入过长（4-50位）");
+                        return false
+                    }
+                }else{
+                    $(".reg_col5 .reg_error").show().html("公司名称输入过短（4-50位）");
+                    return false
+                }
+            }
+        }
+        var timer2=null;
+        var index2=60;
+        function huadong(){
+            index2 = 60;
+            $(".reg_col3 .reg_error").html("").hide();
+            var logTxt = $("#loginname").val();
+            if ((!!window.ActiveXObject || "ActiveXObject" in window) && IEVersion()<=8) {
+                var httpxml ;
+                if(window.XMLHttpRequest){
+                    //大多数浏览器
+                    httpxml = new XMLHttpRequest();
+                }else{
+                    //古董级浏览器
+                    httpxml = new ActiveXObject("Microsoft.XMLHTTP");
+                }
+                httpxml.open("post","/yuan/register/registernew/sendmessagewyy",true);
+                httpxml.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+                httpxml.onreadystatechange =function () {
+                    if(httpxml.readyState==4 && httpxml.status==200){
+                        var s;
+                        if (typeof(JSON) == 'undefined'){
+                            s = eval("("+httpxml.responseText+")");
+                        }else{
+                            s = JSON.parse(httpxml.responseText);
+                        }
+                        if(s.code == 202){
+                            clearInterval(timer2);
+                            $("#getCode").addClass("notclick");
+                            // 60s倒计时
+                            $("#getCode").html(index2+"S后可重发");
+                            timer2=setInterval(function(){
+                                index2--;
+                                $("#getCode").html(index2+"S后可重发");
+                                if(index2==0){
+                                    $("#getCode").removeClass("notclick");
+                                    $("#getCode").html("重新获取验证码");
+                                    clearInterval(timer2);
+                                }
+                            },1000)
+                            $(".reg_col3 .reg_error").show().html("验证码已发送至手机，请查收");
+                            setTimeout(function(){
+                                $(".reg_col3 .reg_error").html("").hide();
+                            },2000)
+                        }else if(s.code == 525){
+                            $(".reg_col2 .reg_error").show().html(s.msg);
+                        }else if(s.code == 526){
+                            $(".reg_col2 .reg_error").show().html(s.msg);
+                        }else if(s.code == 541){//请输入手机号   542请输入图片验证码  548图片验证码错误
+                            $(".reg_col1 .reg_error").show().html(s.msg);
+                        }else if(s.code == 543){//手机号已注册
+                            $(".reg_col1 .reg_error").show().html(s.msg);
+                        }else if(s.code == 546){//输入正确手机号
+                            $(".reg_col1 .reg_error").show().html(s.msg);
+                        }else if(s.code == 545){
+                            // 填写信息有误
+                        }else if(s.code == 549){//短信已发送，请稍后再试
+                            $(".reg_col3 .reg_error").show().html(s.msg);
+                        }else if(s.code == 551 || s.code == 556){//短信发送失败
+                            $(".reg_col3 .reg_error").show().html(s.msg);
+                        }
+                    }
+                }
+                httpxml.send("phone="+convert1(logTxt)+"&geetest_challenge="+codeData.validate+"&geetest_validate="+codeData.validate+"&geetest_seccode="+codeData.validate);
+            }else{
+                $.ajax({
+                    type:"post",
+                    url:"/yuan/register/registernew/sendmessagewyy",
+                    data:{
+                        phone: convert1(logTxt),
+                        geetest_challenge: codeData.validate,
+                        geetest_validate: codeData.validate,
+                        geetest_seccode: codeData.validate
+                    },
+                    dataType:"json",
+                    success:function(data){
+                        if(data.code == 202){
+                            clearInterval(timer2);
+                            $("#getCode").addClass("notclick");
+                            // 60s倒计时
+                            $("#getCode").html(index2+"S后可重发");
+                            timer2=setInterval(function(){
+                                index2--;
+                                $("#getCode").html(index2+"S后可重发");
+                                if(index2==0){
+                                    $("#getCode").removeClass("notclick");
+                                    $("#getCode").html("重新获取验证码");
+                                    clearInterval(timer2);
+                                }
+                            },1000)
+                            $(".reg_col3 .reg_error").show().html("验证码已发送至手机，请查收");
+                            setTimeout(function(){
+                                $(".reg_col3 .reg_error").html("").hide();
+                            },2000)
+                        }else if(data.code == 525){
+                            $(".reg_col2 .reg_error").show().html(data.msg);
+                        }else if(data.code == 526){
+                            $(".reg_col2 .reg_error").show().html(data.msg);
+                        }else if(data.code == 541){//请输入手机号   542请输入图片验证码  548图片验证码错误
+                            $(".reg_col1 .reg_error").show().html(data.msg);
+                        }else if(data.code == 543){//手机号已注册
+                            $(".reg_col1 .reg_error").show().html(data.msg);
+                        }else if(data.code == 546){//输入正确手机号
+                            $(".reg_col1 .reg_error").show().html(data.msg);
+                        }else if(data.code == 545){
+                            // 填写信息有误
+                        }else if(data.code == 549){//短信已发送，请稍后再试
+                            $(".reg_col3 .reg_error").show().html(data.msg);
+                        }else if(data.code == 551 || data.code == 556){//短信发送失败
+                            $(".reg_col3 .reg_error").show().html(data.msg);
+                        }
+                    }
+                })
+            }
+        }
+        function regSuccess(){
+            if(localStorage.getItem('aaacreditparams')){  //210726 aaacredit添加
+              var aaacreditparams = JSON.parse(localStorage.getItem('aaacreditparams'));
+              var currentdate = new Date().toLocaleDateString();
+              if(aaacreditparams.aaacreditdate == currentdate){
+                aaacreditparams.isfirst = '0'
+              }else{
+                aaacreditparams.aaacreditdate = currentdate;
+                aaacreditparams.isfirst = '1'
+              }
+              localStorage.setItem("aaacreditparams",JSON.stringify(aaacreditparams));
+            }else{
+              localStorage.setItem("aaacreditparams",JSON.stringify({
+                aaacreditdate: new Date().toLocaleDateString(),
+                isfirst: '1'
+              }));
+            }
+
+            localStorage.setItem('isText',1);
+            var arr = decodeURIComponent(window.location.href), arrlist = [], flag = false, arrUrl = "", sourceUrl = "";
+            if(arr.split("?")[1]){
+                arrlist = arr.split("?")[1].split("&");
+                for(var k=0;k<arrlist.length;k++){
+                    if(arrlist[k].split("=")[0]=="url"){
+                        flag = true;
+                        arrUrl = arrlist[k].split("=")[1];
+                        arrUrl = decodeURI(arrUrl);
+                    }else if(arrlist[k].split("=")[0]=="source"){
+                        sourceUrl = arrlist[k].split("=")[1]
+                        sourceUrl = decodeURI(sourceUrl);
+                    }
+                }
+            }
+
+            if(flag){
+              if(arrUrl.indexOf("tobussroom")!=-1){
+                swsLink();
+              }else{
+                if(arr.indexOf('searchadvxmxx/search3')!=-1 || arr.indexOf('searchgj/zbcg')!=-1){
+                  window.location.href = "https://www.chinabidding.cn"+arr.split('?url=')[1]
+                }else{
+                  window.location.href = "https://www.chinabidding.cn"+arrUrl
+                }
+              }
+            }else{
+                if(sourceUrl == "4") {  //元博课堂的来源
+                    loginMsgSync()
+                    return
+                }
+                // ##wu 
+                var status;
+                if(sessionStorage.getItem('status')){
+                    status = JSON.parse(sessionStorage.getItem('status'))
+                    status.isLink = true
+                    sessionStorage.setItem('status', JSON.stringify(status))
+                }
+                if(sessionStorage.getItem('url')){
+                  window.location.href = sessionStorage.getItem('url');
+                }else{
+                  if(sourceUrl=="3"){
+                    window.location.href = 'https://www.chinabidding.cn/public/2020/html/ybcloud.html';
+                  }else if(sourceUrl=="2"){
+                    window.location.href = 'https://www.bid360.com.cn/public/2020/html/yuanbo.html';
+                  }else{
+                    window.location.href = 'https://www.chinabidding.cn';
+                  }
+                }
+            }
+
+        }
+
+        var timer1 = null;
+        // 微信登录
+        function getTicket(){
+            $(".wx_box .reload_wx").hide();
+            if ((!!window.ActiveXObject || "ActiveXObject" in window) && IEVersion()<=8) {
+                var httpxml ;
+                if(window.XMLHttpRequest){
+                    //大多数浏览器
+                    httpxml = new XMLHttpRequest();
+                }else{
+                    //古董级浏览器
+                    httpxml = new ActiveXObject("Microsoft.XMLHTTP");
+                }
+                httpxml.open("get","/yuan/login/wxlogin/getticket",true);
+                httpxml.onreadystatechange =function () {
+                    if(httpxml.readyState==4 && httpxml.status==200){
+                        var s;
+                        if (typeof(JSON) == 'undefined'){
+                            s = eval("("+httpxml.responseText+")");
+                        }else{
+                            s = JSON.parse(httpxml.responseText);
+                        }
+                        if(s.url){
+                            wxId = s.id;
+                            ticketId = s.ticket;
+                            $(".shadow .wx_box img").attr("src",s.url);
+                            $(".shadow").show();
+                            isWXlogin();
+                        }else{
+                            alert("微信扫码失败")
+                        }
+                    }else if(httpxml.readyState==4 && httpxml.status!=200){  //非200表示异常
+                        alert("微信扫码异常")
+                    }
+                }
+                httpxml.send();
+            }else{
+                $.ajax({
+                    type:"get",
+                    url:"/yuan/login/wxlogin/getticket",
+                    async: false,
+                    dataType:"json",
+                    success:function(data){
+                        if(data.url){
+                            wxId = data.id;
+                            ticketId = data.ticket;
+                            $(".shadow .wx_box img").attr("src",data.url);
+                            $(".shadow").show();
+                            isWXlogin();
+                        }else{
+                            alert("微信扫码失败")
+                        }
+                    },
+                    error:function(xhr){  //非200表示异常
+                        if(xhr.status != 200){
+                            alert("微信扫码异常")
+                        }
+                    }
+                })
+            }
+        }
+        // 微信轮回请求 判断是否有扫码
+        function isWXlogin(){
+            // 开始重复请求
+            var num = 30;
+            timer1=setInterval(function(){
+                num--;
+                if(wxFlag){
+                    if ((!!window.ActiveXObject || "ActiveXObject" in window) && IEVersion()<=8) {
+                        var httpxml ;
+                        if(window.XMLHttpRequest){
+                            //大多数浏览器
+                            httpxml = new XMLHttpRequest();
+                        }else{
+                            //古董级浏览器
+                            httpxml = new ActiveXObject("Microsoft.XMLHTTP");
+                        }
+                        httpxml.open("post","/yuan/login/wxlogin/callback",true);
+                        httpxml.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+                        httpxml.onreadystatechange =function () {
+                            if(httpxml.readyState==4 && httpxml.status==200){
+                                var s;
+                                if (typeof(JSON) == 'undefined'){
+                                    s = eval("("+httpxml.responseText+")");
+                                }else{
+                                    s = JSON.parse(httpxml.responseText);
+                                }
+                                if(s.code == 200 || s.code == 201){ //200登录成功  201注册成功
+                                    wxFlag = false;
+                                    clearInterval(timer1);
+                                    var arr = window.location.href;
+                                    if(arr.indexOf("=")!=-1 && arr.split("?")[1].split("=")[0]=="source"){
+                                        if(arr.split("?")[1].split("=")[1] == 1){
+                                            window.location.href = 'https://www.chinabidding.cn';
+                                        }else if(arr.split("?")[1].split("=")[1] == 2){
+                                            window.location.href = 'https://www.chinabidding.cn/public/2020/html/yuanbo.html';
+                                        }else if(arr.split("?")[1].split("=")[1] == 3){
+                                            window.location.href = 'https://www.chinabidding.cn/public/2020/html/ybcloud.html';
+                                        }else{
+                                            window.location.href = 'https://www.chinabidding.cn';
+                                        }
+                                    }else{
+                                        window.location.href = 'https://www.chinabidding.cn';
+                                    }
+                                }else if(s.code == 562){ //二维码已失效
+                                    clearInterval(timer1);
+                                    $(".wx_box .reload_wx").show();
+                                }else{
+                                    clearInterval(timer1);
+                                    alert(s.msg)
+                                }
+                            }
+                        }
+                        httpxml.send("id="+convert1(String(wxId))+"&ticket="+convert1(ticketId)+"&ggw_id="+convert1(ggw_id)+"&utm_term="+convert1(utm_term)+"&site_durl="+convert1(site_durl)+"&site_title="+convert1(site_title)+"&utm_source="+convert1(utm_source)+"&utm_campaign="+convert1(utm_campaign)+"&utm_content="+convert1(utm_content));
+                    }else{
+                        $.ajax({
+                            type:"post",
+                            url:"/yuan/login/wxlogin/callback",
+                            data:{
+                                id: convert1(String(wxId)),
+                                ticket: convert1(ticketId),
+                                ggw_id: convert1(ggw_id),
+                                utm_term: convert1(utm_term),
+                                site_durl: convert1(site_durl),
+                                site_title: convert1(site_title),
+                                utm_source: convert1(utm_source),
+                                utm_campaign: convert1(utm_campaign),
+                                utm_content: convert1(utm_content)
+                            },
+                            dataType:"json",
+                            success:function(data){
+                                if(data.code == 200 || data.code == 201){ //200登录成功  201注册成功
+                                    wxFlag = false;
+                                    clearInterval(timer1);
+                                    if(sessionStorage.getItem('url')){  //空和null都为false
+                                        window.location.href = sessionStorage.getItem('url')
+                                    }else{
+                                        window.location.href = "https://www.chinabidding.cn"
+                                    }
+                                }else if(data.code == 562){ //二维码已失效
+                                    clearInterval(timer1);
+                                    $(".wx_box .reload_wx").show();
+                                }else{
+                                    clearInterval(timer1);
+                                    alert(data.msg)
+                                }
+                            }
+                        })
+                    }
+                }
+                if(num==0){
+                    // 关闭定时器，手动刷新二维码
+                    clearInterval(timer1);
+                    $(".wx_box .reload_wx").show();
+                }
+            },2000)
+        }
+        // 关闭弹窗，关闭定时
+        function closeShadow(){
+            clearInterval(timer1);
+            $(".shadow").hide();
+        }
+        // 刷新二维码
+        function refreshWX(){
+            if ((!!window.ActiveXObject || "ActiveXObject" in window) && IEVersion()<=8) {
+                var httpxml ;
+                if(window.XMLHttpRequest){
+                    //大多数浏览器
+                    httpxml = new XMLHttpRequest();
+                }else{
+                    //古董级浏览器
+                    httpxml = new ActiveXObject("Microsoft.XMLHTTP");
+                }
+                httpxml.open("get","/yuan/login/wxlogin/getticket",true);
+                httpxml.onreadystatechange =function () {
+                    if(httpxml.readyState==4 && httpxml.status==200){
+                        var s;
+                        if (typeof(JSON) == 'undefined'){
+                            s = eval("("+httpxml.responseText+")");
+                        }else{
+                            s = JSON.parse(httpxml.responseText);
+                        }
+                        if(s.url){
+                            $(".wx_box .reload_wx").hide();
+                            wxId = s.id;
+                            ticketId = s.ticket;
+                            $(".shadow .wx_box img").attr("src",s.url);
+                            isWXlogin();
+                        }else{
+                            alert("微信扫码失败")
+                        }
+                    }
+                }
+                httpxml.send();
+            }else{
+                $.ajax({
+                    type:"get",
+                    url:"/yuan/login/wxlogin/getticket",
+                    async: false,
+                    dataType:"json",
+                    success:function(data){
+                        if(data.url){
+                            $(".wx_box .reload_wx").hide();
+                            wxId = data.id;
+                            ticketId = data.ticket;
+                            $(".shadow .wx_box img").attr("src",data.url);
+                            isWXlogin();
+                        }else{
+                            alert("微信扫码失败")
+                        }
+                    }
+                })
+            }
+        }
+        function linkTo(){
+            var logoSrc = $(".tips-wrapper img").attr("src")
+            if(logoSrc.indexOf("index_login_logo")!=-1){
+                window.open("https://www.chinabidding.cn")
+            }else if(logoSrc.indexOf("yuanbo_login_logo")!=-1){
+                window.open("https://www.bid360.com.cn/public/2020/html/yuanbo.html")
+            }else if(logoSrc.indexOf("ybcloud_login_logo")!=-1){
+                window.open("https://www.chinabidding.cn/public/2020/html/ybcloud.html")
+            }else{
+                window.open("https://www.chinabidding.cn")
+            }
+        }
+        // ##wu判断跳转过来的上一页面
+        var prevHtml = 0;
+        function changeStyle(color) {
+            $('.tip-p2').css({
+                color: color
+            });
+            $('.login-tab a.checked').css({
+                color: color
+            });
+            $('.item-fore4 .fore4-r').css({
+                color: color
+            });
+            $('.item-fore5 p, .reg_col6 p').css({
+                backgroundColor: color
+            });
+            $('.reg-form .isreg_r a').css({
+                color: color
+            });
+            $('.reg_col3 .col3-code').css({
+                color: color
+            });
+        }
+        prevHtml = window.location.search.split('=')[1];
+        if(prevHtml == 1) {
+            $('.tips-wrapper img').attr('src', 'https://cdn.chinabidding.cn/public/2020/img/sy_cont_logo.png?t=20220118a').css({
+                'margin-right': '50px',
+                'margin-left': '0px'
+            });
+            $('#container').css({
+                background: 'url(https://cdn.chinabidding.cn/public/2020/img/zc_bg.png) top center no-repeat'
+            });
+            changeStyle('#df2229')
+        }else if(prevHtml == 2) {
+            $('.tips-wrapper img').attr('src', 'https://cdn.chinabidding.cn/public/2020/img/yuanbo_login_logo.png').css({
+                "padding-top": "15px",
+                'margin-right': '60px',
+                'margin-left': '0px'
+            });
+            $('#container').css({
+                background: 'url(https://cdn.chinabidding.cn/public/2020/img/zc_bg.png) top center no-repeat'
+            });
+            changeStyle('#0b89c3')
+        }else if(prevHtml == 3){
+            $('.tips-wrapper img').attr('src', 'https://cdn.chinabidding.cn/public/2020/img/ybcloud_login_logo.png').css({
+                "padding-top": "12px",
+                'margin-right': '50px',
+                'margin-left': '-45px'
+            });
+            $('#container').css({
+                background: 'url(https://cdn.chinabidding.cn/public/2020/img/zc_bg.png) top center no-repeat'
+            });
+            changeStyle('#cc0000')
+        }else {
+            $('.tips-wrapper img').attr('src', 'https://cdn.chinabidding.cn/public/2020/img/sy_cont_logo.png?t=20220118a').css({
+                'margin-right': '50px',
+                'margin-left': '0px'
+            });
+            $('#container').css({
+                background: 'url(https://cdn.chinabidding.cn/public/2020/img/zc_bg.png) top center no-repeat'
+            });
+            changeStyle('#df2229')
+        }
+
+        // 页面加载
+        window.onload = function () {
+            getRoute();
+            inputClear();
+            if(window.location.href.indexOf("sbiao360")!=-1){
+                $(".copyright .sbiao").show()
+                $(".copyright .bidding").hide()
+            } else {
+                $(".copyright .bidding").show()
+                $(".copyright .sbiao").hide()
+            }
+
+            fitKefu();
+        }
+
+        // placeholder的ie兼容,目前对text有效
+        $(".reg_col1 .reg_p").click(function(){
+            $(".reg_col1 .reg_p").hide();
+            $(".reg_col1 input").focus();
+        })
+        $(".reg_col1 input").focus(function(){
+            $(".reg_col1 .reg_p").hide();
+        })
+        $(".reg_col3 .reg_p").click(function(){
+            $(".reg_col3 .reg_p").hide();
+            $(".reg_col3 input").focus();
+        })
+        $(".reg_col3 input").focus(function(){
+            $(".reg_col3 .reg_p").hide();
+        })
+        $(".reg_col4 .reg_p").click(function(){
+            $(".reg_col4 .reg_p").hide();
+            $(".reg_col4 input").focus();
+        })
+        $(".reg_col4 input").focus(function(){
+            $(".reg_col4 .reg_p").hide();
+        })
+        $(".reg_col5 .reg_p").click(function(){
+            $(".reg_col5 .reg_p").hide();
+            $(".reg_col5 input").focus();
+        })
+        $(".reg_col5 input").focus(function(){
+            $(".reg_col5 .reg_p").hide();
+        })
+        if ((!!window.ActiveXObject || "ActiveXObject" in window) && IEVersion()<=9) {
+            $(".reg-form .reg_p").show();
+        }
+        if (!!window.ActiveXObject || "ActiveXObject" in window) {  //手动清除ie所有input内容
+            setTimeout(function(){
+                $(".reg-form input").val("");
+            },100)
+        }
+
+        // 隐私协议  201217
+        $(".reg_col8 span").click(function(){
+            $(".agreeshadow").show()
+        })
+        function closeAgree(){
+            $(".agreeshadow").hide()
+        }
+
+        // ##wu 马上登录
+        $('.isreg_r a').on('click', function() {
+            if(prevHtml == 1) {
+                window.location.href = 'https://www.chinabidding.cn/public/2020/html/login.html?source=1'
+            }else if(prevHtml == 2) {
+                window.location.href = 'https://www.chinabidding.cn/public/2020/html/login.html?source=2'
+            } else if(prevHtml == 3) {
+                window.location.href = 'https://www.chinabidding.cn/public/2020/html/login.html?source=3'
+            } else {
+                window.location.href = 'https://www.chinabidding.cn/public/2020/html/login.html'
+            }
+        })
+
+        // 清除input框
+        function inputClear(){
+            $(".reg-form input").val("");
+            $(".reg-form .reg_error").hide();
+            if ((!!window.ActiveXObject || "ActiveXObject" in window) && IEVersion()<=9) {
+                $(".reg-form .reg_p").show();
+            }else{
+                $(".reg-form .reg_p").hide();
+            }
+        }
+
+        // 获取上一个页面url和title
+        function getUrlInfo (type){
+            if(type === 0){
+                var site_durl = sessionStorage.getItem("site_durl")?sessionStorage.getItem("site_durl"):"default";
+                return site_durl;
+            }else if(type === 1){
+                var site_title = sessionStorage.getItem("site_title")?sessionStorage.getItem("site_title"):"default";
+                return site_title;
+            }else {
+                return "default";
+            }
+
+        }
+
+        // $(".reg-form input").bind("input propertychange", function () {
+        //     $(this).val($(this).val().replace(/\s*/g, ''))
+        // })
+
+    </script>
+</body>
+</html>
+<!-- 247调发送手机验证码 sendRegistCaptcha-->
+<!-- 641注册按钮  member.regist/new_save  598 companyname 快速注册   custName传name--   ggw_id：1288>

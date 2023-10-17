@@ -426,7 +426,7 @@ function edithots(data) {
     html += "<a href='javascript:void(0);' onclick=linkhots(" + "'" + data[i].title + "'" + ")>" + data[i].title +
       "</a>"
   }
-  $("#header .hots").html(html);
+  $("#search .hots").html(html);
 }
 
 function linkhots(txt) {
@@ -1764,46 +1764,30 @@ function changeYzm() {
   var time = new Date();
   var nowTime = String(time.getFullYear()) + String(time.getMonth() + 1) + String(time.getDate()) + String(time
       .getHours()) + String(time.getMinutes()) + String(time.getSeconds());
-  $("#yzmImage").attr("src", "/cblcn/member.Login/captcha?randomID=" + randomNum + "&t=" + nowTime)
+  $("#yzmImage").attr("src", "https://cdn.chinabidding.cn/cblcn/member.Login/captcha?randomID=" + randomNum + "&t=" + nowTime)
 
 }
 
 // 获取所有数据(判断是否是ie 8,7)
 function getAllData(city) {
-  if ((!!window.ActiveXObject || "ActiveXObject" in window) && IEVersion() <= 8) {
-    var httpxml;
-    if (window.XMLHttpRequest) {
-      //大多数浏览器
-      httpxml = new XMLHttpRequest();
-    } else {
-      //古董级浏览器
-      httpxml = new ActiveXObject("Microsoft.XMLHTTP");
-    }
-    httpxml.open("post", "/yuan/host/maindata", true);
-    httpxml.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-    httpxml.onreadystatechange = function () {
-      if (httpxml.readyState == 4 && httpxml.status == 200) {
-        var s;
-        if (typeof (JSON) == 'undefined') {
-          s = eval("(" + httpxml.responseText + ")");
-        } else {
-          s = JSON.parse(httpxml.responseText);
-        }
-        editData(s)
-      } else if (httpxml.readyState == 4 && httpxml.status != 200) {
-        // window.location.href = "https://www.chinabidding.cn/old_index"
-      }
-    }
-    httpxml.send("area=" + city);
-  } else {
     $.ajax({
       type: "post",
-      url: "/yuan/host/maindata",
+      // url: _syg() + "/datax/json/yuan_home_index",
+      url:  "http://121.36.111.178:6903/yuan/host/maindata",
       data: {
-        area: city
+        area: city,
+        token: token,
+        device: 'czw001',
+        cpcode: 'czw001'
       },
       dataType: "json",
       success: function (data) {
+        console.log(data)
+        if ((localStorage.getItem("c_user") ?? '') !== '') {
+          data.c_user = JSON.parse(localStorage.getItem("c_user")) || {};
+        } else {
+          data.c_user = {};
+        }
         editData(data)
       },
       error: function (xhr) { //非200表示异常
@@ -1812,9 +1796,7 @@ function getAllData(city) {
         }
       }
     })
-  }
 }
-
 // 解析所有数据
 function editData(data) {
   var html = "",
@@ -1823,7 +1805,6 @@ function editData(data) {
     if (data.c_user){
       localStorage.setItem("isText", data.c_user.text_view==1?1:0); // ##wu将当前登录状态存储在本地
     }
-
   } else {
     $(".col23 .user_inner img").css("border", "none");
   }
@@ -1934,34 +1915,6 @@ function editData(data) {
     $(".dropdown-layer4 .unlogin").show();
   }
 
-  // 招标信息全部分类 rx0121
-  $("#banner .sort_l li").hover(function () {
-    var that = this;
-    if (flag) {
-      $(this).find(".dropdown-layer3").show();
-      $(this).find(".hotboxs").css("width", "620px");
-      $(this).find(".hot_ad").css("left", "650px").show();
-      $("#banner .dropdown-layer3").css("box-shadow", "0 0 8px rgba(0,0,0,.2)");
-    } else {
-      $(this).find(".dropdown-layer3").show();
-      $(this).find(".hotboxs").animate({
-        width: "620px"
-      }, 400);
-      setTimeout(function () {
-        $(that).find(".hot_ad").show().animate({
-          left: "650px"
-        }, 250);
-        $("#banner .dropdown-layer3").css("box-shadow", "0 0 8px rgba(0,0,0,.2)");
-      }, 300)
-    }
-    flag = true;
-  }, function () {
-    $(this).find(".dropdown-layer3").hide();
-    $(this).find(".hotboxs").css("width", 0);
-    $(this).find(".hot_ad").css("left", "430px").hide();
-    $("#banner .dropdown-layer3").css("box-shadow", "none")
-  })
-
   var sort_list = [
     // {
     //     "id": "1264903316345857",
@@ -2016,6 +1969,11 @@ function editData(data) {
     c_like_l(data.c_xmxx, "xmxx");
   }
 
+  setHotKey();
+  changeKey(0);
+}
+
+function setHotKey(){
   // 随机给搜索词
   hotsword = [{
     "title": "烟气在线监测"
@@ -2118,9 +2076,9 @@ function editData(data) {
   }, {
     "title": "沥青"
   }];
-  edithots(randomlist(hotsword, 15));
-  changeKey(0);
+  edithots(randomlist(hotsword, 10));
 }
+
 
 // 定位城市
 function changeCity(city) {
@@ -2308,4 +2266,12 @@ function setBanOrder() {
       expires: banDate
     })
   }
+}
+
+function setTopUser(data) {
+  console.log(22)
+  $(".understand").hide()
+  $(".loginNow").hide()
+  $(".registNow").hide()
+  $(".logged").show()
 }

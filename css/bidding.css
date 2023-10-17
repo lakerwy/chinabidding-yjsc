@@ -3625,6 +3625,58 @@
     width: 72px;
     height: 72px;
 }
+.login_button .logged  .logged_icon {
+    vertical-align: middle;
+    width: 38px;
+    height: 38px;
+    display: inline-block;
+    background: url("../img/icon-tx.png") no-repeat;
+    position: relative;
+}
+.login_button .logged  .logged_icon:hover .mermber {
+    display: block;
+}
+.login_button .logged  .logged_icon .mermber {
+    position: absolute;
+    width: 241px;
+    height: 118px;
+    background: url("../img/bg-grxx.png");
+    left: -118px;
+    top: 33px;
+    padding-left: 35px;
+    display: none;
+}
+.login_button .logged  .logged_icon .mermber p {
+    font-size: 14px;
+    font-family: Microsoft YaHei-Regular, Microsoft YaHei;
+    font-weight: 400;
+    color: #8A6213;
+    line-height: 26px;
+}
+.login_button .logged  .logged_icon .mermber .user_txt {
+    margin-top: 35px;
+}
+.login_button .logged  .logged_icon .mermber .user_date {
+    color: #AD8D50;
+}
+.login_button .logged .user_info {
+    margin-left: 11px;
+    vertical-align: middle;
+    display: inline-block;
+    height: 72px;
+}
+.login_button .logged .user_info p{
+    font-size: 12px;
+    font-family: Microsoft YaHei-Regular, Microsoft YaHei;
+    font-weight: 400;
+    color: #AD8D50;
+    line-height: 20px;
+}
+.login_button .logged .user_info .zskf {
+    margin-top: 15px;
+}
+
+
  /*---------搜索栏----------*/
 .searchbar {
     padding-top: 1px;
@@ -3766,11 +3818,11 @@
 }
 .searchbar #search .top_search .refresh .icon {
     display: inline-block;
-    width: 13px;
-    height: 13px;
-    border: 1px solid;
+    width: 21px;
+    height: 21px;
+    background: url("../img/icon-sx.png") no-repeat;
     vertical-align: middle;
-    margin-right: 3px;
+    margin-right: -1px;
     margin-top: -2px;
 }
     /*-------招标中标信息分类---------*/
@@ -3922,6 +3974,90 @@
     font-size: 24px;
     background: url(https://cdn.chinabidding.cn/public/2020/img/sy_cont_ima.png) no-repeat center;
     background-size: 250px 21px;
+}
+#banner {
+    padding-bottom: 6px;
+}
+#banner .sort_l {
+    width: 193px;
+    background: none;
+    border-right: 1px solid #EEEEEE;
+    height: 504px;
+}
+.sort_l .snav {
+    border-right: 1px solid #EEEEEE;
+    margin-top: 10px;
+}
+.sort_l .snav li {
+    cursor: pointer;
+    height: 48px;
+    line-height: 48px;
+    font-size: 16px;
+    font-family: Microsoft YaHei-Regular, Microsoft YaHei;
+    font-weight: 400;
+    color: #333333;
+}
+#banner .sort_l li:hover {
+    border-right: none;
+}
+#banner .sort_l li i, #banner .sort_l li:hover i {
+    background: none;
+}
+#banner .nav-active {
+    background-color: #fedee1;
+    color: #df2229;
+    box-sizing: border-box;
+    border-left: 1px solid #df2229;
+}
+#banner .purchaseNav {
+    width: 1200px;
+    height: 504px;
+    background: #FFFFFF;
+    box-shadow: 0px 0px 13px 0px rgba(184,190,205,0.5);
+    border-radius: 8px 8px 8px 8px;
+    margin-top: 12px;
+}
+#banner .dropdown-layer3 {
+    top: 0;
+    padding: 0;
+    width: 960px;
+}
+.dropdown-layer3 .hotboxs {
+    padding-left: 0;
+    width: 960px;
+}
+.dropdown-layer3 h4 {
+    font-size: 15px;
+    font-family: Microsoft YaHei-Bold, Microsoft YaHei;
+    font-weight: bold;
+}
+.dropdown-layer3 .hotkey {
+    padding-left: 0px;
+    padding-right: 0px;
+}
+.dropdown-layer3 .hotkey a {
+    margin-left: 10px;
+    margin-right: 10px;
+    olor: #CA3834;
+}
+.dropdown-layer3 .hotbox {
+    width: 960px;
+    margin-bottom: 12px;
+}
+.dropdown-layer3 p {
+    width: 960px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #EEEEEE;
+}
+.dropdown-layer3 .hotboxs p:last-child {
+    border-bottom: 0;
+}
+.sort_l .snav .dropdown-layer3 p a {
+    font-size: 14px;
+    font-family: Microsoft YaHei-Regular, Microsoft YaHei;
+    font-weight: 400;
+    color: #666666;
+    margin-right: 23px;
 }
  /* 发布信息入驻弹框提示 */
  #agencyReg_module{
