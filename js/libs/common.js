@@ -844,10 +844,9 @@ function qimoChatClick() {
                     }
 
                 }
-
-                window.open(url, "", "modal=yes,width=800,height=600,resizable=no,scrollbars=no,left=100,top=100");
             }
         }
+        window.open(url, "", "modal=yes,width=800,height=600,resizable=no,scrollbars=no,left=100,top=100");
     }
 }
 

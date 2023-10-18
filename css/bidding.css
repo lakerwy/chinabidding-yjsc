@@ -3588,6 +3588,10 @@
     margin-left: 30px;
     padding: 0 18px;
 }
+#navigation .login_button .ul_login .registNow a {
+    display: inline-block;
+    width: 100%;
+}
 .login_button .ul_login .app:hover .app_dropdown {
     display: block;
 }
@@ -3639,8 +3643,9 @@
 .login_button .logged  .logged_icon .mermber {
     position: absolute;
     width: 241px;
-    height: 118px;
+    height: 134px;
     background: url("../img/bg-grxx.png");
+    background-size: 100% 100%;
     left: -118px;
     top: 33px;
     padding-left: 35px;
@@ -3658,6 +3663,17 @@
 }
 .login_button .logged  .logged_icon .mermber .user_date {
     color: #AD8D50;
+}
+.login_button .logged  .logged_icon .mermber .logout {
+    float: right;
+    margin-right: 37px;
+    font-size: 12px;
+    font-family: Microsoft YaHei-Regular, Microsoft YaHei;
+    font-weight: 400;
+    color: #999999;
+}
+.login_button .logged  .logged_icon .mermber .logout:hover {
+    color: #CA3834;
 }
 .login_button .logged .user_info {
     margin-left: 11px;
@@ -3684,6 +3700,7 @@
     height: 397px;
     background: url("../img/banner-b.png") no-repeat center;
     background-position: bottom;
+    min-width: 1200px;
 }
 .searchbar #search {
     width: 800px;
@@ -3951,7 +3968,7 @@
     background: url("../img/img-zjk.png") no-repeat;
     margin-right: 0px;
 }
-.productNav .w h3 {
+.productNav .cl h3 {
     font-size: 24px;
     font-family: Microsoft YaHei-Bold, Microsoft YaHei;
     font-weight: bold;
@@ -3959,7 +3976,7 @@
     margin-top: 48px;
     margin-bottom: 11px;
 }
-.productNav .w h4 {
+.productNav .cl h4 {
     font-size: 16px;
     font-family: Microsoft YaHei-Regular, Microsoft YaHei;
     font-weight: 400;

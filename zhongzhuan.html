@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>采购与招标网_招标信息发布_元博采购招标投标服务平台</title>
+  <meta name="keywords" http-equiv="Content-Security-Policy" content="upgrade-insecure-requests"
+    content="招标网,采购,招标,政府采购,元博网采购与招标网,招标与采购官网">
+  <meta name="description"
+    content="【元博网采购与招标网】汇集中国采购与招标网各省市招标采购,工程项目等招投标信息,每天在线活跃用户100000余人,倾力打造中国采购与招标网专业资讯平台.采购与招标网做您的招投标管家。">
+  <script src="https://shop.sygnew.com/new/shop/view/icp/js/jquery-1.11.3.min.js"></script>
+  <script src="https://sso.sygnew.com/js/jquery.cookie.js"></script>
+  <script src="https://sso.yjsc.com.cn/yjsc/js/rp.js"></script>
+</head>
+
+<body>
+
+</body>
+<script>
+
+  var object = getQuery();
+  console.log(object, "2222");
+  $.ajax({
+    type: "post",
+    //url: syg_code_index + "/yuan/login/LoginYjsc/loginYjscBefore",
+    url: "https://chinabidding.bid5.cn/yuan/login/LoginYjsc/loginYjscAfter2",
+    data: { sid: object.sid },
+    dataType: "json",
+    success: function (data) {
+      // $.cookie('userInfo', JSON.stringify(data), { path: "/" });
+      localStorage.setItem("c_user", JSON.stringify(data));
+      $.cookie('token', data.yjsc_token, { path: "/" });
+      $.cookie('sid', object.sid, { path: "/" });
+      // window.location.href = q.preurl?window.location.href.split('preurl=')[1]:'/'
+      if(object.preurl.indexOf('bussroom') !== -1){
+          window.location.href = "https://bus.bid5.cn/#/index?sessionId="+object.sid;
+      }else{
+        window.location.href = object.preurl?window.location.href.split('preurl=')[1]:'/'
+        //window.location.href = object.preurl;
+      }
+      
+    }
+  });
+  function getQuery() {
+    var queryList = location.search.split("?")[1];
+    var query = {};
+    if (queryList) {
+      queryList = queryList.split("&");
+      queryList.forEach(function (item) {
+        var arr = item.split("=");
+        query[arr[0]] = arr[1];
+      })
+    }
+    return query;
+  }
+</script>
+
+</html>
