@@ -842,11 +842,11 @@ function qimoChatClick() {
                         //收费用户
                         url = "https://tb.53kf.com/code/client/0ae6bb374440bbf180f02e04d57fb6962/2";
                     }
-
                 }
+
+                window.open(url, "", "modal=yes,width=800,height=600,resizable=no,scrollbars=no,left=100,top=100");
             }
         }
-        window.open(url, "", "modal=yes,width=800,height=600,resizable=no,scrollbars=no,left=100,top=100");
     }
 }
 

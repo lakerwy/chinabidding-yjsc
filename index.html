@@ -6,8 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>采购与招标网_招标信息发布_元博采购招标投标服务平台</title>
   <meta name="keywords" content="招标网,采购,招标,政府采购,元博网采购与招标网,招标与采购官网">
-  <meta name="description"
-        content="【元博网采购与招标网】汇集中国采购与招标网各省市招标采购,工程项目等招投标信息,每天在线活跃用户100000余人,倾力打造中国采购与招标网专业资讯平台.采购与招标网做您的招投标管家。">
+  <meta name="description" content="受业主委托，中国采招网于2023年06月26日发布固定资产标签打印机及相关耗材项目招标公告;项目简介： 详情见附件   (注：以下内容为附件图片识别，个别文字可能不准确，请以附件为准)  固定资产标签打印机及相关耗材项目招标公告 招标编号： GXTC-A1-******   项目所在地区： 北京市 一招标条件 本 固定资产标签打印机及相关耗材项目 已由项目审批 /核准 /备案机关批准，项目资金来 源为 其他资金自筹资金，且已落实， 招标人为 中国人寿财产保险股份有限公司 。本项目已具 备招标条" />
   <link rel="shortcut icon" href="./img/favicon1.ico">
   <link rel="stylesheet" href="./css/reset.css?t=20231011b">
   <link rel="stylesheet" href="./css/bidding.css?t=231011a">
@@ -266,9 +265,9 @@
       <ul id="hotwords">
         <li class="active" onclick="changeKey('0')">查招标采购</li>
         <span class="shu"></span>
-        <li onclick="changeKey('1')">查项目</li>
+        <li onclick="changeKey('1')">查中标</li>
         <span class="shu shu2"></span>
-        <li onclick="changeKey('2')">查企业</li>
+        <li onclick="changeKey('2')">查项目</li>
         <!--                <li onclick="changeKey('3')">信用查询</li>-->
         <li style="cursor: default !important;" class="last">咨询热线：<span>400-006-6655</span></li>
       </ul>
@@ -303,7 +302,7 @@
       <div class="info_cont">
         <a href="https://www.chinabidding.cn/public/2020/html/plist.html?s=vip" target="_blank">拟在建项目</a>
         <a href="https://www.chinabidding.cn/public/2020/html/plist.html?s=reply" target="_blank">项目核准</a>
-        <a href="https://www.chinabidding.cn/public/2020/html/plist.html?s=reply" target="_blank">项目动态</a>
+        <a href="https://www.chinabidding.cn/public/2020/html/plist.html?s=trend" target="_blank">项目动态</a>
         <a href="https://www.chinabidding.cn/public/2020/html/plist.html?s=xmgs" target="_blank">项目公示</a>
         <a href="https://www.chinabidding.cn/public/2020/html/plist.html?s=xmyg" target="_blank">项目预告</a>
         <a href="https://www.chinabidding.cn/public/2020/html/plist.html?s=xmzt" target="_blank">项目专题</a>
@@ -338,7 +337,7 @@
   <div class="adv w">
     <img onclick="yjscLink(1,'/#/publicize/index')" src="./img/banner-s.png" alt="" >
   </div>
-  <div class="productNav w">
+  <div class="productNav w" id="productNav">
     <h4 class="nav-title" style="background-size: 284px 21px">产品与服务推荐</h4>
     <div class="cl">
       <ul class="productNav-up">
@@ -1368,7 +1367,7 @@
   <div id="like">
     <div class="w cl">
       <h4>
-        信息频道
+        最新标讯
       </h4>
       <div class="l_col1 like_box">
         <h5>
@@ -1816,32 +1815,38 @@
     <ul class="elevator_list">
       <li class="space" style="display: none;"></li>
       <li>
-        <a href="javascript:document.getElementById('recommend_n').scrollIntoView()" aria-hidden="true">
+        <a href="javascript:scrollLeftNav('productNav')" aria-hidden="true">
+          产品服务
+        </a>
+      </li>
+      <li class="space"></li>
+      <li>
+        <a href="javascript:scrollLeftNav('banner')" aria-hidden="true">
+          分类导航
+        </a>
+      </li>
+      <li class="space"></li>
+      <li>
+        <a href="javascript:scrollLeftNav('recommend_n')" aria-hidden="true">
           标讯推荐
         </a>
       </li>
       <li class="space"></li>
       <li>
-        <a href="javascript:document.getElementById('like').scrollIntoView()" aria-hidden="true">
-          信息频道
+        <a href="javascript:scrollLeftNav('like')" aria-hidden="true">
+          最新标讯
         </a>
       </li>
       <li class="space"></li>
+<!--      <li>-->
+<!--        <a href="javascript:qimoChatClick()">-->
+<!--          <i class="go_rev"></i>-->
+<!--          反馈-->
+<!--        </a>-->
+<!--      </li>-->
+<!--      <li class="space"></li>-->
       <li>
-        <a href="javascript:document.getElementById('channel').scrollIntoView()" aria-hidden="true">
-          热门频道
-        </a>
-      </li>
-      <li class="space"></li>
-      <li>
-        <a href="javascript:qimoChatClick()">
-          <i class="go_rev"></i>
-          反馈
-        </a>
-      </li>
-      <li class="space"></li>
-      <li>
-        <a href="javascript:document.getElementById('navigation').scrollIntoView()" aria-hidden="true">
+        <a href="javascript:window.scrollTo(0,0)" aria-hidden="true">
           <i class="go_top"></i>
           顶部
         </a>
@@ -2452,6 +2457,7 @@
 
     // 招标采购导航
     $("#banner .sort_l li:nth-child(1)").find(".dropdown-layer3").show();
+    $("#banner .sort_l li:nth-child(1)").addClass("nav-active");
     $("#banner .sort_l li").mouseover(function () {
         // var index = $(this).index();
         $(this).find(".dropdown-layer3").show();
@@ -2492,6 +2498,8 @@
                 getAllData("0");
             }
         }
+
+        initData();
 
         getRoute(); //获取来源
 

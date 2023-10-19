@@ -436,6 +436,8 @@
 <link rel="stylesheet" href="../css/logvertify/logvertify.css">
 <script src="../js/logvertify/logvertify.js"></script>
 <script type="text/javascript">
+    var baseUrl = "";
+
     var ticketId = "",
         wxId = "",
         wxFlag = true; //打开微信的id
@@ -696,68 +698,9 @@
                         var nowTime = String(time.getFullYear()) + String(time.getMonth() + 1) + String(time
                             .getDate()) + String(time.getHours()) + String(time.getMinutes()) + String(
                             time.getSeconds());
-                        if ((!!window.ActiveXObject || "ActiveXObject" in window) && IEVersion() <= 8) {
-                            var httpxml;
-                            if (window.XMLHttpRequest) {
-                                //大多数浏览器
-                                httpxml = new XMLHttpRequest();
-                            } else {
-                                //古董级浏览器
-                                httpxml = new ActiveXObject("Microsoft.XMLHTTP");
-                            }
-                            httpxml.open("post", "/yuan/login/loginnew/login", true);
-                            httpxml.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-                            httpxml.onreadystatechange = function () {
-                                if (httpxml.readyState == 4 && httpxml.status == 200) {
-                                    var s;
-                                    if (typeof (JSON) == 'undefined') {
-                                        s = eval("(" + httpxml.responseText + ")");
-                                    } else {
-                                        s = JSON.parse(httpxml.responseText);
-                                    }
-                                    $(".login-box-l .item-fore1 input").css("border",
-                                        "1px solid #e9e9e9")
-                                    $(".login-box-l .item-fore2 input").css("border",
-                                        "1px solid #e9e9e9")
-                                    $(".login-box-l .item-fore3 input").css("border",
-                                        "1px solid #e9e9e9")
-                                    if (s.code == 200) { //登陆成功
-                                        $(".login-box-l .msg-error").html("").hide();
-                                        if (s.msg.indexOf('登录成功2') != -1) { //安全校验220421
-                                            logvertify()
-                                        } else {
-                                            reglinktxt()
-                                        }
-                                    } else if (s.code == 500) {
-                                        $(".login-box-l .msg-error").show().html("<i></i>该账号或手机号未注册");
-                                        changeYzmL();
-                                    } else if (s.code == 501) {
-                                        $(".login-box-l .msg-error").show().html(
-                                            "<i></i>您输入的用户名密码不匹配，请重新输入");
-                                        changeYzmL();
-                                    } else if (s.code == 509) {
-                                        $(".login-box-l .msg-error").show().html(
-                                            "<i></i>您的账号久未登录，请联系客服");
-                                    } else if (s.code == 548 || s.code == 550) {
-                                        $(".login-box-l .msg-error").show().html("<i></i>图形验证码错误");
-                                        changeYzmL();
-                                    } else if (s.code == 514) {
-                                        $(".login-box-l .msg-error").show().html("<i></i>登录过于频繁，请稍后重试");
-                                    } else if (s.code == 5001 || s.code == 5002 || s.code == 5003 || s
-                                            .code == 5091 || s.code == 5092 || s.code == 5093 || s.code ==
-                                        5094 || s.code == 5095) {
-                                        $(".login-box-l .msg-error").show().html(
-                                            "<i></i>您输入的用户名密码不匹配，请重新输入");
-                                        changeYzmL();
-                                    }
-                                }
-                            }
-                            httpxml.send("phone=" + convert1(logTxt) + "&password=" + convert1(pwdTxt) +
-                                "&yzm=" + convert1(imgTxt) + "&t=" + nowTime);
-                        } else {
-                            $.ajax({
+                        $.ajax({
                                 type: "post",
-                                url: "/yuan/login/loginnew/login",
+                                url: baseUrl + "/yuan/login/loginnew/login",
                                 data: {
                                     phone: convert1(logTxt),
                                     password: convert1(pwdTxt),
@@ -806,8 +749,7 @@
                                         changeYzmL();
                                     }
                                 }
-                            })
-                        }
+                          })
                     }
                 }
             }
@@ -830,64 +772,9 @@
                         var nowTime = String(time.getFullYear()) + String(time.getMonth() + 1) + String(time
                             .getDate()) + String(time.getHours()) + String(time.getMinutes()) + String(
                             time.getSeconds());
-                        if ((!!window.ActiveXObject || "ActiveXObject" in window) && IEVersion() <= 8) {
-                            var httpxml;
-                            if (window.XMLHttpRequest) {
-                                //大多数浏览器
-                                httpxml = new XMLHttpRequest();
-                            } else {
-                                //古董级浏览器
-                                httpxml = new ActiveXObject("Microsoft.XMLHTTP");
-                            }
-                            httpxml.open("post", "/yuan/login/messagelogin/logincheckmessage", true);
-                            httpxml.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-                            httpxml.onreadystatechange = function () {
-                                if (httpxml.readyState == 4 && httpxml.status == 200) {
-                                    var s;
-                                    if (typeof (JSON) == 'undefined') {
-                                        s = eval("(" + httpxml.responseText + ")");
-                                    } else {
-                                        s = JSON.parse(httpxml.responseText);
-                                    }
-                                    $(".login-box-r .item-fore1 input").css("border",
-                                        "1px solid #e9e9e9")
-                                    $(".login-box-r .item-fore2 input").css("border",
-                                        "1px solid #e9e9e9")
-                                    $(".login-box-r .item-fore3 input").css("border",
-                                        "1px solid #e9e9e9")
-                                    if (s.code == 200 || s.code == 201) { //登录成功，注册过
-                                        reglinktxt();
-                                    } else if (s.code == 500) {
-                                        $(".login-box-r .msg-error").show().html("<i></i>该手机号未注册");
-                                    } else if (s.code == 501) {
-                                        $(".login-box-r .msg-error").show().html("<i></i>请先获取手机验证码");
-                                    } else if (s.code == 510) {
-                                        $(".login-box-r .msg-error").show().html(
-                                            "<i></i>请输入正确的手机号或验证码");
-                                    } else if (s.code == 512) {
-                                        $(".login-box-r .msg-error").show().html(
-                                            "<i></i>验证码输入错误次数过多，请稍后重试");
-                                    } else if (s.code == 513) {
-                                        $(".login-box-r .msg-error").show().html("<i></i>手机验证码错误");
-                                    } else if (s.code == 514) {
-                                        $(".login-box-r .msg-error").show().html("<i></i>登录过于频繁，请稍后重试");
-                                    } else if (s.code == 551 || s.code == 552 || s.code == 553 || s
-                                        .code == 554 || s.code == 555 || s.code == 556) {
-                                        $(".login-box-r .msg-error").show().html("<i></i>短信发送失败，请稍后重试");
-                                    } else if (s.code == 550) {
-                                        $(".login-box-r .msg-error").show().html("<i></i>图形验证码错误");
-                                        changeYzmR();
-                                    }
-                                }
-                            }
-                            httpxml.send("phone=" + convert1(logTxt) + "&phonecode=" + convert1(codeTxt) +
-                                "&url=''&t=" + nowTime + "&ggw_id=" + convert1("default") + "&keywords=" +
-                                convert1(keywords) + "&visit_source=" + convert1(visit_source) +
-                                "&companyName=" + convert1(companySname));
-                        } else {
-                            $.ajax({
+                        $.ajax({
                                 type: "post",
-                                url: "/yuan/login/messagelogin/logincheckmessage",
+                                url: baseUrl + "/yuan/login/messagelogin/logincheckmessage",
                                 data: {
                                     phone: convert1(logTxt),
                                     phonecode: convert1(codeTxt),
@@ -938,7 +825,6 @@
                                     }
                                 }
                             })
-                        }
                     }
                 }
             }
@@ -1026,44 +912,9 @@
         // 登录埋点的信息获取
         var da = new Date();
         da = da.getTime();
-        if ((!!window.ActiveXObject || "ActiveXObject" in window) && IEVersion() <= 8) {
-            var httpxml;
-            if (window.XMLHttpRequest) {
-                //大多数浏览器
-                httpxml = new XMLHttpRequest();
-            } else {
-                //古董级浏览器
-                httpxml = new ActiveXObject("Microsoft.XMLHTTP");
-            }
-            httpxml.open("post", "/cblcn/Home/logincheckAndGetMeta", true);
-            httpxml.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-            httpxml.onreadystatechange = function () {
-                if (httpxml.readyState == 4 && httpxml.status == 200) {
-                    var s;
-                    if (typeof (JSON) == 'undefined') {
-                        s = eval("(" + httpxml.responseText + ")");
-                    } else {
-                        s = JSON.parse(httpxml.responseText);
-                    }
-                    // 登录的埋点
-                    if (s.member) {
-                        var userdata = s.member
-                        gio('setUserId', userdata.record_id);
-                        gio('people.set', {
-                            'metaId': userdata.metaId,
-                            'groupId': userdata.cust_right_group
-                        });
-                        linkGio();
-                    }
-                } else if (httpxml.readyState == 4 && httpxml.status != 200) {
-                    linkGio();
-                }
-            }
-            httpxml.send("t=" + da);
-        } else {
-            $.ajax({
+        $.ajax({
                 type: "post",
-                url: "/cblcn/Home/logincheckAndGetMeta",
+                url: baseUrl + "/cblcn/Home/logincheckAndGetMeta",
                 data: {
                     t: da
                 },
@@ -1086,7 +937,6 @@
                     }
                 }
             })
-        }
     }
 
     function regPhone() {
@@ -1181,7 +1031,7 @@
         var time = new Date();
         var nowTime = String(time.getFullYear()) + String(time.getMonth() + 1) + String(time.getDate()) + String(
             time.getHours()) + String(time.getMinutes()) + String(time.getSeconds());
-        $("#yzmImageL").attr("src", "https://cdn.chinabidding.cn/cblcn/member.Login/captcha?randomID=" + randomNum + "&t=" + nowTime)
+        $("#yzmImageL").attr("src", "/cblcn/member.Login/captcha?randomID=" + randomNum + "&t=" + nowTime)
     }
 
     function changeYzmR() {
@@ -1189,7 +1039,7 @@
         var time = new Date();
         var nowTime = String(time.getFullYear()) + String(time.getMonth() + 1) + String(time.getDate()) + String(
             time.getHours()) + String(time.getMinutes()) + String(time.getSeconds());
-        $("#yzmImageR").attr("src", "https://cdn.chinabidding.cn/cblcn/member.Login/captcha?randomID=" + randomNum + "&t=" + nowTime)
+        $("#yzmImageR").attr("src", "/cblcn/member.Login/captcha?randomID=" + randomNum + "&t=" + nowTime)
     }
 
     window.onload = function () {
