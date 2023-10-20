@@ -1191,13 +1191,13 @@
         function linkTo(){
             var logoSrc = $(".tips-wrapper img").attr("src")
             if(logoSrc.indexOf("index_login_logo")!=-1){
-                window.open("https://www.chinabidding.cn")
+                window.open("/")
             }else if(logoSrc.indexOf("yuanbo_login_logo")!=-1){
                 window.open("https://www.bid360.com.cn/public/2020/html/yuanbo.html")
             }else if(logoSrc.indexOf("ybcloud_login_logo")!=-1){
                 window.open("https://www.chinabidding.cn/public/2020/html/ybcloud.html")
             }else{
-                window.open("https://www.chinabidding.cn")
+                window.open("/")
             }
         }
         // ##wu判断跳转过来的上一页面
@@ -1327,13 +1327,13 @@
         // ##wu 马上登录
         $('.isreg_r a').on('click', function() {
             if(prevHtml == 1) {
-                window.location.href = 'https://www.chinabidding.cn/public/2020/html/login.html?source=1'
+                window.location.href = './login.html?source=1'
             }else if(prevHtml == 2) {
-                window.location.href = 'https://www.chinabidding.cn/public/2020/html/login.html?source=2'
+                window.location.href = './login.html?source=2'
             } else if(prevHtml == 3) {
-                window.location.href = 'https://www.chinabidding.cn/public/2020/html/login.html?source=3'
+                window.location.href = './login.html?source=3'
             } else {
-                window.location.href = 'https://www.chinabidding.cn/public/2020/html/login.html'
+                window.location.href = './login.html'
             }
         })
 

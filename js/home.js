@@ -303,6 +303,7 @@ function c_news_l(newsData) {
     html1 = "",
     img = "";
   for (var i = 0; i < newsData.length && i < 2; i++) {
+    newsData[i].url = baseUrl + newsData[i].url;
     img = i == 0 ? "https://cdn.chinabidding.cn/public/2020/img/sy_cont_image10.png" :
       "https://cdn.chinabidding.cn/public/2020/img/sy_cont_image11.png"
     html += "<a href=javascript:ajaxlink(" + "'" + newsData[i].url + "','" + newsData[i].id + "'" + ") title=" + newsData[i].title + "><img src=" + img +
@@ -310,6 +311,7 @@ function c_news_l(newsData) {
   }
   $("#news .news_l").html(html);
   for (var j = 2; j < newsData.length; j++) {
+    newsData[i].url = baseUrl + newsData[i].url;
     if (newsData[j].title.length < 32) {
       html1 += "<li><a href=javascript:ajaxlink(" + "'" + newsData[j].url + "','" + newsData[j].id + "'" + ") title=" + newsData[j].title + ">" + newsData[j]
         .title + "</a><span>" + newsData[j].date + "</span></li>"
@@ -1482,11 +1484,11 @@ function loginTo(index) {
   if (isText == 1) {
     history.go(0)
   } else {
-    sessionStorage.setItem('url', "https://www.chinabidding.cn");
+    sessionStorage.setItem('url', "https://chinabidding.bid5.cn/");
     if (index == 1) {
-      window.open("https://www.chinabidding.cn/public/2020/html/login.html?source=1")
+      window.open("../html/login.html?source=1")
     } else if (index == 2) {
-      window.open("https://www.chinabidding.cn/public/2020/html/register.html?source=1")
+      window.open("../html/register.html?source=1")
     }
   }
 }
@@ -1632,6 +1634,7 @@ function clickButton() {
   if (!((!!window.ActiveXObject || "ActiveXObject" in window) && IEVersion() <= 8)) {
     isText = localStorage.getItem('isText'); // ##wu每次跳转前先获取当前的登录状态
   }
+  var skipUrl = "";
   for (var i = 0; i < $("#hotwords li").length; i++) {
     if ($("#hotwords li").eq(i).attr("class") == "active") {
       if (i == 0) {
@@ -1641,10 +1644,10 @@ function clickButton() {
             txt = $("#search .form p").text();
           }
           addHistoryWord(txt, "index");
-          window.open("https://www.chinabidding.cn/search/searchgj/zbcg?keywords=" + encodeURI(txt.replace(/\#/g, " ").replace(/\&/g, " ").replace(/\\/g, " ").replace(/\{/g, " ").replace(/\$/g, " ")))
+          skipUrl = "https://www.chinabidding.cn/search/searchgj/zbcg?keywords=" + encodeURI(txt.replace(/\#/g, " ").replace(/\&/g, " ").replace(/\\/g, " ").replace(/\{/g, " ").replace(/\$/g, " "))
         } else {
           sessionStorage.setItem('url', "https://www.chinabidding.cn/search/searchgj/zbcg?keywords=" + encodeURI(txt.replace(/\#/g, " ").replace(/\&/g, " ").replace(/\\/g, " ").replace(/\{/g, " ").replace(/\$/g, " ")))
-          window.open("https://www.chinabidding.cn/public/2020/html/login.html?source=1")
+          skipUrl = "https://www.chinabidding.cn/public/2020/html/login.html?source=1"
         }
       } else if (i == 1) {
         // 查中标
@@ -1653,10 +1656,10 @@ function clickButton() {
             txt = $("#search .form p").text();
           }
           addHistoryWord(txt, "index");
-          window.open("https://www.chinabidding.cn/search/searchgj/zbcg?table_type=4%2C&keywords=" + encodeURI(txt.replace(/\#/g, " ").replace(/\&/g, " ").replace(/\\/g, " ").replace(/\{/g, " ").replace(/\$/g, " ")))
+          skipUrl = "https://www.chinabidding.cn/search/searchgj/zbcg?table_type=4%2C&keywords=" + encodeURI(txt.replace(/\#/g, " ").replace(/\&/g, " ").replace(/\\/g, " ").replace(/\{/g, " ").replace(/\$/g, " "))
         } else {
           sessionStorage.setItem('url', "https://www.chinabidding.cn/search/searchgj/zbcg?keywords=" + encodeURI(txt.replace(/\#/g, " ").replace(/\&/g, " ").replace(/\\/g, " ").replace(/\{/g, " ").replace(/\$/g, " ")))
-          window.open("https://www.chinabidding.cn/public/2020/html/login.html?source=1")
+          skipUrl = "https://www.chinabidding.cn/public/2020/html/login.html?source=1"
         }
       } else if (i == 2) {
         // 查项目
@@ -1665,14 +1668,16 @@ function clickButton() {
             txt = $("#search .form p").text();
           }
           addHistoryWord(txt, "index");
-          window.open("https://www.chinabidding.cn/search/searchadvxmxx/search3?keywords=" + encodeURI(txt.replace(/\#/g, " ").replace(/\&/g, " ")))
+          skipUrl = "https://www.chinabidding.cn/search/searchadvxmxx/search3?keywords=" + encodeURI(txt.replace(/\#/g, " ").replace(/\&/g, " "))
         } else {
           sessionStorage.setItem('url', "https://www.chinabidding.cn/search/searchadvxmxx/search3?keywords=" + encodeURI(txt.replace(/\#/g, " ").replace(/\&/g, " ")))
-          window.open("https://www.chinabidding.cn/public/2020/html/login.html?source=1")
+          skipUrl = "https://www.chinabidding.cn/public/2020/html/login.html?source=1"
         }
       }
     }
   }
+  // linkYuanbo(skipUrl, true)
+  window.open(skipUrl)
 }
 
 function clickButton1() {
@@ -1720,7 +1725,7 @@ function changeYzm() {
   var time = new Date();
   var nowTime = String(time.getFullYear()) + String(time.getMonth() + 1) + String(time.getDate()) + String(time
       .getHours()) + String(time.getMinutes()) + String(time.getSeconds());
-  $("#yzmImage").attr("src", "https://cdn.chinabidding.cn/cblcn/member.Login/captcha?randomID=" + randomNum + "&t=" + nowTime)
+  $("#yzmImage").attr("src", "/cblcn/member.Login/captcha?randomID=" + randomNum + "&t=" + nowTime)
 
 }
 
@@ -1765,35 +1770,31 @@ function expiredTip(endDate, showFlag) {
   var fourMonth = getExpiredTime(endDate, 4); //三个月过期时间戳
   var sixMonth = getExpiredTime(endDate, 6); //三个月过期时间戳
   // if (nowTime >= new Date('2023-04-15 00:00:00').getTime() || new Date(endDate).getTime()>= new Date('2023-06-01 00:00:00').getTime()){
-  if (nowTime >= new Date('2023-06-30 00:00:00').getTime()){
-    if (nowTime >= thrMonth || showFlag) {
-      // 到期时间小于等于显示按钮
-      $(".renew_btn").show()
-    }
+  if (nowTime >= thrMonth || showFlag) {
+    // 到期时间小于等于显示按钮
+    $(".renew_btn").show()
   }
   if (loginFlag == 1) {
     // 为当天第一次登录
-    if (nowTime >= new Date('2023-06-30 00:00:00').getTime()){
-      if (nowTime > thrMonth && nowTime < twoMonth) {
-        // 2~3个月过期
-        if (nowDay === 1) {
-          // 弹窗
-          $("#renew_pop").show()
-          $("#renew_pop .inside").show()
-          return true;
-        }
-      } else if (nowTime > twoMonth && nowTime < oneMonth) {
-        // 1~2个月过期
-        if (nowDay === 1 || nowDay === 5) {
-          // 弹窗
-          $("#renew_pop").show()
-          $("#renew_pop .inside").show()
-          return true;
-        }
+    if (nowTime > thrMonth && nowTime < twoMonth) {
+      // 2~3个月过期
+      if (nowDay === 1) {
+        // 弹窗
+        $("#renew_pop").show()
+        $("#renew_pop .inside").show()
+        return true;
       }
-      $.cookie("loginFLag", 0)
-      return false;
+    } else if (nowTime > twoMonth && nowTime < oneMonth) {
+      // 1~2个月过期
+      if (nowDay === 1 || nowDay === 5) {
+        // 弹窗
+        $("#renew_pop").show()
+        $("#renew_pop .inside").show()
+        return true;
+      }
     }
+    $.cookie("loginFLag", 0)
+    return false;
   }
 }
 
@@ -1912,13 +1913,6 @@ function setBanOrder() {
   }
 }
 
-function setTopUser(data) {
-  $(".understand").hide()
-  $(".loginNow").hide()
-  $(".registNow").hide()
-  $(".logged").show()
-}
-//
 // 获取所有数据(判断是否是ie 8,7)
 function getAllData(city) {
   $.ajax({
@@ -1962,8 +1956,6 @@ function editData(data) {
         $(".elevator_tip").show()
       })
     } else { //免费
-      $(".sort_r .col23_free").show();
-      $(".sort_r .col23_pay").remove();
       var nowDate = new Date().getTime();
       if (data.c_user.endtime != null) {
         var endDate = new Date(data.c_user.endtime.replace(/-/g, '/')).getTime();
@@ -2006,17 +1998,10 @@ function editData(data) {
     data.c_release = data.c_release.length > 7 ? data.c_release.slice(0, 7) : data.c_release;
     r_rel_right(data.c_release);
   }
-  // 国信信息
-  if (data.c_news && data.c_news.length) {
-    data.c_news = data.c_news.length > 11 ? data.c_news.slice(0, 11) : data.c_news;
-    c_news_l(data.c_news);
-  }
 }
 // 加载页面所有静态数据
 function initData() {
-  setRegFlag()
-  $(".elevator_credit").on("click", creditChatClick)
-
+  getUserInfo();
   //加载热门数据
   setHotKey();
   changeKey(0);
@@ -2029,6 +2014,10 @@ function initData() {
   getZbcgxx();
   //项目信息
   getXmxx();
+  //国信信息
+  getGxxx();
+  //探项网专栏
+  getTxwProject();
 }
 //用户信息接口
 function getUserInfo(){
@@ -2045,7 +2034,51 @@ function getUserInfo(){
       localStorage.setItem("isText", data?1:0); // ##wu将当前登录状态存储在本地
       isText = data?1:0;
       if(data && data.record_id){ //登录
-        setTopUser(data);
+        var xf = false;
+        $(".loginNow").hide()
+        $(".registNow").hide()
+        $(".logged").show()
+        if (data.cust_right_group ==1 || data.cust_right_group ==2 || data.cust_right_group ==3 || data.cust_right_group ==21){
+          $(".mermber .user_date").html("会员服务截止时间：" + data.pay_end_date);
+          xf = expiredTip(data.pay_end_date)
+          $(".elevator_credit").unbind("click")
+          $(".elevator_credit").on("click", function () {
+            $(".elevator_tip").show()
+          })
+          if(data.cust_right_group){
+            setKefuzixun(data.cust_right_group)
+          }
+        } else { //免费
+          var nowDate = new Date().getTime();
+          if (data.pay_end_date != null) {
+            var endDate = new Date(data.pay_end_date.replace(/-/g, '/')).getTime();
+          }
+          if (endDate >= nowDate) {
+            $(".mermber .user_date").html("上次登录的日期:" + data.login_date);
+          } else {
+            $(".mermber .user_date").html("您的收费权限已到期")
+          }
+          $(".elevator_credit").on("click", creditChatClick);
+        }
+        // 有续费提醒的时候不弹出在线咨询
+        if (!xf){
+          // setMarketing(data)
+          // setDzzbDialog(data);
+          // setChargeing(data)
+        }
+        if (data.metaPhone == "" || data.metaPhone == null) { //电话
+          $(".user_info .zskf").html("专属客服：400-006-6655")
+        } else {
+          $(".user_info .zskf").html("专属客服："+ data.metaName+ " "+data.metaPhone)
+        }
+        $(".user_info .bszx").hide();
+        $(".user_info .zskf").css("margin-top","23px")
+      } else {
+        setRegFlag()
+        $(".elevator_credit").on("click", creditChatClick)
+        $(".loginNow").show()
+        $(".registNow").show()
+        $(".logged").hide()
       }
     },
     error: function (data) { //非200表示异常
@@ -2206,9 +2239,9 @@ function getTmpInfo() {
     },
     dataType: "json",
     success: function (data) {
-      if (data && data.length){
-        // var list2 = deduplicationData(mqcg, data.rec_m.list);
-        var list2 = data;
+      if (data && data.rec_m){
+        var list2 = deduplicationData(data.c_mqcg, data.rec_m);
+        // var list2 = data;
         var html2 = "";
         for (var i = 0; i < list2.length; i++) {
           if (list2[i].title) {
@@ -2280,6 +2313,50 @@ function getXmxx(){
           res = res.length > 7 ? res.slice(0, 7) : res;
           c_like_l(res, "xmxx");
         }
+      }
+    },
+    error: function (data) { //非200表示异常
+
+    }
+  })
+}
+// 国信信息
+function getGxxx(){
+  $.ajax({
+    type: "post",
+    url: baseSyg + "/datax/json/yuan_getgxdate",
+    data: {
+      token: token,
+      device: 'czw001',
+      cpcode: 'czw001'
+    },
+    dataType: "json",
+    success: function (data) {
+      if (data && data.length){
+        data = data.length > 11 ? data.slice(0, 11) : data;
+        c_news_l(data)
+      }
+    },
+    error: function (data) { //非200表示异常
+
+    }
+  })
+}
+// 探项网专栏
+function getTxwProject(){
+  $.ajax({
+    type: "post",
+    url: baseSyg + "/datax/json/yuan_tx_project",
+    data: {
+      token: token,
+      device: 'czw001',
+      cpcode: 'czw001'
+    },
+    dataType: "json",
+    success: function (data) {
+      if (data && data.length){
+        data = data.length > 7 ? data.slice(0, 7) : data;
+        r_rel_left(data);
       }
     },
     error: function (data) { //非200表示异常

@@ -1634,7 +1634,7 @@ function fitKefu() {
 }
 
 function setKefuzixun(type) {
-    if (type == "b" || type == "c" || type == "d" ){
+    if (type == "b" || type == "c" || type == "d" || type == 1 || type == 2 || type == 3){
         $(".elevator_tip .p1").html('标书/征信业务请咨询')
         $(".elevator_tip .p2 span").html('王达')
         $(".elevator_tip .p3 span").html('13810410859')
@@ -2067,6 +2067,38 @@ function yjscLink(type,url) {
     } else {
       window.open(r.mainurl+r.url)
     }
+}
+// 获取炻维云token
+function getYjscToken(){
+    $.ajax({
+      url:"/yuan/login/loginnew/yjscGetToken",
+      type:"get",
+      success:function(res){
+        console.log(res,'res');
+      }
+    })
+}
+// 跳转原采招网
+function linkYuanbo(_url,type){
+    var form = null
+    form = document.createElement("form")
+    form.action = "https://www.chinabidding.cn/yuan/login/login4yjsc/changeyjscurl"
+    form.method = "post"
+    form.target = type?"_blank":"_self"
+    var url = null
+    var token = null
+    url = document.createElement("input")
+    token = document.createElement("input")
+    token.type = "hidden"
+    token.name = "token"
+    token.value = $.cookie('token')
+    url.type = "hidden"
+    url.name = "url"
+    url.value = _url
+    form.appendChild(url)
+    form.appendChild(token)
+    $(document.body).append(form)
+    form.submit()
 }
 
 (function () {

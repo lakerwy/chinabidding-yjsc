@@ -231,7 +231,7 @@
                   <span>上午好</span>！尊敬的会员
                 </p>
                 <p class="user_date">会员服务截止时间：2023-10-05</p>
-                <p class="logout">退出登录</p>
+                <p class="logout" onclick="outLogin()">退出登录</p>
               </div>
             </div>
             <div class="user_info">
@@ -2444,32 +2444,6 @@
         hourReport();
         // 获取验证码
         changeYzm();
-        if ((!!window.ActiveXObject || "ActiveXObject" in window) && IEVersion() <= 8) {
-            var arr = window.location.href;
-            if (arr.indexOf("=") != -1 && arr.split("?")[1].split("=")[0] == "city") {
-                $(".dropdown-layer li a").eq(arr.split("?")[1].split("=")[1]).addClass("dative");
-                $("#city").html(cityList[arr.split("?")[1].split("=")[1]]);
-                getAllData($(".dropdown-layer li a").eq(arr.split("?")[1].split("=")[1]).attr("data_id"));
-            } else {
-                getAllData("0");
-            }
-        } else {
-            if (sessionStorage.getItem("city")) {
-                $("#city").html(sessionStorage.getItem("city"));
-                // 兼容ie浏览器，不支持forEach属性
-                for (var i = 0; i < cityList.length; i++) {
-                    if (cityList[i] === sessionStorage.getItem("city")) {
-                        $(".dropdown-layer li a").eq(i).addClass("dative")
-                        // 请求所有数据
-                        getAllData($(".dropdown-layer li a").eq(i).attr("data_id"))
-                    }
-                }
-            } else {
-                $(".dropdown-layer li a").eq(0).addClass("dative")
-                // 请求所有数据
-                getAllData("0");
-            }
-        }
 
         initData();
 
