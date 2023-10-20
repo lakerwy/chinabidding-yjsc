@@ -187,16 +187,16 @@
             </div>
           </li>
           <li><span>发布信息</span></li>
-          <li class="understand">
-            <div id="understand">
-              <span>了解采购与招标网</span>
-              <span id="icon_sq_two" class="icon_sq"></span>
-            </div>
-            <div class="about">
-              <a href="javascript:void(0)">关于我们</a>
-              <a href="javascript:void(0)">合作伙伴说</a>
-            </div>
-          </li>
+<!--          <li class="understand">-->
+<!--            <div id="understand">-->
+<!--              <span>了解采购与招标网</span>-->
+<!--              <span id="icon_sq_two" class="icon_sq"></span>-->
+<!--            </div>-->
+<!--            <div class="about">-->
+<!--              <a href="javascript:void(0)">关于我们</a>-->
+<!--              <a href="javascript:void(0)">合作伙伴说</a>-->
+<!--            </div>-->
+<!--          </li>-->
         </ul>
       </div>
       <div class="login_button">
@@ -2281,7 +2281,7 @@
     // 控制悬浮框显隐
     window.onscroll = function () {
         var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
-        if (scrollTop > 860 && scrollTop < 1100) {
+        if (scrollTop > 600 && scrollTop < 1000) {
             $(".e_left .elevator_list li").eq(1).find("a").css({
                 background: "#fff",
                 color: "#df2229"
@@ -2300,16 +2300,7 @@
                     background: "#fff"
                 })
             })
-            $(".e_left .elevator_list li").eq(3).find("a").css("color", "#333").hover(function () {
-                $(this).css({
-                    color: "#fff"
-                })
-            }, function () {
-                $(this).css({
-                    color: "#333"
-                })
-            })
-            $(".e_left .elevator_list li").eq(5).find("a").css("color", "#333").hover(function () {
+            $(".e_left .elevator_list li:eq(3),.e_left .elevator_list li:eq(5),.e_left .elevator_list li:eq(7)").find("a").css("color", "#333").hover(function () {
                 $(this).css({
                     color: "#fff"
                 })
@@ -2319,7 +2310,7 @@
                 })
             })
         }
-        if (scrollTop > 1100 && scrollTop < 1400) {
+        if (scrollTop > 1000 && scrollTop < 1600) {
             $(".e_left .elevator_list li").eq(3).find("a").css({
                 background: "#fff",
                 color: "#df2229"
@@ -2338,16 +2329,7 @@
                     background: "#fff"
                 })
             })
-            $(".e_left .elevator_list li").eq(1).find("a").css("color", "#333").hover(function () {
-                $(this).css({
-                    color: "#fff"
-                })
-            }, function () {
-                $(this).css({
-                    color: "#333"
-                })
-            })
-            $(".e_left .elevator_list li").eq(5).find("a").css("color", "#333").hover(function () {
+            $(".e_left .elevator_list li:eq(1),.e_left .elevator_list li:eq(5),.e_left .elevator_list li:eq(7)").find("a").css("color", "#333").hover(function () {
                 $(this).css({
                     color: "#fff"
                 })
@@ -2357,7 +2339,7 @@
                 })
             })
         }
-        if (scrollTop > 1400 && scrollTop < 1900) {
+        if (scrollTop > 1600 && scrollTop < 1900) {
             $(".e_left .elevator_list li").eq(5).find("a").css({
                 background: "#fff",
                 color: "#df2229"
@@ -2376,16 +2358,7 @@
                     background: "#fff"
                 })
             })
-            $(".e_left .elevator_list li").eq(1).find("a").css("color", "#333").hover(function () {
-                $(this).css({
-                    color: "#fff"
-                })
-            }, function () {
-                $(this).css({
-                    color: "#333"
-                })
-            })
-            $(".e_left .elevator_list li").eq(3).find("a").css("color", "#333").hover(function () {
+            $(".e_left .elevator_list li:eq(1),.e_left .elevator_list li:eq(3),.e_left .elevator_list li:eq(7)").find("a").css("color", "#333").hover(function () {
                 $(this).css({
                     color: "#fff"
                 })
@@ -2395,8 +2368,26 @@
                 })
             })
         }
-        if (scrollTop > 1900 || scrollTop < 860) {
-            $(".e_left .elevator_list li").eq(3).find("a").css("color", "#333").hover(function () {
+        if (scrollTop > 1900 && scrollTop < 2350) {
+            $(".e_left .elevator_list li").eq(7).find("a").css({
+                background: "#fff",
+                color: "#df2229"
+            }).hover(function () {
+                $(this).css({
+                    background: "#df2229",
+                    color: "#fff"
+                })
+            }, function () {
+                $(this).css({
+                    background: "#fff",
+                    color: "#df2229"
+                })
+            }).on('click', function () {
+                $(this).css({
+                    background: "#fff"
+                })
+            })
+            $(".e_left .elevator_list li:eq(1),.e_left .elevator_list li:eq(3),.e_left .elevator_list li:eq(5)").find("a").css("color", "#333").hover(function () {
                 $(this).css({
                     color: "#fff"
                 })
@@ -2405,16 +2396,9 @@
                     color: "#333"
                 })
             })
-            $(".e_left .elevator_list li").eq(5).find("a").css("color", "#333").hover(function () {
-                $(this).css({
-                    color: "#fff"
-                })
-            }, function () {
-                $(this).css({
-                    color: "#333"
-                })
-            })
-            $(".e_left .elevator_list li").eq(1).find("a").css("color", "#333").hover(function () {
+        }
+        if (scrollTop > 2350 || scrollTop < 600) {
+            $(".e_left .elevator_list li:eq(1),.e_left .elevator_list li:eq(3),.e_left .elevator_list li:eq(5),.e_left .elevator_list li:eq(7)").find("a").css("color", "#333").hover(function () {
                 $(this).css({
                     color: "#fff"
                 })
@@ -2425,16 +2409,6 @@
             })
         }
         var clientW = document.documentElement.clientWidth;
-        // if (clientW <= 1080) {
-        //   $("#bot_info").removeClass("fastlog");
-        //   $("#bot_info").addClass("minlog");
-        //   var scrollX = $(document).scrollLeft();
-        //   $("#bot_info").css("margin-left", -20 - scrollX + "px")
-        // } else {
-        //   $("#bot_info").css("margin-left", "-560px")
-        //   $("#bot_info").removeClass("minlog");
-        //   $("#bot_info").addClass("fastlog");
-        // }
     }
 
     $("#mycity").hover(function () {
@@ -2464,8 +2438,6 @@
         $(this).siblings().find(".dropdown-layer3").hide();
         $(this).addClass("nav-active").siblings().removeClass("nav-active");
     })
-
-    // setTopUser();
 
     $(function () {
         // 时间修改

@@ -1,33 +1,9 @@
 var baseUrl = "https://www.chinabidding.cn";
+var baseSyg = _syg();
 
-function renderRecommendN(data,mqcg) {
-  if (data.rec_m.list && data.rec_m.list.length) {
-    var list2 = deduplicationData(mqcg, data.rec_m.list);
-    var html2 = "";
-    for (var i = 0; i < list2.length; i++) {
-      if (list2[i].title) {
-        html2 += '<li class="item"><a title="' + list2[i].title + '" target="_blank" href="https://www.chinabidding.cn/public/2020/html/special/index.html?id=' + (list2[i].id ? list2[i].id : "") + '"><span class="left"></span>' + list2[i].title + '</a></li>'
-        
-      } else {
-        html2 += '<li class="item"><a title="' + list2[i].FCompanyName + '" target="_blank" href="https://www.chinabidding.cn/public/bidagency/index.html#/famousEnterprisePro/enterpriseDetails?fid='+list2[i].FID+'"><span class="left"></span>' + list2[i].FCompanyName + '</a></li>'
-        
-      }
-      // https://www.chinabidding.cn/public/2020/html test
-      // html2 += '<li class="item"><a title="' + list2[i].title + '" target="_blank" href="https://www.chinabidding.cn/public/2020/html/special/index.html?id=' + (list2[i].id ? list2[i].id : "") + '"><span class="left"></span>' + list2[i].title + '</a></li>'
-    }
-    $("#recommend_n .special ul").append(html2);
-    if(list2.length>5){
-      $("#recommend_n .special .fSwiper").kxbdMarquee({
-        direction: "up",
-        loop: 0, //无限滚动
-        scrollAmount: 1, //步长
-        scrollDelay: 48, //时长
-        isEqual: true
-      });
-    }
-  }
-  if (data.rec_n && data.rec_n.list && data.rec_n.list.length) {
-    var list3 = data.rec_n.list;
+function renderRecommendN(data) {
+    // var list3 = data.rec_n.list;
+    var list3 = "";
     list3 = [
       {
         title: '鞍钢招标有限公司'
@@ -51,7 +27,6 @@ function renderRecommendN(data,mqcg) {
       html3 += '<li class="item"><a style="cursor:auto;" title="' + list3[i].title + '" href="javascript:void(0);"><span class="left">' + (i + 1) + '</span>' + list3[i].title + '</a></li>'
     }
     $("#recommend_n .companyList").append(html3);
-  }
 }
 
 function deduplicationData(data1,data2) {
@@ -1775,7 +1750,7 @@ function changeNav(index) {
   } else if (index == 4) { //政府采购
     sessionStorage.setItem("navActive", "政府采购")
   }
-  window.open("https://www.chinabidding.cn/public/2020/html/zbcgsort.html")
+  window.open("https://www.chinabidding.cn/public/2020/html/zbcgsort.html?navFlag="+index)
 }
 
 // 自主续费弹窗逻辑2021.01.26添加
@@ -1948,7 +1923,7 @@ function setTopUser(data) {
 function getAllData(city) {
   $.ajax({
     type: "post",
-    url: _syg() + "/datax/json/yuan_home_index",
+    url: baseSyg + "/datax/json/yuan_home_index",
     // url:  "http://121.36.111.178:6903/yuan/host/maindata",
     data: {
       area: city,
@@ -1974,57 +1949,14 @@ function getAllData(city) {
 }
 // 解析所有数据
 function editData(data) {
-  var html = "",
-      html1 = "";
-  if (!((!!window.ActiveXObject || "ActiveXObject" in window) && IEVersion() <= 8)) {
-    if (data.c_user){
-      localStorage.setItem("isText", data.c_user.text_view==1?1:0); // ##wu将当前登录状态存储在本地
-    }
-  } else {
-    $(".col23 .user_inner img").css("border", "none");
-  }
-  if (data.c_user){
-    isText = data.c_user.text_view==1?1:0;
-  }
-  // 底部浮窗是否出现
-  if (isText == 1 && data.c_user) {
-    if (data.c_user.memberid){
-      memberid = data.c_user.memberid;
-    }
-    if (data.c_user.id){
-      userId = data.c_user.id;
-      setLoginFlag(data.c_user.id);
-    }
+  // 顶部登录
+  if (isText == 1 && data) {
     //顶部登录
-    $(".unlog").hide();
-    $(".islog").show();
-    $("#bot_info").hide();
-    $(".islog span").eq(0).html("您好，尊敬的会员")
-
-    $(".sort_r .col22").hide(); //右侧登录
-    // $(".sort_r .col23").show();
-    $(".sort_r .col23 .user_txt p").html("尊敬的会员");
-
-    $(".dropdown-layer5 .drop_unlogin").hide(); //中标业绩
-    $(".dropdown-layer5 .drop_login").show();
-
-    $(".dropdown-layer4 .unlogin").hide(); //中标认证
-    $(".dropdown-layer4 .islogin").show();
     var xf = false;
     if (data.c_user.type && (data.c_user.type == "b" || data.c_user.type == "c" || data.c_user.type == "d" || data.c_user.type == "e")) { //付费
-      if (data.c_user.type == "e"){
-        $(".sort_r .col23_free").show();
-        $(".sort_r .col23_pay").remove();
-      } else {
-        $(".sort_r .col23_pay").show();
-        $(".sort_r .col23_free").remove();
-      }
       $(".sort_r .col23 .date1").html("会员服务截止日期:");
       $(".sort_r .col23 .date2").html(data.c_user.endtime);
       xf = expiredTip(data.c_user.endtime, data.c_user.is_show)
-      // if (!xf) {
-      //     setEndYearPop(data.c_user.type, data.c_user.id);
-      // }
       $(".elevator_credit").unbind("click")
       $(".elevator_credit").on("click", function () {
         $(".elevator_tip").show()
@@ -2048,79 +1980,23 @@ function editData(data) {
     // 有续费提醒的时候不弹出在线咨询
     if (!xf){
       // setMarketing(data)
-      setDzzbDialog(data);
+      // setDzzbDialog(data);
       setChargeing(data)
     }
     if (data.c_user.userMeta == "" || data.c_user.userMeta == null) { //电话
-      $(".elevator_tip .p3 span").html("400-006-6655")
-      $(".sort_r .col23 .kefu_phone").html("400-006-6655");
       $(".dropdown-layer5 .drop_login p").eq(1).html("400-006-6655");
       $(".dropdown-layer4 .islogin p").eq(1).html("400-006-6655");
     } else {
-      $(".elevator_tip .p3 span").html(data.c_user.userMeta)
-      $(".sort_r .col23 .kefu_phone").html(data.c_user.userMeta);
-      $(".dropdown-layer5 .drop_login p").eq(1).html(data.c_user.userMeta);
-      $(".dropdown-layer4 .islogin p").eq(1).html(data.c_user.userMeta);
       $('.logshadowz .p2 span').html(data.c_user.userMeta)
-    }
-    if (!(data.c_user.userName == "" || data.c_user.userName == null || data.c_user.userName == "销售专员" || data.c_user.userName == "专属客服")) { //名字
-      $(".sort_r .col23 .kefu_name span").html(data.c_user.userName.length > 4 ? data.c_user.userName.substring(0, 3) + "..." : data.c_user.userName);
-      $(".elevator_tip .p2 span").html(data.c_user.userName)
     }
     if(data.c_user.type){
       setKefuzixun(data.c_user.type)
     }
-    //isAAACreditShow(data.c_user.userName);
-    // setCoolPop(data.c_user.userName, data.c_user.userMeta, data.c_user.type, data.c_user.id);
   } else {
     setRegFlag()
     $(".elevator_credit").on("click", creditChatClick)
-    $(".islog").hide();
-    $(".unlog").show();
-    $("#bot_info").show();
-    $(".islog span").eq(0).html("");
-
-    $(".sort_r .col23").hide();
-    $(".sort_r .col22").show();
-
-    $(".dropdown-layer5 .drop_login").hide();
-    $(".dropdown-layer5 .drop_unlogin").show();
-
-    $(".dropdown-layer4 .islogin").hide();
-    $(".dropdown-layer4 .unlogin").show();
   }
 
-  var sort_list = [
-    // {
-    //     "id": "1264903316345857",
-    //     "txt1": "javascript:void(0);",
-    //     "txt_a": "https://cdn.chinabidding.cn/public/2020/img/banner220913.png",
-    //     "txt_color": null,
-    //     "video_flag": false,
-    //     "class": "chargeActive"
-    // },
-  ]
-  if(data.c_sources && data.c_sources.length){
-    var imgSources = data.c_sources;
-    for (var i = 0; i < imgSources.length; i++) {
-      if (imgSources[i].link == null || imgSources[i].link == ""){
-        imgSources[i].link = "javascript:void(0);";
-      }
-      sort_list.push({
-        id: imgSources[i].id || '',
-        txt1: imgSources[i].link || '',
-        txt_a: imgSources[i].urlPath || '',
-        video_flag: imgSources[i].isVideo || false,
-        class: imgSources[i].remark || '',
-      })
-    }
-    b_s_sortr(sort_list);
-  }
-
-  // 标讯推荐
-  if (data.c_project) {
-    renderRecommendN(data.c_project,data.c_mqcg);
-  }
   // 中国采购与招标网独家发布
   if (data.c_tjxx && data.c_tjxx.length) {
     data.c_tjxx = data.c_tjxx.length > 7 ? data.c_tjxx.slice(0, 7) : data.c_tjxx;
@@ -2135,24 +2011,47 @@ function editData(data) {
     data.c_news = data.c_news.length > 11 ? data.c_news.slice(0, 11) : data.c_news;
     c_news_l(data.c_news);
   }
-
-  // 项目信息
-  if (data.c_xmxx && data.c_xmxx.length) {
-    data.c_xmxx = data.c_xmxx.length > 7 ? data.c_xmxx.slice(0, 7) : data.c_xmxx;
-    c_like_l(data.c_xmxx, "xmxx");
-  }
 }
 // 加载页面所有静态数据
 function initData() {
+  setRegFlag()
+  $(".elevator_credit").on("click", creditChatClick)
+
   //加载热门数据
   setHotKey();
   changeKey(0);
   // 标讯推荐
   getFreeData();
+  // 企业招标专题
+  getTmpInfo();
+  renderRecommendN();
   // 招标采购信息
   getZbcgxx();
   //项目信息
   getXmxx();
+}
+//用户信息接口
+function getUserInfo(){
+  $.ajax({
+    type: "get",
+    url: "/cblcn/home/logincheck?t=" + Math.random(),
+    // data: {
+    //   token: token,
+    //   device: 'czw001',
+    //   cpcode: 'czw001'
+    // },
+    dataType: "json",
+    success: function (data) {
+      localStorage.setItem("isText", data?1:0); // ##wu将当前登录状态存储在本地
+      isText = data?1:0;
+      if(data && data.record_id){ //登录
+        setTopUser(data);
+      }
+    },
+    error: function (data) { //非200表示异常
+
+    }
+  })
 }
 // 刷新热搜榜词
 function setHotKey(){
@@ -2264,7 +2163,7 @@ function setHotKey(){
 function getFreeData(){
   $.ajax({
     type: "post",
-    url: _syg() + "/datax/json/yuan_getfree_data",
+    url: baseSyg + "/datax/json/yuan_getfree_data",
     data: {
       token: token,
       device: 'czw001',
@@ -2295,11 +2194,53 @@ function getFreeData(){
     }
   })
 }
+// 企业招标专题
+function getTmpInfo() {
+  $.ajax({
+    type: "post",
+    url: baseSyg + "/datax/json/yuan_tmp_infos",
+    data: {
+      token: token,
+      device: 'czw001',
+      cpcode: 'czw001'
+    },
+    dataType: "json",
+    success: function (data) {
+      if (data && data.length){
+        // var list2 = deduplicationData(mqcg, data.rec_m.list);
+        var list2 = data;
+        var html2 = "";
+        for (var i = 0; i < list2.length; i++) {
+          if (list2[i].title) {
+            html2 += '<li class="item"><a title="' + list2[i].title + '" target="_blank" href="https://www.chinabidding.cn/public/2020/html/special/index.html?id=' + (list2[i].id ? list2[i].id : "") + '"><span class="left"></span>' + list2[i].title + '</a></li>'
+
+          } else {
+            html2 += '<li class="item"><a title="' + list2[i].FCompanyName + '" target="_blank" href="https://www.chinabidding.cn/public/bidagency/index.html#/famousEnterprisePro/enterpriseDetails?fid='+list2[i].FID+'"><span class="left"></span>' + list2[i].FCompanyName + '</a></li>'
+
+          }
+        }
+        $("#recommend_n .special ul").append(html2);
+        if(list2.length>5){
+          $("#recommend_n .special .fSwiper").kxbdMarquee({
+            direction: "up",
+            loop: 0, //无限滚动
+            scrollAmount: 1, //步长
+            scrollDelay: 48, //时长
+            isEqual: true
+          });
+        }
+      }
+    },
+    error: function (data) { //非200表示异常
+
+    }
+  })
+}
 //招标采购信息
 function getZbcgxx(){
   $.ajax({
       type: "post",
-      url: _syg() + "/datax/json/yuan_zbcgxx",
+      url: baseSyg + "/datax/json/yuan_zbcgxx",
       data: {
         token: token,
         device: 'czw001',
@@ -2325,7 +2266,7 @@ function getZbcgxx(){
 function getXmxx(){
   $.ajax({
     type: "post",
-    url: _syg() + "/datax/json/yuan_xmxx",
+    url: baseSyg + "/datax/json/yuan_xmxx",
     data: {
       token: token,
       device: 'czw001',
@@ -2333,9 +2274,12 @@ function getXmxx(){
     },
     dataType: "json",
     success: function (data) {
-      console.log(data);
       if (data && data.status == "success"){
-
+        var res = data.result.items;
+        if (res && res.length) {
+          res = res.length > 7 ? res.slice(0, 7) : res;
+          c_like_l(res, "xmxx");
+        }
       }
     },
     error: function (data) { //非200表示异常

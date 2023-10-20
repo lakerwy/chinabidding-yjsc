@@ -843,7 +843,6 @@ function qimoChatClick() {
                         url = "https://tb.53kf.com/code/client/0ae6bb374440bbf180f02e04d57fb6962/2";
                     }
                 }
-
                 window.open(url, "", "modal=yes,width=800,height=600,resizable=no,scrollbars=no,left=100,top=100");
             }
         }
@@ -1650,8 +1649,6 @@ function setKefuzixun(type) {
 
 function creditChatClick() {
     var url = "https://tb.53kf.com/code/client/160d33b8d6369cbb3d8ac9b54e49b8bc7/3"; //更新信用在线咨询代码
-    // var url = "https://tb.53kf.com/code/client/0ae6bb374440bbf180f02e04d57fb6962/10";
-    // window.open(url,"","modal=yes,width=800,height=600,resizable=no,scrollbars=no,left=100,top=100");
     window.open(url, "",
         "height=625,width=750,top=195,left=585,toolbar=no,menubar=no,scrollbars=no, resizable=no,location=yes, status=no"
     );
