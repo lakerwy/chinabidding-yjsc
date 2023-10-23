@@ -2018,6 +2018,8 @@ function initData() {
   getGxxx();
   //探项网专栏
   getTxwProject();
+  // 元博网独家发布
+  getYuanboxx();
 }
 //用户信息接口
 function getUserInfo(){
@@ -2357,6 +2359,28 @@ function getTxwProject(){
       if (data && data.length){
         data = data.length > 7 ? data.slice(0, 7) : data;
         r_rel_left(data);
+      }
+    },
+    error: function (data) { //非200表示异常
+
+    }
+  })
+}
+// 元博网独家发布
+function getYuanboxx(){
+  $.ajax({
+    type: "post",
+    url: baseSyg + "/datax/json/yuan_yuanboxx",
+    data: {
+      token: token,
+      device: 'czw001',
+      cpcode: 'czw001'
+    },
+    dataType: "json",
+    success: function (data) {
+      if (data && data.length){
+        data = data.length > 7 ? data.slice(0, 7) : data;
+        r_rel_right(data)
       }
     },
     error: function (data) { //非200表示异常
