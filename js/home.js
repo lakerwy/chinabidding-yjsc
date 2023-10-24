@@ -285,6 +285,7 @@ function r_rel_right(relData) {
     if(relData[i].content){
       htmlc1 = relData[i].content.length < 48 ? relData[i].content : relData[i].content.substring(0, 47) + "...";
     }
+    relData[i].url = baseUrl + relData[i].url;
     if (i == 0) {
       html += "<li class='cl'><a rel='nofollow' href=javascript:ajaxlink(" + "'" + relData[i].url + "','" + relData[i].id + "'" + ") title=" + relData[i]
         .title +
@@ -1241,14 +1242,14 @@ function regSuccess() {
     if (index == 0) {
       clearInterval(timer);
       localStorage.setItem("registerFlag", "1")
-      window.location.href = 'https://www.chinabidding.cn';
+      window.location.href = '/';
     }
   }, 1000)
 }
 
 function refreshPage() {
   localStorage.setItem("registerFlag", "1")
-  window.location.href = 'https://www.chinabidding.cn';
+  window.location.href = '/';
 }
 
 var timer1 = null;
@@ -2058,9 +2059,12 @@ function getUserInfo(){
           if (endDate >= nowDate) {
             $(".mermber .user_date").html("上次登录的日期:" + data.login_date);
           } else {
-            $(".mermber .user_date").html("您的收费权限已到期")
+            $(".mermber .user_date").html("您的收费权限已到期,请联系专属客服！");
+            $(".mermber").css("height", "162px")
           }
           $(".elevator_credit").on("click", creditChatClick);
+          $(".user_info .bszx").hide();
+          $(".user_info .zskf").css("margin-top","23px")
         }
         // 有续费提醒的时候不弹出在线咨询
         if (!xf){
@@ -2073,8 +2077,6 @@ function getUserInfo(){
         } else {
           $(".user_info .zskf").html("专属客服："+ data.metaName+ " "+data.metaPhone)
         }
-        $(".user_info .bszx").hide();
-        $(".user_info .zskf").css("margin-top","23px")
       } else {
         setRegFlag()
         $(".elevator_credit").on("click", creditChatClick)
@@ -2378,9 +2380,12 @@ function getYuanboxx(){
     },
     dataType: "json",
     success: function (data) {
-      if (data && data.length){
-        data = data.length > 7 ? data.slice(0, 7) : data;
-        r_rel_right(data)
+      if (data && data.status == "success"){
+        var res = data.result.items;
+        if (res && res.length) {
+          res = res.length > 7 ? res.slice(0, 7) : res;
+          r_rel_right(res)
+        }
       }
     },
     error: function (data) { //非200表示异常

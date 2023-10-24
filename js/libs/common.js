@@ -2101,6 +2101,30 @@ function linkYuanbo(_url,type){
     form.submit()
 }
 
+(function() {
+    function _ajaxsetup() {
+        if (typeof ($._ajax) == "undefined") {
+            $._ajax = $.ajax;
+            $.ajax = function(a, b) {
+                // 修改或者移除不需要的部分
+
+                return $._ajax(a, b);
+            };
+        }
+
+        // 其他的逻辑...
+
+        // 添加或者修改其他的钩子函数
+
+    }
+
+    // 调用新的 _ajaxsetup 函数
+    _ajaxsetup();
+
+    // 将新的函数绑定到全局作用域上，覆盖旧的函数
+    window._ajaxsetup = _ajaxsetup;
+})();
+
 (function () {
     "use strict";
 

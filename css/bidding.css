@@ -3670,6 +3670,7 @@
     margin-top: 35px;
 }
 .login_button .logged  .logged_icon .mermber .user_date {
+    width: 210px;
     color: #AD8D50;
 }
 .login_button .logged  .logged_icon .mermber .logout {
