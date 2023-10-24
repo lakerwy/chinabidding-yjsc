@@ -2068,16 +2068,6 @@ function yjscLink(type,url) {
       window.open(r.mainurl+r.url)
     }
 }
-// 获取炻维云token
-function getYjscToken(){
-    $.ajax({
-      url:"/yuan/login/loginnew/yjscGetToken",
-      type:"get",
-      success:function(res){
-        console.log(res,'res');
-      }
-    })
-}
 // 跳转原采招网
 function linkYuanbo(_url,type){
     var form = null
@@ -2099,6 +2089,19 @@ function linkYuanbo(_url,type){
     form.appendChild(token)
     $(document.body).append(form)
     form.submit()
+}
+
+// 登录后跳转中转页面
+function linkZhongzhuan(url) {
+    var sid = $.cookie("CBL_SESSION") || "";
+    if (sid) {
+        sid = sid.slice(sid.indexOf("___ID=")+6);
+    }
+    if(sid) {
+        window.location.href = "https://www.chinabidding.cn/public/2020/html/zhongzhuan.html?sid="+sid+"&url="+url;
+    } else {
+        window.location.href = url;
+    }
 }
 
 (function() {

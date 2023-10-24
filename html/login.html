@@ -424,7 +424,9 @@
   <p></p>
 </div>
 
-<script type="text/javascript" src="../js/libs/jquery-1.8.3.min.js"></script>
+<script src="https://shop.sygnew.com/new/shop/view/icp/js/jquery-1.11.3.min.js"></script>
+<script src="https://sso.sygnew.com/js/jquery.cookie.js"></script>
+
 <script src="https://cdn.bootcss.com/crypto-js/3.1.9-1/crypto-js.min.js"></script>
 <script type="text/javascript" src="../js/libs/common.js?t=20220703a"></script>
 <script src="../js/libs/confuse.js"></script>
@@ -901,12 +903,8 @@
                 } else if (sourceUrl == "2") {
                     window.location.href = 'https://www.bid360.com.cn/public/2020/html/yuanbo.html';
                 } else {
-                    // var sid = $.cookie("CBL_SESSION") || "";
-                    // if (sid) {
-                    //     sid = sid.slice(sid.indexOf("___ID=")+6);
-                    // }
-                    // window.location.href = "https://www.chinabidding.cn/public/2020/html/zhongzhuan.html?sid="+sid+"url=https://chinabidding.bid5.cn/"
-                    window.location.href = '/';
+                    // window.location.href = '/';
+                    linkZhongzhuan("https://chinabidding.bid5.cn/")
                 }
             }
         }

@@ -1,9 +1,9 @@
 @font-face {
   font-family: "iconfont"; /* Project id 2074085 */
-  src: url('/public/2020/font/iconfont.eot?t=1616119633005');
-  src: url('/public/2020/font/iconfont.woff2?t=1626077340801') format('woff2'),
-       url('/public/2020/font/iconfont.woff?t=1626077340801') format('woff'),
-       url('/public/2020/font/iconfont.ttf?t=1626077340801') format('truetype');
+  src: url('./iconfont.eot?t=1616119633005');
+  src: url('./iconfont.woff2?t=1626077340801') format('woff2'),
+       url('./iconfont.woff?t=1626077340801') format('woff'),
+       url('./iconfont.ttf?t=1626077340801') format('truetype');
 }
 
 .iconfont {

@@ -3939,7 +3939,7 @@
 }
 .productNav .productNav-up li a {
     display: inline-block;
-    width: 100%;
+    width: calc(100% - 20px);
     height: 100%;
     padding-left: 16px;
 }
@@ -3966,7 +3966,7 @@
 }
 .productNav .productNav-down li a {
     display: inline-block;
-    width: 100%;
+    width: calc(100% - 50px);
     height: 100%;
     padding-left: 44px;
 }
@@ -3990,6 +3990,15 @@
     font-family: Microsoft YaHei-Regular, Microsoft YaHei;
     font-weight: 400;
     color: #FFFFFF;
+}
+
+.productNav .productNav-down2 li {
+    width: 50%;
+    background-size: 100% 160px;
+}
+.productNav .productNav-down2 li:nth-child(2) {
+    background-size: 100% 160px;
+    margin-right: 0;
 }
 
     /*-----招标采购导航-----*/

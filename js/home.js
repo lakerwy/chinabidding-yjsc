@@ -312,7 +312,7 @@ function c_news_l(newsData) {
   }
   $("#news .news_l").html(html);
   for (var j = 2; j < newsData.length; j++) {
-    newsData[i].url = baseUrl + newsData[i].url;
+    newsData[j].url = baseUrl + newsData[j].url;
     if (newsData[j].title.length < 32) {
       html1 += "<li><a href=javascript:ajaxlink(" + "'" + newsData[j].url + "','" + newsData[j].id + "'" + ") title=" + newsData[j].title + ">" + newsData[j]
         .title + "</a><span>" + newsData[j].date + "</span></li>"
@@ -1242,7 +1242,8 @@ function regSuccess() {
     if (index == 0) {
       clearInterval(timer);
       localStorage.setItem("registerFlag", "1")
-      window.location.href = '/';
+
+      linkZhongzhuan("https://chinabidding.bid5.cn/")
     }
   }, 1000)
 }
@@ -2330,7 +2331,6 @@ function getGxxx(){
     type: "post",
     url: baseSyg + "/datax/json/yuan_getgxdate",
     data: {
-      token: token,
       device: 'czw001',
       cpcode: 'czw001'
     },
@@ -2394,3 +2394,51 @@ function getYuanboxx(){
   })
 }
 
+//跳转聚合交易
+function linkElecronBid1() {
+  var isText = localStorage.getItem('isText');
+  if (isText == 1) {
+    $.ajax({
+      type: "post",
+      url: "https://sso.chinabidding.cn/login.once",
+      dataType:"json",
+      data: {
+        token: $.cookie('token'),
+      },
+      success: function (data) {
+        var once = data.data.once;
+        window.open("https://sso.chinabidding.cn/oauth/authorize?response_type=once&once="+once+"&client_id=yjscbid_1690798333&scope=*;corp:last&state=console&redirect_uri=https://yjsc.chinabidding.cn/_oauth_login")
+      },
+      error: function () {
+
+      }
+    });
+
+  } else {
+
+  }
+}
+//跳转到招采平台在线报名
+function linkSign() {
+  var isText = localStorage.getItem('isText');
+  if (isText == 1) {
+    $.ajax({
+      type: "post",
+      url: "https://sso.chinabidding.cn/login.once",
+      dataType:"json",
+      data: {
+        token: $.cookie('token'),
+      },
+      success: function (data) {
+        var once = data.data.once;
+        var url = "https://shop.chinabidding.cn/op/?once=" + once + "&email=" + $.cookie('email')+ "&open=" + btoa('https://shop.chinabidding.cn/new/shop/view/bidding/index.html')
+        window.open(url)
+      },
+      error: function () {
+
+      }
+    });
+  } else {
+
+  }
+}
