@@ -186,7 +186,7 @@
               </div>
             </div>
           </li>
-          <li><span>发布信息</span></li>
+          <li><span onclick="sendMsg()">发布信息</span></li>
 <!--          <li class="understand">-->
 <!--            <div id="understand">-->
 <!--              <span>了解采购与招标网</span>-->
@@ -217,7 +217,7 @@
               </div>
             </div>
           </li>
-          <li><span>商务室</span></li>
+          <li><span onclick="swsLink()">商务室</span></li>
           <li class="loginNow">
             <a href="./html/login.html" target="_blank">登录</a>
           </li>
@@ -2109,12 +2109,12 @@
       <img src="https://cdn.chinabidding.cn/public/2020/img/public/tx.png" class="success">
       <h4>企业公共账号无法登录个人商务室</h4>
       <p class="p1">请使用个人子账号<a
-          href="https://www.chinabidding.cn/public/2020/html/login.html?source=1&url=/yuan/login/loginnew/tobussroom"
+          href="./html/login.html?source=1&url=/yuan/login/loginnew/tobussroom"
           target="_blank">[重新登录]</a>。如果您没有开通个人子账号，请与专属客服联系</p>
       <p class="p2">专属客服联系电话：<span>400-006-6655</span></p>
       <i class="iconfont closei" onclick="closelogsz()">&#xe617;</i>
       <div class="btns cl">
-        <a href="https://www.chinabidding.cn/public/2020/html/login.html?source=1&url=/yuan/login/loginnew/tobussroom"
+        <a href="./html/login.html?source=1&url=/yuan/login/loginnew/tobussroom"
            target="_blank">前往登录</a>
         <a href="javascript:void(0);" onclick="closelogsz()">取消</a>
       </div>
@@ -2205,17 +2205,17 @@
     $("#search .form p").click(function () {
         $("#search .form p").hide();
         $("#search .form input").focus();
-        if ($("#search .form input").val() == "" && !$("#hotwords li").eq(2).hasClass("active")) {
+        if ($("#search .form input").val() == "" && !$("#hotwords li").eq(3).hasClass("active")) {
             showHistoryWord("index");
         }
     })
     $("#search .form input").focus(function () {
-        if ($(this).val() == "" && !$("#hotwords li").eq(2).hasClass("active")) {
+        if ($(this).val() == "" && !$("#hotwords li").eq(3).hasClass("active")) {
             showHistoryWord("index");
         }
 
         $("#search .form input").on("propertychange keyup", function (event) {
-            if ($(this).val() == "" && !$("#hotwords li").eq(2).hasClass("active")) {
+            if ($(this).val() == "" && !$("#hotwords li").eq(3).hasClass("active")) {
                 showHistoryWord("index");
             } else {
                 $("#search .historywrap").hide();

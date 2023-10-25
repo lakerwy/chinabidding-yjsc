@@ -1176,63 +1176,27 @@ function swsLink() {
     if (sessionStorage.getItem("isEmail")) {
         e_query = sessionStorage.getItem("isEmail");
     }
-    if ((!!window.ActiveXObject || "ActiveXObject" in window) && IEVersion() <= 8) {
-        var httpxml;
-        if (window.XMLHttpRequest) {
-            //大多数浏览器
-            httpxml = new XMLHttpRequest();
-        } else {
-            //古董级浏览器
-            httpxml = new ActiveXObject("Microsoft.XMLHTTP");
-        }
-        httpxml.open("get", "/yuan/login/loginnew/tobussroom?source=1", true);
-        httpxml.onreadystatechange = function () {
-            if (httpxml.readyState == 4 && httpxml.status == 200) {
-                var s;
-                if (typeof (JSON) == 'undefined') {
-                    s = eval("(" + httpxml.responseText + ")");
+    $.ajax({
+        type: "get",
+        url: "/yuan/login/loginnew/tobussroom?source=1",
+        dataType: "json",
+        success: function (data) {
+            // 处理逻辑
+            console.log(typeof (data))
+            if (data.msg && data.msg == 40001) {
+                $(".logshadowz").show();
+            } else if (data.msg && data.msg == 40002) {
+                sessionStorage.setItem('url', encodeURI(window.location.href))
+                window.open("../html/login.html?source=1&url=/yuan/login/loginnew/tobussroom")
+            } else if (data.msg) {
+                if (window.location.href.indexOf("login") != -1 || window.location.href.indexOf("register") != -1) {
+                    window.location.href = e_query ? data.msg + e_query : data.msg;
                 } else {
-                    s = JSON.parse(httpxml.responseText);
-                }
-                // 处理逻辑
-                if (s.msg && s.msg == 40001) {
-                    $(".logshadowz").show();
-                } else if (s.msg && s.msg == 40002) {
-                    sessionStorage.setItem('url', encodeURI(window.location.href))
-                    window.open("https://www.chinabidding.cn/public/2020/html/login.html?source=1&url=/yuan/login/loginnew/tobussroom")
-                } else if (s.msg) {
-                    if (window.location.href.indexOf("login") != -1 || window.location.href.indexOf("register") != -1) {
-                        window.location.href = e_query ? s.msg + e_query : s.msg
-                    } else {
-                        window.open(e_query ? s.msg + e_query : s.msg)
-                    }
+                    window.open(e_query ? data.msg + e_query : data.msg)
                 }
             }
         }
-        httpxml.send();
-    } else {
-        $.ajax({
-            type: "get",
-            url: "/yuan/login/loginnew/tobussroom?source=1",
-            dataType: "json",
-            success: function (data) {
-                // 处理逻辑
-                console.log(typeof (data))
-                if (data.msg && data.msg == 40001) {
-                    $(".logshadowz").show();
-                } else if (data.msg && data.msg == 40002) {
-                    sessionStorage.setItem('url', encodeURI(window.location.href))
-                    window.open("https://www.chinabidding.cn/public/2020/html/login.html?source=1&url=/yuan/login/loginnew/tobussroom")
-                } else if (data.msg) {
-                    if (window.location.href.indexOf("login") != -1 || window.location.href.indexOf("register") != -1) {
-                        window.location.href = e_query ? data.msg + e_query : data.msg;
-                    } else {
-                        window.open(e_query ? data.msg + e_query : data.msg)
-                    }
-                }
-            }
-        })
-    }
+    })
 }
 
 //采钻商城跳转
@@ -1777,9 +1741,11 @@ function showHistoryWord(type) {  //展示搜索历史
             var list = arr[type];
             for (var i = 0, html = "", url = ""; i < list.length; i++) {
                 if (type == "index") {
-                    if ($("#hotwords li").eq(0).hasClass("active")) {
+                    if ($("#hotwords li:eq(0)").hasClass("active")) {
                         url = "https://www.chinabidding.cn/search/searchgj/zbcg?keywords=" + encodeURI(list[i].replace(/\#/g, " ").replace(/\&/g, " ").replace(/\\/g, " ").replace(/\{/g, " ").replace(/\$/g, " "));
                     } else if ($("#hotwords li").eq(1).hasClass("active")) {
+                        url = "https://www.chinabidding.cn/search/searchgj/zbcg?table_type=4%2C&keywords=" + encodeURI(list[i].replace(/\#/g, " ").replace(/\&/g, " ").replace(/\\/g, " ").replace(/\{/g, " ").replace(/\$/g, " "));
+                    } else if ($("#hotwords li").eq(2).hasClass("active")) {
                         url = "https://www.chinabidding.cn/search/searchadvxmxx/search3?keywords=" + encodeURI(list[i].replace(/\#/g, " ").replace(/\&/g, " "));
                     }
                     html += '<li><a href=' + url + ' atype=' + type + ' target="_blank" class="sl">' + list[i] + '</a><i onclick=singleDeleteHW(' + i + ',' + '"' + type + '"' + ')>×</i></li>'

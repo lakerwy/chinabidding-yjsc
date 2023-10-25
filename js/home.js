@@ -433,15 +433,6 @@ function timeChage(currentTime) {
 
 // 发布信息
 function sendMsg() {
-  // 发布信息逻辑 2022/10/20以前的内容————————————————————————————————————
-  // isText = localStorage.getItem('isText'); // ##wu每次跳转前先获取当前的登录状态
-  // if (isText == 1) {
-  //     window.open("https://www.chinabidding.cn/info/fbxx/fbgg")
-  // } else {
-  //     sessionStorage.setItem('url', "https://www.chinabidding.cn/info/fbxx/fbgg")
-  //     window.open("https://www.chinabidding.cn/public/2020/html/login.html?source=1")
-  // }
-
 
   // 2022/10/20修改的内容————————————————————————————————————————————————————
   var httpxml
@@ -465,12 +456,6 @@ function sendMsg() {
       } else {
         res = JSON.parse(httpxml.responseText)
       }
-      // res.text_view = 1
-      // res.is_yuan = 1
-      // res.his_fbxx = 1
-      // res.agent_view = 0
-      // console.log(res.text_view, 'ssssssssss')
-
       if (res.text_view) {  //是否登录
         if(res.agent_view){ //是否入驻
           yjscLink(6)
@@ -500,13 +485,13 @@ function sendMsg() {
             module.html(str)
             $('body').append(module)
           }else{
-            window.open('/info/fbxx/fbgg')
+            window.open(baseUrl+'/info/fbxx/fbgg')
           }
         }
       } else {
         sessionStorage.setItem('url', location.href)
         window.open(
-          '/public/2020/html/login.html?source=1'
+          '../html/login.html?source=1'
         )
       }
     }
@@ -2394,6 +2379,15 @@ function getYuanboxx(){
   })
 }
 
+function linkJhjy(){
+  $.ajax({
+    type: "get",
+    url: "/login.oncecheck?once=https://www.yjsc.com.cn/",
+    success: function (data) {
+      console.log(data)
+    },
+  })
+}
 //跳转聚合交易
 function linkElecronBid1() {
   var isText = localStorage.getItem('isText');

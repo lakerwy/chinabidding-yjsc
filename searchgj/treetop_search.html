@@ -94,7 +94,6 @@
             onfocus="changeBegin()" style="color:#d6a889;;">
           <input id="text" name="keywords" class="sousuok fl" growing-track="true" autocomplete="off" value=""
             style="display:none">
-          <!--                <input id="text" name="keywords" class="sousuok fl" growing-track='true' autocomplete="off" value="" placeholder="输入您想查找的关键词 多个词可以输入空格隔开！"/>-->
           <div class="historywrap"></div>
           <div class="neir fl" id="search_x" onclick="search_click(0)">-内容-</div>
           <input type="hidden" value="CONTEXT" id="search_type" name="search_type">
@@ -137,11 +136,11 @@
           </div>
           <div style="float: right;margin-right:40px;margin-top: 10px">
             <input type="button" data-growing-title="搜索" value="开始搜索" class="ss_anniu" onclick="submitForm()">
-            <a href="./treetop_search.html" title="重置" style="vertical-align:-3px;"><img
-                src="https://cdn.chinabidding.cn/public/search/searchadvzbxx/test/images/chongz.png"></a>
+            <a href="./treetop_search.html" title="重置" style="vertical-align:-3px;">
+              <img src="https://cdn.chinabidding.cn/public/search/searchadvzbxx/test/images/chongz.png" alt="">
+            </a>
           </div>
         </form>
-
       </div>
       <div id="search_adv_button"></div>
       <table width="1003" cellspacing="0" cellpadding="0" border="0" align="center">
@@ -149,14 +148,12 @@
           <tr>
             <td width="650">
               <div class="flash-replaced">
-                <div id="search_adv_button"></div>
+                <div id=""></div>
               </div>
             </td>
           </tr>
         </tbody>
       </table>
-      <!--<div class="bao_c" id="ts1"><img src="https://cdn.chinabidding.cn/public/search/searchadvzbxx/test/images/baoc.png" /></div>
-            <div class="bao_c1" id="ts2"><img src="https://cdn.chinabidding.cn/public/search/searchadvzbxx/test/images/cz.png" /></div>-->
       <!--栏目全选弹出框开始-->
       <div class="tanc_lanmu" id="dialog-table" style="display:none;">
         <div class="guanbi"><a href="javascript:" onclick="qx_table()"><img
@@ -372,7 +369,6 @@
       <div class="guang_3" style="display:none;"><img src=""></div>
       <!--广告位-->
       <div class="guanjc" id="searchC" style="display: none;">
-        <!--<span class="param-selected"><a  href="" title=""> </a><span class="close-icon"><img onclick="" src="https://cdn.chinabidding.cn/public/search/searchadvzbxx/test/images/x_03.jpg" /></span></span>-->
       </div>
       <div class="lieb">
         <table cellspacing="0" cellpadding="0" border="0" align="center" width="1003">
@@ -416,7 +412,6 @@
                   </p>
                 </div>
                 <!-- 数据列表 -->
-                <!--<table height="20" frame="box" cellspacing="1" cellpadding="3" border="0" align="center" width="100%" class="table_body" bordercolorlight="BLACK" bordercolordark="WHITE">-->
                 <table cellpadding="0" style="width:1003px;height:auto;">
                   <tbody id='noworder'>
 
@@ -467,19 +462,6 @@
                         } else {
                           popupInit.getSearchList(pr)
                         }
-                        // jQuery.ajax({
-                        //   async: false,
-                        //   type: "post",
-                        //   url: "/cblcn/Home/logincheck",
-                        //   success: function (msg) {
-                        //     var jumpUrl = "/search/searchgj/zbcg?areaid=&keywords=&time_start=&time_end=&page=1&search_type=CONTEXT&categoryid=&rp=30&table_type=1%2C&b_date=month".replace("page=1", "page=" + pr);
-                        //     if (msg == null || msg == "" || msg.login_id == "") {
-                        //       setRegFlag(true, jumpUrl);
-                        //     } else {
-                        //       location.href = jumpUrl;
-                        //     }
-                        //   }
-                        // })
                       }
                     }
                   </script>
@@ -553,7 +535,7 @@
         style="position: absolute;top: 24px;right: 50%;transform: translateX(-2400%); cursor: pointer;">
     </div>
     <script type="text/javascript" src="https://cdn.chinabidding.cn/public/2020/js/floatSpace.js"></script>
-    <script type="text/javascript" src="../search/zbw/js/searchgj.js?v=14032153" charset="utf-8"></script>
+    <script type="text/javascript" src="./js/searchgj.js?v=14032153" charset="utf-8"></script>
     <script type="text/javascript" src="../javascripts/common/common.js"></script>
     <script type="text/javascript" src="https://cdn.chinabidding.cn/cblcn/ZhuCeRuKou/searchG"></script>
     <script type="text/javascript"
