@@ -505,48 +505,6 @@ function closeAgencyRegModule(flag) {
   flag==2 && yjscLink(7)
 }
 
-function outLogin() { //登出
-  if ((!!window.ActiveXObject || "ActiveXObject" in window) && IEVersion() <= 8) {
-    var httpxml;
-    if (window.XMLHttpRequest) {
-      //大多数浏览器
-      httpxml = new XMLHttpRequest();
-    } else {
-      //古董级浏览器
-      httpxml = new ActiveXObject("Microsoft.XMLHTTP");
-    }
-    httpxml.open("get", "/yuan/logout/logout/tologout", true);
-    httpxml.onreadystatechange = function () {
-      if (httpxml.readyState == 4 && httpxml.status == 200) {
-        var s;
-        if (typeof (JSON) == 'undefined') {
-          s = eval("(" + httpxml.responseText + ")");
-        } else {
-          s = JSON.parse(httpxml.responseText);
-        }
-        if (s.code == 200) {
-          localStorage.setItem('isText', 0);
-          history.go(0);
-        }
-      }
-    }
-    httpxml.send();
-  } else {
-    $.ajax({
-      type: "get",
-      url: "/yuan/logout/logout/tologout",
-      async: false,
-      dataType: "json",
-      success: function (data) {
-        if (data.code == 200) {
-          localStorage.setItem('isText', 0);
-          history.go(0);
-        }
-      }
-    })
-  }
-}
-
 // 快速注册逻辑
 $(".log_col1 .log_p").click(function () {
   $(".log_col1 .log_p").hide();
@@ -2008,21 +1966,32 @@ function initData() {
   // 元博网独家发布
   getYuanboxx();
 }
+function outLogin() { //登出
+  $.ajax({
+    type: "get",
+    url: "/yuan/logout/logout/tologout",
+    async: false,
+    dataType: "json",
+    success: function (data) {
+      if (data.code == 200) {
+        localStorage.setItem('isText', 0);
+        localStorage.removeItem('userInfo');
+        history.go(0);
+      }
+    }
+  })
+}
 //用户信息接口
 function getUserInfo(){
   $.ajax({
     type: "get",
     url: "/cblcn/home/logincheck?t=" + Math.random(),
-    // data: {
-    //   token: token,
-    //   device: 'czw001',
-    //   cpcode: 'czw001'
-    // },
     dataType: "json",
     success: function (data) {
       localStorage.setItem("isText", data?1:0); // ##wu将当前登录状态存储在本地
       isText = data?1:0;
       if(data && data.record_id){ //登录
+        localStorage.setItem("userInfo", JSON.stringify(data));
         var xf = false;
         $(".loginNow").hide()
         $(".registNow").hide()
@@ -2408,30 +2377,6 @@ function linkElecronBid1() {
       }
     });
 
-  } else {
-
-  }
-}
-//跳转到招采平台在线报名
-function linkSign() {
-  var isText = localStorage.getItem('isText');
-  if (isText == 1) {
-    $.ajax({
-      type: "post",
-      url: "https://sso.chinabidding.cn/login.once",
-      dataType:"json",
-      data: {
-        token: $.cookie('token'),
-      },
-      success: function (data) {
-        var once = data.data.once;
-        var url = "https://shop.chinabidding.cn/op/?once=" + once + "&email=" + $.cookie('email')+ "&open=" + btoa('https://shop.chinabidding.cn/new/shop/view/bidding/index.html')
-        window.open(url)
-      },
-      error: function () {
-
-      }
-    });
   } else {
 
   }

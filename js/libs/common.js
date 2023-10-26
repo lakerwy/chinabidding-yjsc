@@ -150,8 +150,26 @@ function loginMsgSync() {
                     if(type=='1') {
                         if(s.text_view=='1'){
                             logMsg.formData.IsMain = s.is_yuan?false:true
-                            logMsg.formData.CZID = s.is_yuan?s.yuanid:s.memberid
-                            logMsg.getForm('/cblcn/Home/logincheck?t='+new Date().getTime(),'2')
+                            logMsg.formData.CZID = s.is_yuan?s.yuanid:s.memberid;
+                            var userInfo = localStorage.getItem('userInfo')?JSON.parse(localStorage.getItem('userInfo')):{}
+                            logMsg.formData.StudentName = userInfo.cust_name
+                            logMsg.formData.StudentNetName = userInfo.login_id
+                            logMsg.formData.Mobile = userInfo.phone?userInfo.phone:''
+                            logMsg.formData.Subrelation = logMsg.formData.IsMain?0:userInfo.record_id
+                            logMsg.formData.Origin = userInfo.company_name?userInfo.company_name:''
+                            logMsg.formData.EMail = userInfo.cust_email?userInfo.cust_email:''
+                            logMsg.getForm('','3')
+
+                            // 加密
+                            var arr = Object.keys(logMsg.formData), html = '';
+                            for(var i=0;i<arr.length;i++){
+                                html += arr[i]+'='+logMsg.formData[arr[i]]+'&'
+                            }
+                            html = html.substring(0,html.length-1)
+                            //可能存在encodeURIComponent转码的大小写问题
+                            html = logMsg.encryptByDES(encodeURIComponent(html),'81AE6CF8')
+                            window.location.href = 'https://study.chinabidding.cn/Interface/LoginHandler.ashx?'+html
+
                         }else{
                             var a = document.createElement('a');
                             a.setAttribute('href','https://study.chinabidding.cn');
@@ -160,24 +178,6 @@ function loginMsgSync() {
                             a.click();
                             a.remove();
                         }
-                    }else if(type == '2') {
-                        logMsg.formData.StudentName = s.cust_name
-                        logMsg.formData.StudentNetName = s.login_id
-                        logMsg.formData.Mobile = s.phone?s.phone:''
-                        logMsg.formData.Subrelation = logMsg.formData.IsMain?0:s.record_id
-                        logMsg.formData.Origin = s.company_name?s.company_name:''
-                        logMsg.formData.EMail = s.cust_email?s.cust_email:''
-                        logMsg.getForm('','3')
-
-                        // 加密
-                        var arr = Object.keys(logMsg.formData), html = '';
-                        for(var i=0;i<arr.length;i++){
-                            html += arr[i]+'='+logMsg.formData[arr[i]]+'&'
-                        }
-                        html = html.substring(0,html.length-1)
-                        //可能存在encodeURIComponent转码的大小写问题
-                        html = logMsg.encryptByDES(encodeURIComponent(html),'81AE6CF8')
-                        window.location.href = 'https://study.chinabidding.cn/Interface/LoginHandler.ashx?'+html
                     }
                 }else if(httpxml.readyState==4 && httpxml.status!=200){  //非200表示异常
                     console.log('获取信息失败')
@@ -821,32 +821,16 @@ if (!Array.indexOf) {
 // 客服弹框
 function qimoChatClick() {
     var url = "https://tb.53kf.com/code/client/0ae6bb374440bbf180f02e04d57fb6962/3"; //游客
-    var xmlhttp;
-    if (window.XMLHttpRequest) { // code for IE7+, Firefox, Chrome, Opera, Safari
-        xmlhttp = new XMLHttpRequest();
-    } else { // code for IE6, IE5
-        xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
-    }
-    xmlhttp.open("GET", "/cblcn/home/logincheck?t=" + Math.random(), true);
-    xmlhttp.send();
-    xmlhttp.onreadystatechange = function () {
-        if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
-            var result = xmlhttp.responseText;
-            if (result) {
-                var us = eval('(' + result + ')');
-                if (us && us.record_id) {
-                    //免费用户
-                    if (us.cust_right_group == 0) {
-                        url = "https://tb.53kf.com/code/client/0ae6bb374440bbf180f02e04d57fb6962/1";
-                    } else {
-                        //收费用户
-                        url = "https://tb.53kf.com/code/client/0ae6bb374440bbf180f02e04d57fb6962/2";
-                    }
-                }
-                window.open(url, "", "modal=yes,width=800,height=600,resizable=no,scrollbars=no,left=100,top=100");
-            }
+    var isText = localStorage.getItem('isText');
+    if(isText == 1) {
+        var userInfo = localStorage.getItem('userInfo')?JSON.parse(localStorage.getItem('userInfo')):{}
+        if (userInfo.cust_right_group == 0) { //免费用户
+            url = "https://tb.53kf.com/code/client/0ae6bb374440bbf180f02e04d57fb6962/1";
+        } else { //收费用户
+            url = "https://tb.53kf.com/code/client/0ae6bb374440bbf180f02e04d57fb6962/2";
         }
     }
+    window.open(url, "", "modal=yes,width=800,height=600,resizable=no,scrollbars=no,left=100,top=100");
 }
 
 setInterval(function () {
@@ -1974,32 +1958,8 @@ function yjscLink(type,url) {
         return res
       },
       getIsText: function(){
-        var httpxml,res;
-        if (window.XMLHttpRequest) {
-          //大多数浏览器
-          httpxml = new XMLHttpRequest();
-        } else {
-          //古董级浏览器
-          httpxml = new ActiveXObject("Microsoft.XMLHTTP");
-        }
-        httpxml.open("get", "/cblcn/Home/newLoginCheck?t="+new Date().getTime(), false);
-        httpxml.onreadystatechange = function () {
-          if (httpxml.readyState == 4 && httpxml.status == 200) {
-            var s;
-            if (typeof (JSON) == 'undefined') {
-              s = eval("(" + httpxml.responseText + ")");
-            } else {
-              s = JSON.parse(httpxml.responseText);
-            }
-            // 处理逻辑
-            res = s.text_view==1?1:0
-          }else if (httpxml.readyState == 4 && httpxml.status != 200) {
-            res = 0
-          }
-        }
-        httpxml.send();
-  
-        return res
+        var isText = localStorage.getItem('isText'); // ##wu每次跳转前先获取当前的登录状态
+        return isText
       }
     }
     var isText = yjsc.getIsText();
