@@ -1589,7 +1589,7 @@ function clickButton() {
             txt = $("#search .form p").text();
           }
           addHistoryWord(txt, "index");
-          skipUrl = "https://www.chinabidding.cn/search/searchgj/zbcg?keywords=" + encodeURI(txt.replace(/\#/g, " ").replace(/\&/g, " ").replace(/\\/g, " ").replace(/\{/g, " ").replace(/\$/g, " "))
+          skipUrl = "./html/treetop_search.html?keywords=" + encodeURI(txt.replace(/\#/g, " ").replace(/\&/g, " ").replace(/\\/g, " ").replace(/\{/g, " ").replace(/\$/g, " "))
         } else {
           sessionStorage.setItem('url', "https://www.chinabidding.cn/search/searchgj/zbcg?keywords=" + encodeURI(txt.replace(/\#/g, " ").replace(/\&/g, " ").replace(/\\/g, " ").replace(/\{/g, " ").replace(/\$/g, " ")))
           skipUrl = "https://www.chinabidding.cn/public/2020/html/login.html?source=1"
@@ -1601,7 +1601,7 @@ function clickButton() {
             txt = $("#search .form p").text();
           }
           addHistoryWord(txt, "index");
-          skipUrl = "https://www.chinabidding.cn/search/searchgj/zbcg?table_type=4%2C&keywords=" + encodeURI(txt.replace(/\#/g, " ").replace(/\&/g, " ").replace(/\\/g, " ").replace(/\{/g, " ").replace(/\$/g, " "))
+          skipUrl = "./html/treetop_search.html?keywords=" + encodeURI(txt.replace(/\#/g, " ").replace(/\&/g, " ").replace(/\\/g, " ").replace(/\{/g, " ").replace(/\$/g, " ")) + "&table_type=" + 4;
         } else {
           sessionStorage.setItem('url', "https://www.chinabidding.cn/search/searchgj/zbcg?keywords=" + encodeURI(txt.replace(/\#/g, " ").replace(/\&/g, " ").replace(/\\/g, " ").replace(/\{/g, " ").replace(/\$/g, " ")))
           skipUrl = "https://www.chinabidding.cn/public/2020/html/login.html?source=1"
@@ -1613,7 +1613,8 @@ function clickButton() {
             txt = $("#search .form p").text();
           }
           addHistoryWord(txt, "index");
-          skipUrl = "https://www.chinabidding.cn/search/searchadvxmxx/search3?keywords=" + encodeURI(txt.replace(/\#/g, " ").replace(/\&/g, " "))
+          skipUrl = "./html/project_search.html?keywords=" + encodeURI(txt.replace(/\#/g, " ").replace(/\&/g, " "))
+          // skipUrl = "https://www.chinabidding.cn/search/searchadvxmxx/search3?keywords=" + encodeURI(txt.replace(/\#/g, " ").replace(/\&/g, " "))
         } else {
           sessionStorage.setItem('url', "https://www.chinabidding.cn/search/searchadvxmxx/search3?keywords=" + encodeURI(txt.replace(/\#/g, " ").replace(/\&/g, " ")))
           skipUrl = "https://www.chinabidding.cn/public/2020/html/login.html?source=1"
@@ -1621,7 +1622,6 @@ function clickButton() {
       }
     }
   }
-  // linkYuanbo(skipUrl, true)
   window.open(skipUrl)
 }
 
@@ -2348,19 +2348,11 @@ function getYuanboxx(){
   })
 }
 
-function linkJhjy(){
-  $.ajax({
-    type: "get",
-    url: "/login.oncecheck?once=https://www.yjsc.com.cn/",
-    success: function (data) {
-      console.log(data)
-    },
-  })
-}
 //跳转聚合交易
 function linkElecronBid1() {
+  var jhjyUrl = "https://yjsc.com.cn";
   var isText = localStorage.getItem('isText');
-  if (isText == 1) {
+  if (isText == 1 && $.cookie('token')) {
     $.ajax({
       type: "post",
       url: "https://sso.chinabidding.cn/login.once",
@@ -2370,14 +2362,37 @@ function linkElecronBid1() {
       },
       success: function (data) {
         var once = data.data.once;
-        window.open("https://sso.chinabidding.cn/oauth/authorize?response_type=once&once="+once+"&client_id=yjscbid_1690798333&scope=*;corp:last&state=console&redirect_uri=https://yjsc.chinabidding.cn/_oauth_login")
+        window.open("https://sso.chinabidding.cn/oauth/authorize?response_type=once&once="+once+"&client_id=yjscbid_1690798333&scope=*;corp:last&state=console&redirect_uri=https://www.yjsc.com.cn/")
+      },
+      error: function () {
+      }
+    });
+  } else {
+    window.open(jhjyUrl)
+  }
+}
+//跳转到招采平台在线报名
+function linkSign() {
+  var shopUrl = "https://shop.sygnew.com/new/shop/view/software/index.html";
+  var isText = localStorage.getItem('isText');
+  if (isText == 1 && $.cookie('token')) {
+    $.ajax({
+      type: "post",
+      url: "https://sso.chinabidding.cn/login.once",
+      dataType:"json",
+      data: {
+        token: $.cookie('token'),
+      },
+      success: function (data) {
+        var once = data.data.once;
+        var url = "https://shop.chinabidding.cn/op/?once=" + once + "&email=" + $.cookie('email')+ "&open=" + btoa('https://shop.chinabidding.cn/new/shop/view/bidding/index.html')
+        window.open(url)
       },
       error: function () {
 
       }
     });
-
   } else {
-
+    window.open(shopUrl)
   }
 }

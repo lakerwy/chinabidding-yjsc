@@ -914,18 +914,14 @@
     function reglinktxt() {
         // 登录埋点的信息获取
         var da = new Date();
-        da = da.getTime();
         $.ajax({
-                type: "post",
-                url: baseUrl + "/cblcn/Home/logincheckAndGetMeta",
-                data: {
-                    t: da
-                },
+                type: "get",
+                url: baseUrl + "/cblcn/home/logincheck?t=" + Math.random(),
                 dataType: "json",
                 success: function (data) {
                     //处理逻辑
-                    if (data.member) {
-                        var userdata = data.member
+                    if (data && data.record_id) {
+                        var userdata = data;
                         gio('setUserId', userdata.record_id);
                         gio('people.set', {
                             'metaId': userdata.metaId,
